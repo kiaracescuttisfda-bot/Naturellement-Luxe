@@ -56,6 +56,31 @@
   --shadow-dark:  0 8px 40px rgba(22,22,22,0.4);
   --shadow-glow:  0 0 40px rgba(212,161,90,0.15);
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Formes organiques [EXACT de Aigue Marine] */
+  --radius-organic-hero: 0px 0px 200px 0px;
+  --radius-organic-section: 200px 200px 200px 0px;
+  --radius-organic-hero-sub: 100px 100px 0px 100px;
+  --radius-pill: 30px;
+  --radius-card: 20px;
+  --radius-glass: 90px 0px 0px 0px;
+
+  /* Glassmorphism [EXACT] */
+  --glass-bg: rgba(241, 231, 214, 0.58);
+  --glass-border: 2px solid rgba(255, 255, 255, 0.5);
+  --glass-blur: 12px;
+
+  /* Spacing Aigue Marine [EXACT] */
+  --space-section: 10rem;
+  --space-section-sm: 6rem;
+  --space-card-padding: 3rem;
+
+  /* Shadows */
+  --shadow-elevated: 0 20px 60px rgba(22, 22, 22, 0.12);
+  --shadow-card-hover: 0 24px 48px rgba(107, 90, 76, 0.18);
+
+  /* Transitions */
+  --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -92,6 +117,7 @@ h2 { font-size: var(--text-3xl); }
 h3 { font-size: var(--text-2xl); }
 
 p { line-height: 1.85; font-weight: 300; }
+.text-justify { text-align: justify; }
 a { text-decoration: none; color: inherit; transition: var(--transition); }
 img { max-width: 100%; display: block; }
 ul, ol { list-style: none; }
@@ -120,11 +146,11 @@ ul, ol { list-style: none; }
 .botanical-deco { position: absolute; opacity: 0.08; pointer-events: none; z-index: 0; }
 
 /* Animations reveal */
-.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s ease, transform 0.9s ease; }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.4, 0, 0.2, 1); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-right { opacity: 0; transform: translateX(50px); transition: opacity 0.9s ease, transform 0.9s ease; }
+.reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.4, 0, 0.2, 1); }
 .reveal-right.visible { opacity: 1; transform: translateX(0); }
-.reveal-left { opacity: 0; transform: translateX(-50px); transition: opacity 0.9s ease, transform 0.9s ease; }
+.reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.4, 0, 0.2, 1); }
 .reveal-left.visible { opacity: 1; transform: translateX(0); }
 .reveal-delay-1 { transition-delay: 0.15s; }
 .reveal-delay-2 { transition-delay: 0.3s; }
