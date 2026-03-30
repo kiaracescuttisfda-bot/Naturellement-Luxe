@@ -1,164 +1,203 @@
-/* ============================================
-   NATURELLEMENT LUXE — Design System
-   Palette "Le Club"
-   ============================================ */
-
-/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap');
 
-:root {
-  /* Palette Le Club */
-  --color-noir-chaud:     #161616;
-  --color-bronze-fume:    #6B5A4C;
-  --color-chene-clair:    #C7A77C;
-  --color-onyx-miel:      #D4A15A;
-  --color-beige-pierre:   #D6C2A6;
-  --color-beige-sable:    #E2D2B8;
-  --color-grege-pierre:   #CFC2B1;
-  --color-creme:          #F1E7D6;
-  --color-blanc-craie:    #F6F3EE;
-
-  /* Alias sémantiques */
-  --bg-dark:       var(--color-noir-chaud);
-  --bg-medium:     var(--color-bronze-fume);
-  --bg-light:      var(--color-creme);
-  --accent:        var(--color-chene-clair);
-  --accent-warm:   var(--color-onyx-miel);
-  --text-light:    var(--color-blanc-craie);
-  --text-muted:    var(--color-beige-pierre);
-  --text-subtle:   var(--color-grege-pierre);
-  --border-color:  var(--color-beige-sable);
-
-  /* Typographie */
-  --font-serif:   'Cormorant Garamond', Georgia, serif;
-  --font-sans:    'Montserrat', sans-serif;
-  --font-script:  'Great Vibes', cursive;
-
-  /* Tailles */
-  --text-xs:   0.75rem;
-  --text-sm:   0.875rem;
-  --text-base: 1rem;
-  --text-lg:   1.125rem;
-  --text-xl:   1.375rem;
-  --text-2xl:  1.75rem;
-  --text-3xl:  2.5rem;
-  --text-4xl:  3.5rem;
-  --text-hero: clamp(4rem, 8vw, 7rem);
-
-  /* Espacements */
-  --space-xs:  0.5rem;
-  --space-sm:  1rem;
-  --space-md:  2rem;
-  --space-lg:  4rem;
-  --space-xl:  5rem;
-  --space-2xl: 8rem;
-
-  /* Shadows — teintées bronze, jamais noires pures */
-  --shadow-soft:  0 8px 40px rgba(22, 22, 22, 0.35);
-  --shadow-card:  0 4px 24px rgba(107, 90, 76, 0.2);
-  --shadow-glow:  0 0 30px rgba(212, 161, 90, 0.12);
-
-  /* Borders */
-  --border-accent: 1px solid rgba(199, 167, 124, 0.35);
-  --border-warm:   1px solid rgba(226, 210, 184, 0.2);
-
-  /* Effets */
-  --radius-sm:     4px;
-  --radius-md:     8px;
-  --radius-lg:     20px;
-  --transition:    all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ============================================
-   Reset & Base
-   ============================================ */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+:root {
+  --noir:           #161616;
+  --bronze:         #6B5A4C;
+  --chene:          #C7A77C;
+  --miel:           #D4A15A;
+  --beige-pierre:   #D6C2A6;
+  --beige-sable:    #E2D2B8;
+  --grege:          #CFC2B1;
+  --creme:          #F1E7D6;
+  --craie:          #F6F3EE;
+
+  --bg-dark:        var(--noir);
+  --bg-medium:      var(--bronze);
+  --bg-light:       var(--creme);
+  --accent:         var(--chene);
+  --accent-warm:    var(--miel);
+  --text-primary:   var(--craie);
+  --text-secondary: var(--beige-pierre);
+  --text-muted:     var(--grege);
+  --border:         rgba(199, 167, 124, 0.25);
+  --border-warm:    rgba(226, 210, 184, 0.15);
+
+  --font-serif:     'Cormorant Garamond', Georgia, serif;
+  --font-sans:      'Montserrat', sans-serif;
+  --font-script:    'Great Vibes', cursive;
+
+  --text-xs:    0.6875rem;
+  --text-sm:    0.8125rem;
+  --text-base:  1rem;
+  --text-lg:    1.125rem;
+  --text-xl:    1.375rem;
+  --text-2xl:   1.75rem;
+  --text-3xl:   2.5rem;
+  --text-4xl:   3.5rem;
+  --text-hero:  clamp(3.5rem, 7vw, 6.5rem);
+
+  --space-xs:   0.5rem;
+  --space-sm:   1rem;
+  --space-md:   2rem;
+  --space-lg:   4rem;
+  --space-xl:   7rem;
+  --space-2xl:  11rem;
+
+  --shadow-soft:    0 4px 24px rgba(22, 22, 22, 0.4);
+  --shadow-card:    0 8px 40px rgba(107, 90, 76, 0.25);
+  --shadow-glow:    0 0 40px rgba(212, 161, 90, 0.15);
+  --transition:     all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.2s ease;
 }
 
 html {
-  font-size: 16px;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+  background-color: var(--noir);
+  color: var(--craie);
   font-family: var(--font-sans);
-  font-weight: 300;
   font-size: var(--text-base);
+  font-weight: 300;
   line-height: 1.8;
-  color: var(--color-blanc-craie);
-  background-color: var(--color-noir-chaud);
   overflow-x: hidden;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: var(--craie);
+}
+
+h1 { font-size: var(--text-hero); }
+h2 { font-size: var(--text-3xl); }
+h3 { font-size: var(--text-2xl); }
+h4 { font-size: var(--text-xl); }
+
+h1 em, h2 em {
+  font-style: italic;
+  color: var(--chene);
+}
+
+p {
+  color: var(--beige-pierre);
+  line-height: 1.85;
+  font-weight: 300;
 }
 
 a {
-  color: var(--color-chene-clair);
   text-decoration: none;
-  transition: var(--transition);
+  color: inherit;
+  transition: var(--transition-fast);
 }
 
-a:hover {
-  color: var(--color-onyx-miel);
-}
-
-ul, ol {
-  list-style: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  line-height: 1.2;
-  color: var(--color-blanc-craie);
-  letter-spacing: 0.02em;
-}
-
-h1 { font-size: var(--text-hero); font-weight: 300; }
-h2 { font-size: var(--text-4xl); font-weight: 300; }
-h3 { font-size: var(--text-3xl); }
-h4 { font-size: var(--text-2xl); }
-
-p {
-  margin-bottom: var(--space-sm);
-  color: var(--color-beige-pierre);
-}
+img { max-width: 100%; display: block; }
+ul, ol { list-style: none; }
 
 ::selection {
-  background: var(--color-chene-clair);
-  color: var(--color-noir-chaud);
+  background: var(--chene);
+  color: var(--noir);
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--noir); }
+::-webkit-scrollbar-thumb { background: var(--chene); border-radius: 3px; }
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
 }
 
-::-webkit-scrollbar-track {
-  background: var(--color-noir-chaud);
+.section-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--chene);
+  display: block;
+  margin-bottom: 1.25rem;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-chene-clair);
-  border-radius: 3px;
+.section-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  color: var(--chene);
+  font-size: 0.6rem;
+  letter-spacing: 0.5em;
+}
+.section-ornament::before,
+.section-ornament::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--chene);
+  opacity: 0.5;
 }
 
-/* Section separator line */
-section {
-  border-top: 1px solid rgba(199, 167, 124, 0.15);
+.divider {
+  width: 40px;
+  height: 1px;
+  background: var(--chene);
+  margin: 1.5rem 0;
 }
 
-section:first-child {
-  border-top: none;
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
+.reveal-delay-4 { transition-delay: 0.6s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scrollLine {
+  0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
+  50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+  51%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+  100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
 }
