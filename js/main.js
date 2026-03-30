@@ -2,11 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 1. SCROLL HEADER
   const header = document.querySelector('header');
-  if (header) {
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 70);
-    }, { passive: true });
-  }
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 70);
+  }, { passive: true });
 
   // 2. MENU MOBILE
   const burger      = document.querySelector('.burger');
@@ -14,57 +12,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileClose = document.querySelector('.mobile-close');
   const overlay     = document.querySelector('.mobile-overlay');
 
-  const openMenu = () => {
-    if (!mobileNav) return;
-    mobileNav.classList.add('open');
-    if (overlay) overlay.classList.add('visible');
-    document.body.style.overflow = 'hidden';
-  };
-  const closeMenu = () => {
-    if (!mobileNav) return;
-    mobileNav.classList.remove('open');
-    if (overlay) overlay.classList.remove('visible');
-    document.body.style.overflow = '';
-  };
+  const openMenu  = () => { mobileNav.classList.add('open'); overlay.classList.add('visible'); document.body.style.overflow = 'hidden'; };
+  const closeMenu = () => { mobileNav.classList.remove('open'); overlay.classList.remove('visible'); document.body.style.overflow = ''; };
 
   if (burger)      burger.addEventListener('click', openMenu);
   if (mobileClose) mobileClose.addEventListener('click', closeMenu);
   if (overlay)     overlay.addEventListener('click', closeMenu);
-  if (mobileNav) {
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
-  }
+  if (mobileNav) mobileNav.querySelectorAll('a').forEach(l => l.addEventListener('click', closeMenu));
 
-  // 3. SMOOTH SCROLL
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const href = anchor.getAttribute('href');
-      if (href === '#') return;
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-  // 4. PARALLAXE VERTICAL
+  // 3. PARALLAXE VERTICAL sur images flottantes
   const parallaxEls = document.querySelectorAll('[data-speed]');
   if (parallaxEls.length > 0) {
     window.addEventListener('scroll', () => {
       parallaxEls.forEach(el => {
-        const speed = parseFloat(el.dataset.speed) || 0.15;
+        const speed = parseFloat(el.dataset.speed) || 0.1;
         el.style.transform = `translateY(${window.scrollY * speed}px)`;
       });
+    }, { passive: true });
+  }
+
+  // 4. PARALLAXE sur section pleine largeur
+  const parallaxSection = document.querySelector('.parallax-img');
+  if (parallaxSection) {
+    window.addEventListener('scroll', () => {
+      parallaxSection.style.transform = `translateY(${window.scrollY * 0.25}px)`;
     }, { passive: true });
   }
 
   // 5. ACTIVE NAV
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.header-nav a').forEach(link => {
-    const href = link.getAttribute('href').split('/').pop();
-    if (href === currentPage) link.classList.add('active');
+    if (link.getAttribute('href').split('/').pop() === currentPage) link.classList.add('active');
   });
 
   // 6. ACCORDION
@@ -73,30 +51,24 @@ document.addEventListener('DOMContentLoaded', () => {
       const item = btn.parentElement;
       const content = item.querySelector('.accordion-content');
       const isActive = item.classList.contains('active');
-
       document.querySelectorAll('.accordion-item').forEach(ai => {
         ai.classList.remove('active');
         const c = ai.querySelector('.accordion-content');
         if (c) c.style.maxHeight = null;
       });
-
-      if (!isActive) {
-        item.classList.add('active');
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
+      if (!isActive) { item.classList.add('active'); content.style.maxHeight = content.scrollHeight + 'px'; }
     });
   });
 
   // 7. TABS
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      const tabGroup = btn.closest('.tabs');
-      const target = btn.dataset.tab;
-      tabGroup.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      tabGroup.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      const g = btn.closest('.tabs'), t = btn.dataset.tab;
+      g.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      g.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
-      const panel = tabGroup.querySelector(`[data-panel="${target}"]`);
-      if (panel) panel.classList.add('active');
+      const p = g.querySelector(`[data-panel="${t}"]`);
+      if (p) p.classList.add('active');
     });
   });
 
@@ -106,10 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = parseInt(btn.dataset.stepTarget);
       const stepper = document.querySelector('.stepper');
       if (!stepper) return;
-      stepper.querySelectorAll('.step').forEach((step, i) => {
-        step.classList.toggle('active', i + 1 <= target);
-        step.classList.toggle('current', i + 1 === target);
-      });
+      stepper.querySelectorAll('.step').forEach((s, i) => { s.classList.toggle('active', i+1 <= target); s.classList.toggle('current', i+1 === target); });
       document.querySelectorAll('.step-content').forEach(sc => sc.classList.remove('active'));
       const tc = document.querySelector(`[data-step="${target}"]`);
       if (tc) tc.classList.add('active');
