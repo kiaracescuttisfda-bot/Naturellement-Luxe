@@ -25,7 +25,7 @@
 .hero-medium .overlay-dark {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.55), rgba(10, 10, 10, 0.75));
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.55), rgba(22, 22, 22, 0.75));
   z-index: 1;
 }
 
@@ -38,7 +38,7 @@
 .hero-medium-content h1 {
   font-family: var(--font-serif);
   font-size: clamp(2.4rem, 5vw, 3.6rem);
-  color: var(--color-white, #FAFAF8);
+  color: var(--color-blanc-craie);
   margin-bottom: var(--space-xs, 0.5rem);
 }
 
@@ -46,27 +46,27 @@
 .breadcrumb {
   font-family: var(--font-sans);
   font-size: 0.9rem;
-  color: var(--color-grey-text, #9A9A9A);
+  color: var(--color-beige-pierre);
   letter-spacing: 0.04em;
 }
 
 .breadcrumb a {
-  color: var(--color-gold, #C9A84C);
+  color: var(--color-chene-clair);
   text-decoration: none;
   transition: var(--transition, 0.3s ease);
 }
 
 .breadcrumb a:hover {
-  color: var(--color-white, #FAFAF8);
+  color: var(--color-blanc-craie);
 }
 
 .breadcrumb .separator {
   margin: 0 0.5em;
-  color: var(--color-grey-text, #9A9A9A);
+  color: var(--color-beige-pierre);
 }
 
 .breadcrumb .current {
-  color: var(--color-white, #FAFAF8);
+  color: var(--color-blanc-craie);
 }
 
 /* ---- Contact Section (Split Layout) ---- */
@@ -86,14 +86,14 @@
 /* ---- Contact Form Wrapper ---- */
 .contact-form-wrapper {
   padding: var(--space-xl, 3rem);
-  background: var(--color-black-card, #161616);
+  background: var(--color-noir-chaud);
   border-radius: var(--radius-md, 8px);
 }
 
 .contact-form-wrapper h2 {
   font-family: var(--font-serif);
   font-size: clamp(1.5rem, 2.5vw, 2rem);
-  color: var(--color-white, #FAFAF8);
+  color: var(--color-blanc-craie);
 }
 
 /* Form Grid (Nom + Prenom row) */
@@ -113,13 +113,13 @@
   font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--color-white, #FAFAF8);
+  color: var(--color-blanc-craie);
   margin-bottom: 0.4rem;
   letter-spacing: 0.03em;
 }
 
 .form-group .required {
-  color: var(--color-gold, #C9A84C);
+  color: var(--color-chene-clair);
 }
 
 .form-group input,
@@ -127,10 +127,10 @@
 .form-group textarea {
   width: 100%;
   padding: 0.85rem 1rem;
-  background: var(--color-black, #0A0A0A);
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: var(--color-noir-chaud);
+  border: 1px solid rgba(199, 167, 124, 0.2);
   border-radius: var(--radius-md, 8px);
-  color: var(--color-white, #FAFAF8);
+  color: var(--color-blanc-craie);
   font-family: var(--font-sans);
   font-size: 0.95rem;
   transition: var(--transition, 0.3s ease);
@@ -140,21 +140,21 @@
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: var(--color-grey-text, #9A9A9A);
+  color: var(--color-beige-pierre);
   opacity: 0.6;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: var(--color-gold, #C9A84C);
-  box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.15);
+  border-color: var(--color-chene-clair);
+  box-shadow: 0 0 0 2px rgba(199, 167, 124, 0.15);
 }
 
 .form-group select {
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%23C9A84C'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%23C7A77C'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   padding-right: 2.5rem;
@@ -162,8 +162,8 @@
 }
 
 .form-group select option {
-  background: var(--color-black, #0A0A0A);
-  color: var(--color-white, #FAFAF8);
+  background: var(--color-noir-chaud);
+  color: var(--color-blanc-craie);
 }
 
 .form-group textarea {
@@ -184,26 +184,26 @@
   height: 18px;
   min-width: 18px;
   margin-top: 0.15rem;
-  accent-color: var(--color-gold, #C9A84C);
+  accent-color: var(--color-chene-clair);
   cursor: pointer;
 }
 
 .checkbox-group label {
   font-family: var(--font-sans);
   font-size: 0.82rem;
-  color: var(--color-grey-text, #9A9A9A);
+  color: var(--color-beige-pierre);
   line-height: 1.5;
   cursor: pointer;
 }
 
 .checkbox-group label a {
-  color: var(--color-gold, #C9A84C);
+  color: var(--color-chene-clair);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .checkbox-group label a:hover {
-  color: var(--color-white, #FAFAF8);
+  color: var(--color-blanc-craie);
 }
 
 /* Submit Button */
@@ -216,8 +216,8 @@
 
 /* ---- Contact Info Card ---- */
 .contact-info {
-  background: var(--color-black-card, #161616);
-  border: 1px solid rgba(201, 168, 76, 0.25);
+  background: var(--color-noir-chaud);
+  border: 1px solid rgba(199, 167, 124, 0.25);
   border-radius: var(--radius-md, 8px);
   padding: var(--space-xl, 3rem) var(--space-lg, 2rem);
 }
@@ -225,7 +225,7 @@
 .contact-info h3 {
   font-family: var(--font-serif);
   font-size: clamp(1.3rem, 2vw, 1.6rem);
-  color: var(--color-white, #FAFAF8);
+  color: var(--color-blanc-craie);
 }
 
 /* ---- Info Items ---- */
@@ -241,7 +241,7 @@
 }
 
 .info-icon {
-  color: var(--color-gold, #C9A84C);
+  color: var(--color-chene-clair);
   font-size: 1.1rem;
   line-height: 1.6;
   flex-shrink: 0;
@@ -254,26 +254,26 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-gold, #C9A84C);
+  color: var(--color-chene-clair);
   margin-bottom: 0.25rem;
 }
 
 .info-item p {
   font-family: var(--font-sans);
   font-size: 0.92rem;
-  color: var(--color-white, #FAFAF8);
+  color: var(--color-blanc-craie);
   line-height: 1.6;
   margin: 0;
 }
 
 .info-item a {
-  color: var(--color-white, #FAFAF8);
+  color: var(--color-blanc-craie);
   text-decoration: none;
   transition: var(--transition, 0.3s ease);
 }
 
 .info-item a:hover {
-  color: var(--color-gold, #C9A84C);
+  color: var(--color-chene-clair);
 }
 
 /* ---- Horaires List ---- */
@@ -297,18 +297,18 @@
 }
 
 .horaires-list .day {
-  color: var(--color-gold, #C9A84C);
+  color: var(--color-chene-clair);
   font-weight: 500;
   min-width: 90px;
 }
 
 .horaires-list .time {
-  color: var(--color-white, #FAFAF8);
+  color: var(--color-blanc-craie);
   text-align: right;
 }
 
 .horaires-list .closed .day {
-  color: var(--color-grey-text, #9A9A9A);
+  color: var(--color-beige-pierre);
 }
 
 .horaires-list .closed .time {
@@ -330,8 +330,8 @@
 .map-placeholder {
   position: relative;
   aspect-ratio: 16 / 9;
-  background: var(--color-black-card, #161616);
-  border: 1px solid rgba(201, 168, 76, 0.25);
+  background: var(--color-noir-chaud);
+  border: 1px solid rgba(199, 167, 124, 0.25);
   border-radius: var(--radius-md, 8px);
   overflow: hidden;
 }
@@ -351,19 +351,19 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-sm, 1rem);
-  background: var(--color-black-card, #161616);
+  background: var(--color-noir-chaud);
   z-index: 0;
 }
 
 .map-fallback .map-pin {
   font-size: 2.5rem;
-  color: var(--color-gold, #C9A84C);
+  color: var(--color-chene-clair);
 }
 
 .map-fallback p {
   font-family: var(--font-sans);
   font-size: 1rem;
-  color: var(--color-grey-text, #9A9A9A);
+  color: var(--color-beige-pierre);
 }
 
 /* ---- Responsive ---- */

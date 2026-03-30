@@ -25,7 +25,7 @@
         <a href="tarifs.html">Tarifs</a>
         <a href="carte-cadeau.html">Carte Cadeau</a>
         <a href="contact.html">Contact</a>
-        <a href="reserver.html" class="btn-primary">Réserver</a>
+        <a href="reserver.html" class="btn-header-cta">Réserver</a>
       </nav>
 
       <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -35,8 +35,17 @@
       </button>
     </div>
 
-    <!-- Mobile Nav -->
+    <!-- Mobile backdrop -->
+    <div class="nav-mobile-backdrop"></div>
+
+    <!-- Mobile Nav — slide panel -->
     <div class="nav-mobile-overlay" role="navigation" aria-label="Navigation mobile">
+      <button class="nav-mobile-close" aria-label="Fermer le menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
       <a href="index.html">Accueil</a>
       <a href="prestations.html">Prestations</a>
       <a href="prestation-spa.html">Spa Privatif</a>
@@ -53,88 +62,153 @@
 
   <main>
     <!-- ========== SECTION 1 — HERO ========== -->
-    <section class="hero-home" aria-label="Accueil">
-      <div class="overlay-dark"></div>
+    <section class="hero" aria-label="Accueil" style="border-top:none;">
+      <video autoplay muted loop playsinline class="hero-video" poster="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=85&auto=format">
+        <source src="https://videos.pexels.com/video-files/3327263/3327263-uhd_2560_1440_30fps.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
       <div class="hero-content">
-        <span class="tag reveal">Spa Privatif & Bien-être</span>
-        <h1 class="reveal reveal-delay-1">
-          Le Spa Privatif
-          <em>Naturellement Luxe</em>
+        <span class="hero-tag reveal">Spa Privatif & Bien-être</span>
+        <h1 class="hero-title reveal reveal-delay-1">
+          Naturellement<br><em>Luxe</em>
         </h1>
-        <p class="hero-subtitle reveal reveal-delay-2">Historiquement le premier Spa Privatif de Paris — Votre bulle de sérénité au cœur du 2<sup>e</sup> arrondissement</p>
-        <div class="hero-buttons reveal reveal-delay-3">
+        <p class="hero-subtitle reveal reveal-delay-2">Une parenthèse d'exception, rien que pour vous — Historiquement le premier Spa Privatif de Paris</p>
+        <div class="hero-cta reveal reveal-delay-3">
           <a href="reserver.html" class="btn-primary">Réserver</a>
-          <a href="#concept" class="btn-outline">Découvrir</a>
+          <a href="prestations.html" class="btn-outline">Découvrir</a>
+        </div>
+        <div class="hero-price reveal reveal-delay-3">
+          <span class="price-from">Dès</span>
+          <span class="price-amount">99</span>
+          <span class="price-currency">€</span>
+          <span class="price-unit">/ pers.</span>
         </div>
       </div>
-      <a href="#concept" class="scroll-arrow" aria-label="Défiler vers le bas">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="7 13 12 18 17 13"></polyline>
-          <line x1="12" y1="6" x2="12" y2="18"></line>
-        </svg>
-      </a>
-    </section>
-
-    <!-- ========== SECTION 2 — INTRO / CONCEPT ========== -->
-    <section class="section-intro" id="concept" aria-label="Notre concept">
-      <div class="intro-grid">
-        <div class="intro-text reveal">
-          <h2>Un luxe <span>naturel</span>,<br>une expérience unique</h2>
-          <div class="divider-gold" style="margin: var(--space-md) 0;"></div>
-          <p>Naturellement Luxe vous accueille dans un univers où bien-être et simplicité se conjuguent pour créer une expérience unique de détente absolue. Depuis 2014, nous avons fait le choix de l'intimité et du sur-mesure pour vous offrir des moments d'exception.</p>
-          <p>La beauté du corps passe aussi par la beauté des lieux. Chaque détail est pensé pour votre confort et votre sérénité : un cocon de détente avec une décoration harmonieuse, des équipements haut de gamme et un accueil bienveillant.</p>
-        </div>
-        <div class="intro-highlight reveal reveal-delay-2">
-          <div class="year" data-count="2014" data-prefix="">2014</div>
-          <div class="year-label">Premier Spa Privatif de Paris</div>
-        </div>
-      </div>
-      <div class="intro-quote reveal">
-        <blockquote>L'abandon de soi, l'évasion et la relaxation totale</blockquote>
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <span></span>
       </div>
     </section>
 
-    <!-- ========== SECTION 3 — NOS UNIVERS ========== -->
+    <!-- ========== SECTION 2 — CONCEPT ========== -->
+    <section class="concept" id="concept" aria-label="Notre concept">
+      <div class="container">
+        <div class="concept-grid">
+          <div class="concept-text reveal-left">
+            <span class="label">Notre concept</span>
+            <h2>Un moment unique,<br>hors du temps</h2>
+            <div class="divider-gold" style="margin: var(--space-md) 0;"></div>
+            <p>Naturellement Luxe vous accueille dans un univers où bien-être et simplicité se conjuguent pour créer une expérience unique de détente absolue. Depuis 2014, nous avons fait le choix de l'intimité et du sur-mesure pour vous offrir des moments d'exception.</p>
+            <p>La beauté du corps passe aussi par la beauté des lieux. Chaque détail est pensé pour votre confort et votre sérénité : un cocon de détente avec une décoration harmonieuse, des équipements haut de gamme et un accueil bienveillant.</p>
+            <a href="prestations.html" class="btn-outline" style="margin-top: var(--space-md);">En savoir plus</a>
+          </div>
+          <div class="concept-images reveal-right">
+            <img class="img-parallax" data-speed="0.08" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=85&auto=format" alt="Spa Naturellement Luxe — pierres chaudes" loading="lazy">
+            <img class="img-parallax img-offset" data-speed="0.04" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&q=85&auto=format" alt="Ambiance spa — bougies" loading="lazy">
+            <!-- SVG decorative element -->
+            <svg class="concept-deco" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M100 0 C100 200, 180 200, 100 400" stroke="rgba(199,167,124,0.15)" stroke-width="1" fill="none"/>
+              <path d="M120 50 C120 220, 40 250, 120 380" stroke="rgba(199,167,124,0.08)" stroke-width="1" fill="none"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Quote -->
+        <div class="concept-quote reveal">
+          <blockquote>L'abandon de soi, l'évasion et la relaxation totale</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 3 — ÉQUIPEMENTS ========== -->
+    <section class="section-equipements" aria-label="Nos équipements" style="border-top: none;">
+      <div class="equipements-grid">
+        <div class="equipment-item reveal reveal-delay-1">
+          <svg class="equipment-icon" viewBox="0 0 60 60" aria-hidden="true">
+            <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1" fill="none"/>
+            <path d="M20 38 C20 28, 25 22, 30 20 C35 22, 40 28, 40 38" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <line x1="30" y1="20" x2="30" y2="40" stroke="currentColor" stroke-width="1"/>
+          </svg>
+          <h3 class="equipment-title">Jacuzzi</h3>
+          <p class="equipment-text">Balnéothérapie 2-3 places avec jets hydro-massants et sels de mer morte.</p>
+        </div>
+        <div class="equipment-item reveal reveal-delay-2">
+          <svg class="equipment-icon" viewBox="0 0 60 60" aria-hidden="true">
+            <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1" fill="none"/>
+            <path d="M22 40 L22 25 C22 20, 38 20, 38 25 L38 40" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <line x1="26" y1="30" x2="34" y2="30" stroke="currentColor" stroke-width="1"/>
+          </svg>
+          <h3 class="equipment-title">Sauna</h3>
+          <p class="equipment-text">Chaleur sèche 60-80°C pour une détoxification profonde et une relaxation totale.</p>
+        </div>
+        <div class="equipment-item reveal reveal-delay-3">
+          <svg class="equipment-icon" viewBox="0 0 60 60" aria-hidden="true">
+            <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1" fill="none"/>
+            <circle cx="30" cy="28" r="8" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <line x1="30" y1="36" x2="30" y2="42" stroke="currentColor" stroke-width="1"/>
+            <line x1="24" y1="22" x2="18" y2="16" stroke="currentColor" stroke-width="1"/>
+            <line x1="36" y1="22" x2="42" y2="16" stroke="currentColor" stroke-width="1"/>
+            <line x1="22" y1="28" x2="14" y2="28" stroke="currentColor" stroke-width="1"/>
+            <line x1="38" y1="28" x2="46" y2="28" stroke="currentColor" stroke-width="1"/>
+          </svg>
+          <h3 class="equipment-title">Luminothérapie</h3>
+          <p class="equipment-text">Synthétise la vitamine D sans UV. Combat les effets du manque de lumière.</p>
+        </div>
+        <div class="equipment-item reveal reveal-delay-4">
+          <svg class="equipment-icon" viewBox="0 0 60 60" aria-hidden="true">
+            <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1" fill="none"/>
+            <ellipse cx="30" cy="32" rx="14" ry="6" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <line x1="16" y1="32" x2="16" y2="24" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="44" y1="32" x2="44" y2="24" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <h3 class="equipment-title">Futon King-Size</h3>
+          <p class="equipment-text">Futon 2m × 2m pour se relaxer entre deux sessions de bien-être.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 4 — NOS UNIVERS / PRESTATIONS ========== -->
     <section class="section-univers" aria-label="Nos univers">
-      <div class="section-title reveal">
-        <h2>Nos Univers</h2>
-        <div class="ornament"><span>&#9830;</span></div>
-        <p>Découvrez nos différentes expériences de bien-être</p>
-      </div>
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Nos Univers</h2>
+          <div class="ornament"><span>&#9830;</span></div>
+          <p>Découvrez nos différentes expériences de bien-être</p>
+        </div>
 
-      <div class="univers-grid">
-        <a href="prestation-spa.html" class="univers-card reveal reveal-delay-1">
-          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=800&q=80" alt="Spa Privatif — jacuzzi, sauna, balnéothérapie" loading="lazy">
-          <div class="overlay-dark"></div>
-          <div class="univers-card-content">
-            <h3>Spa Privatif</h3>
-            <span class="btn-ghost">Découvrir &rarr;</span>
-          </div>
-        </a>
+        <div class="univers-grid">
+          <a href="prestation-spa.html" class="univers-card reveal reveal-delay-1">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=800&q=85&auto=format" alt="Spa Privatif — jacuzzi, sauna, balnéothérapie" loading="lazy">
+            <div class="overlay-dark"></div>
+            <div class="univers-card-content">
+              <h3>Spa Privatif</h3>
+              <span class="btn-ghost">Découvrir &rarr;</span>
+            </div>
+          </a>
 
-        <a href="prestation-massage.html" class="univers-card reveal reveal-delay-2">
-          <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&q=80" alt="Massages traditionnels" loading="lazy">
-          <div class="overlay-dark"></div>
-          <div class="univers-card-content">
-            <h3>Massages</h3>
-            <span class="btn-ghost">Découvrir &rarr;</span>
-          </div>
-        </a>
+          <a href="prestation-massage.html" class="univers-card reveal reveal-delay-2">
+            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&q=85&auto=format" alt="Massages traditionnels" loading="lazy">
+            <div class="overlay-dark"></div>
+            <div class="univers-card-content">
+              <h3>Massages</h3>
+              <span class="btn-ghost">Découvrir &rarr;</span>
+            </div>
+          </a>
 
-        <a href="prestation-events.html" class="univers-card reveal reveal-delay-3">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Événements — EVJF, Baby Shower, Anniversaire" loading="lazy">
-          <div class="overlay-dark"></div>
-          <div class="univers-card-content">
-            <h3>Événements</h3>
-            <span class="btn-ghost">Découvrir &rarr;</span>
-          </div>
-        </a>
+          <a href="prestation-events.html" class="univers-card reveal reveal-delay-3">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=85&auto=format" alt="Événements — EVJF, Baby Shower, Anniversaire" loading="lazy">
+            <div class="overlay-dark"></div>
+            <div class="univers-card-content">
+              <h3>Événements</h3>
+              <span class="btn-ghost">Découvrir &rarr;</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- ========== SECTION 4 — EXPERIENCE PARALLAX ========== -->
+    <!-- ========== SECTION 5 — EXPERIENCE PARALLAX ========== -->
     <section class="section-experience" aria-label="L'expérience Naturellement Luxe">
-      <div class="parallax-bg"></div>
+      <div class="parallax-bg" data-speed="-0.15" style="background-image: url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1920&q=85&auto=format');"></div>
       <div class="overlay-dark"></div>
       <div class="experience-content reveal">
         <h2>Un espace de 35m² entièrement privatisé pour vous</h2>
@@ -142,67 +216,67 @@
       </div>
     </section>
 
-    <!-- ========== SECTION 5 — CHIFFRES ========== -->
+    <!-- ========== SECTION 6 — CHIFFRES ========== -->
     <section class="section-stats" aria-label="Nos chiffres clés">
-      <div class="stats-grid">
-        <div class="stat-item reveal">
-          <div class="stat-icon">&#9733;</div>
-          <div class="stat-number" data-count="2014">2014</div>
-          <div class="stat-label">Depuis</div>
-        </div>
-        <div class="stat-item reveal reveal-delay-1">
-          <div class="stat-icon">&#9829;</div>
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Privatif</div>
-        </div>
-        <div class="stat-item reveal reveal-delay-2">
-          <div class="stat-icon">&#10022;</div>
-          <div class="stat-number">35m²</div>
-          <div class="stat-label">D'espace bien-être</div>
-        </div>
-        <div class="stat-item reveal reveal-delay-3">
-          <div class="stat-icon">&#9734;</div>
-          <div class="stat-number">5/5</div>
-          <div class="stat-label">Satisfaction client</div>
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <div class="stat-number" data-count="2014">2014</div>
+            <div class="stat-label">Depuis</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-1">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Privatif</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-2">
+            <div class="stat-number">35m²</div>
+            <div class="stat-label">D'espace bien-être</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-number">5/5</div>
+            <div class="stat-label">Satisfaction client</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== SECTION 6 — TEMOIGNAGES ========== -->
+    <!-- ========== SECTION 7 — TEMOIGNAGES ========== -->
     <section class="section-testimonials" aria-label="Témoignages clients">
-      <div class="section-title reveal">
-        <h2>Ce qu'ils en disent</h2>
-        <div class="ornament"><span>&#9830;</span></div>
-      </div>
-
-      <div class="testimonials-grid">
-        <div class="testimonial-card reveal reveal-delay-1">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>Quel bonheur que ce petit cocon dans Paris. Un moment de rêve, en toute intimité. L'accueil est chaleureux et les installations sont superbes.</blockquote>
-          <div class="testimonial-author">Yann</div>
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Ce qu'ils en disent</h2>
+          <div class="ornament"><span>&#9830;</span></div>
         </div>
 
-        <div class="testimonial-card reveal reveal-delay-2">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>Une bulle d'évasion ! C'était comme chez nous mais en mieux. Spa privatif chaleureux, massage duo merveilleusement relaxant. C'était parfait de A à Z.</blockquote>
-          <div class="testimonial-author">Anna</div>
-        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal reveal-delay-1">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>Quel bonheur que ce petit cocon dans Paris. Un moment de rêve, en toute intimité. L'accueil est chaleureux et les installations sont superbes.</blockquote>
+            <div class="testimonial-author">Yann</div>
+          </div>
 
-        <div class="testimonial-card reveal reveal-delay-3">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>Merci pour cet accueil, cette bienveillance... Conquise. 90 minutes de relaxation à deux, en toute intimité. Encore mieux que sur les photos.</blockquote>
-          <div class="testimonial-author">Florence, 41 ans</div>
+          <div class="testimonial-card reveal reveal-delay-2">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>Une bulle d'évasion ! C'était comme chez nous mais en mieux. Spa privatif chaleureux, massage duo merveilleusement relaxant. C'était parfait de A à Z.</blockquote>
+            <div class="testimonial-author">Anna</div>
+          </div>
+
+          <div class="testimonial-card reveal reveal-delay-3">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>Merci pour cet accueil, cette bienveillance... Conquise. 90 minutes de relaxation à deux, en toute intimité. Encore mieux que sur les photos.</blockquote>
+            <div class="testimonial-author">Florence, 41 ans</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== SECTION 7 — CARTE CADEAU ========== -->
+    <!-- ========== SECTION 8 — CARTE CADEAU ========== -->
     <section class="section-gift" aria-label="Carte cadeau">
       <div class="gift-split">
-        <div class="gift-image reveal">
-          <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?w=1000&q=80" alt="Carte cadeau Naturellement Luxe" loading="lazy">
+        <div class="gift-image reveal-left">
+          <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1000&q=85&auto=format" alt="Carte cadeau Naturellement Luxe" loading="lazy">
         </div>
-        <div class="gift-content reveal reveal-delay-1">
+        <div class="gift-content reveal-right">
           <span class="tag">Idée cadeau</span>
           <h2>Offrez une Expérience Unique</h2>
           <div class="divider-gold" style="margin: var(--space-sm) 0 var(--space-md);"></div>
@@ -212,47 +286,52 @@
       </div>
     </section>
 
-    <!-- ========== SECTION 8 — GALERIE / INSTAGRAM ========== -->
+    <!-- ========== SECTION 9 — GALERIE ========== -->
     <section class="section-gallery" aria-label="Galerie">
-      <div class="section-title reveal">
-        <h2>Notre Univers</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Notre Univers</h2>
+          <div class="ornament"><span>&#9830;</span></div>
+        </div>
       </div>
 
       <div class="gallery-grid">
         <div class="gallery-item reveal">
-          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Ambiance spa — bougies et détente" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=85&auto=format" alt="Ambiance spa — bougies et détente" loading="lazy">
         </div>
         <div class="gallery-item reveal reveal-delay-1">
-          <img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=600&q=80" alt="Jacuzzi privatif" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=600&q=85&auto=format" alt="Jacuzzi privatif" loading="lazy">
         </div>
         <div class="gallery-item reveal reveal-delay-2">
-          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=600&q=80" alt="Pierres chaudes et soins" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=600&q=85&auto=format" alt="Pierres chaudes et soins" loading="lazy">
         </div>
         <div class="gallery-item reveal reveal-delay-1">
-          <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80" alt="Massage relaxant" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=85&auto=format" alt="Massage relaxant" loading="lazy">
         </div>
         <div class="gallery-item reveal reveal-delay-2">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Sauna finlandais" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=85&auto=format" alt="Ambiance romantique" loading="lazy">
         </div>
         <div class="gallery-item reveal reveal-delay-3">
-          <img src="https://images.unsplash.com/photo-1559599076-9c61d8e1b77c?w=600&q=80" alt="Ambiance zen et bougies" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1559599076-9c61d8e1b77c?w=600&q=85&auto=format" alt="Ambiance zen et bougies" loading="lazy">
         </div>
       </div>
     </section>
 
-    <!-- ========== SECTION 9 — CTA RESERVATION ========== -->
+    <!-- ========== SECTION 10 — CTA RESERVATION ========== -->
     <section class="section-cta" aria-label="Réserver maintenant">
-      <div class="reveal">
-        <h2>Prêt pour votre moment de détente ?</h2>
-        <p>Réservez dès maintenant votre créneau en toute simplicité. Votre parenthèse de bien-être vous attend.</p>
-        <a href="reserver.html" class="btn-dark">Réserver maintenant</a>
+      <div class="container">
+        <div class="reveal">
+          <h2>Prêt pour votre moment de détente ?</h2>
+          <p>Réservez dès maintenant votre créneau en toute simplicité. Votre parenthèse de bien-être vous attend.</p>
+          <a href="reserver.html" class="btn-cta-dark">Réserver maintenant</a>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- ========== FOOTER ========== -->
   <footer class="site-footer" role="contentinfo">
+    <div class="footer-bg"></div>
     <div class="footer-inner">
       <div class="footer-col">
         <div class="footer-logo">Naturellement Luxe</div>

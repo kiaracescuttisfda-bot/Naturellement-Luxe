@@ -1,27 +1,38 @@
 /* ============================================
    NATURELLEMENT LUXE — Design System
+   Palette "Le Club"
    ============================================ */
 
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap');
 
 :root {
-  /* Couleurs principales */
-  --color-black:        #0A0A0A;
-  --color-black-soft:   #111111;
-  --color-black-card:   #161616;
-  --color-gold:         #C9A84C;
-  --color-gold-light:   #E2C47A;
-  --color-gold-pale:    #F5E6C3;
-  --color-white:        #FAFAF8;
-  --color-white-warm:   #F0EDE8;
-  --color-grey-text:    #9A9A9A;
-  --color-grey-light:   #2A2A2A;
+  /* Palette Le Club */
+  --color-noir-chaud:     #161616;
+  --color-bronze-fume:    #6B5A4C;
+  --color-chene-clair:    #C7A77C;
+  --color-onyx-miel:      #D4A15A;
+  --color-beige-pierre:   #D6C2A6;
+  --color-beige-sable:    #E2D2B8;
+  --color-grege-pierre:   #CFC2B1;
+  --color-creme:          #F1E7D6;
+  --color-blanc-craie:    #F6F3EE;
+
+  /* Alias sémantiques */
+  --bg-dark:       var(--color-noir-chaud);
+  --bg-medium:     var(--color-bronze-fume);
+  --bg-light:      var(--color-creme);
+  --accent:        var(--color-chene-clair);
+  --accent-warm:   var(--color-onyx-miel);
+  --text-light:    var(--color-blanc-craie);
+  --text-muted:    var(--color-beige-pierre);
+  --text-subtle:   var(--color-grege-pierre);
+  --border-color:  var(--color-beige-sable);
 
   /* Typographie */
-  --font-serif:    'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-  --font-sans:     'Montserrat', 'Raleway', sans-serif;
-  --font-script:   'Great Vibes', 'Pinyon Script', cursive;
+  --font-serif:   'Cormorant Garamond', Georgia, serif;
+  --font-sans:    'Montserrat', sans-serif;
+  --font-script:  'Great Vibes', cursive;
 
   /* Tailles */
   --text-xs:   0.75rem;
@@ -32,24 +43,30 @@
   --text-2xl:  1.75rem;
   --text-3xl:  2.5rem;
   --text-4xl:  3.5rem;
-  --text-hero: clamp(3rem, 7vw, 6rem);
+  --text-hero: clamp(4rem, 8vw, 7rem);
 
   /* Espacements */
   --space-xs:  0.5rem;
   --space-sm:  1rem;
   --space-md:  2rem;
   --space-lg:  4rem;
-  --space-xl:  7rem;
-  --space-2xl: 12rem;
+  --space-xl:  5rem;
+  --space-2xl: 8rem;
+
+  /* Shadows — teintées bronze, jamais noires pures */
+  --shadow-soft:  0 8px 40px rgba(22, 22, 22, 0.35);
+  --shadow-card:  0 4px 24px rgba(107, 90, 76, 0.2);
+  --shadow-glow:  0 0 30px rgba(212, 161, 90, 0.12);
+
+  /* Borders */
+  --border-accent: 1px solid rgba(199, 167, 124, 0.35);
+  --border-warm:   1px solid rgba(226, 210, 184, 0.2);
 
   /* Effets */
   --radius-sm:     4px;
   --radius-md:     8px;
   --radius-lg:     20px;
-  --shadow-gold:   0 4px 30px rgba(201, 168, 76, 0.15);
-  --shadow-card:   0 8px 40px rgba(0, 0, 0, 0.4);
-  --transition:    all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  --border-gold:   1px solid rgba(201, 168, 76, 0.3);
+  --transition:    all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ============================================
@@ -74,9 +91,9 @@ body {
   font-family: var(--font-sans);
   font-weight: 300;
   font-size: var(--text-base);
-  line-height: 1.7;
-  color: var(--color-white);
-  background-color: var(--color-black);
+  line-height: 1.8;
+  color: var(--color-blanc-craie);
+  background-color: var(--color-noir-chaud);
   overflow-x: hidden;
 }
 
@@ -87,13 +104,13 @@ img {
 }
 
 a {
-  color: var(--color-gold);
+  color: var(--color-chene-clair);
   text-decoration: none;
   transition: var(--transition);
 }
 
 a:hover {
-  color: var(--color-gold-light);
+  color: var(--color-onyx-miel);
 }
 
 ul, ol {
@@ -104,22 +121,23 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   font-weight: 400;
   line-height: 1.2;
-  color: var(--color-white);
+  color: var(--color-blanc-craie);
+  letter-spacing: 0.02em;
 }
 
-h1 { font-size: var(--text-hero); }
-h2 { font-size: var(--text-4xl); }
+h1 { font-size: var(--text-hero); font-weight: 300; }
+h2 { font-size: var(--text-4xl); font-weight: 300; }
 h3 { font-size: var(--text-3xl); }
 h4 { font-size: var(--text-2xl); }
 
 p {
   margin-bottom: var(--space-sm);
-  color: var(--color-grey-text);
+  color: var(--color-beige-pierre);
 }
 
 ::selection {
-  background: var(--color-gold);
-  color: var(--color-black);
+  background: var(--color-chene-clair);
+  color: var(--color-noir-chaud);
 }
 
 /* Scrollbar */
@@ -128,10 +146,19 @@ p {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-black);
+  background: var(--color-noir-chaud);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-gold);
+  background: var(--color-chene-clair);
   border-radius: 3px;
+}
+
+/* Section separator line */
+section {
+  border-top: 1px solid rgba(199, 167, 124, 0.15);
+}
+
+section:first-child {
+  border-top: none;
 }

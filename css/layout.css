@@ -3,13 +3,13 @@
    ============================================ */
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 var(--space-md);
 }
 
 .container-wide {
-  max-width: 1440px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 var(--space-md);
 }
@@ -81,12 +81,12 @@ main {
 }
 
 .hero-medium {
-  min-height: 50vh;
+  min-height: 55vh;
   padding-top: 80px;
 }
 
 .hero-small {
-  min-height: 60vh;
+  min-height: 55vh;
   padding-top: 80px;
 }
 

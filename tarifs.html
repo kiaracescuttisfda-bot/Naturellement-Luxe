@@ -25,7 +25,7 @@
         <a href="tarifs.html" class="active">Tarifs</a>
         <a href="carte-cadeau.html">Carte Cadeau</a>
         <a href="contact.html">Contact</a>
-        <a href="reserver.html" class="btn-primary">Réserver</a>
+        <a href="reserver.html" class="btn-header-cta">Réserver</a>
       </nav>
 
       <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -35,8 +35,17 @@
       </button>
     </div>
 
-    <!-- Mobile Nav -->
+    <!-- Mobile backdrop -->
+    <div class="nav-mobile-backdrop"></div>
+
+    <!-- Mobile Nav — slide panel -->
     <div class="nav-mobile-overlay" role="navigation" aria-label="Navigation mobile">
+      <button class="nav-mobile-close" aria-label="Fermer le menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
       <a href="index.html">Accueil</a>
       <a href="prestations.html">Prestations</a>
       <a href="prestation-spa.html">Spa Privatif</a>
@@ -450,6 +459,7 @@
 
   <!-- ========== FOOTER ========== -->
   <footer class="site-footer" role="contentinfo">
+    <div class="footer-bg"></div>
     <div class="footer-inner">
       <div class="footer-col">
         <div class="footer-logo">Naturellement Luxe</div>

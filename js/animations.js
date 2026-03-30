@@ -1,26 +1,47 @@
 /* ============================================
    NATURELLEMENT LUXE — Scroll Animations
-   IntersectionObserver fade-in + translateY
+   IntersectionObserver
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const revealElements = document.querySelectorAll('.reveal');
 
-  if (!revealElements.length) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+  // --- Auto-add .reveal class to key elements ---
+  document.querySelectorAll('h2').forEach(el => {
+    if (!el.classList.contains('reveal') && !el.classList.contains('reveal-left') && !el.classList.contains('reveal-right')) {
+      el.classList.add('reveal');
+    }
   });
 
-  revealElements.forEach(el => observer.observe(el));
+  document.querySelectorAll('.prestation-card').forEach(el => {
+    if (!el.classList.contains('reveal')) {
+      el.classList.add('reveal');
+    }
+  });
+
+  document.querySelectorAll('.equipment-item').forEach(el => {
+    if (!el.classList.contains('reveal')) {
+      el.classList.add('reveal');
+    }
+  });
+
+  // --- IntersectionObserver for reveal animations ---
+  const revealElements = document.querySelectorAll('.reveal, .reveal-right, .reveal-left');
+
+  if (revealElements.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => observer.observe(el));
+  }
 
   // --- Counter animation for stats ---
   const counters = document.querySelectorAll('[data-count]');
@@ -53,20 +74,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.5 });
 
     counters.forEach(el => counterObserver.observe(el));
-  }
-
-  // --- Parallax effect ---
-  const parallaxElements = document.querySelectorAll('.parallax-bg');
-  if (parallaxElements.length) {
-    window.addEventListener('scroll', () => {
-      requestAnimationFrame(() => {
-        parallaxElements.forEach(el => {
-          const rect = el.getBoundingClientRect();
-          const speed = 0.3;
-          const yPos = -(rect.top * speed);
-          el.style.transform = `translate3d(0, ${yPos}px, 0)`;
-        });
-      });
-    }, { passive: true });
   }
 });

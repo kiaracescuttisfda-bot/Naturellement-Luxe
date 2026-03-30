@@ -25,7 +25,7 @@
 .hero-medium .overlay-dark {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(22, 22, 22, 0.55);
 }
 
 .hero-medium .hero-content {
@@ -35,7 +35,7 @@
 
 .hero-medium h1 {
   font-size: clamp(2rem, 5vw, 3.5rem);
-  color: var(--color-white);
+  color: var(--color-blanc-craie);
   margin-bottom: var(--space-sm);
 }
 
@@ -46,21 +46,21 @@
   justify-content: center;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: var(--color-grey-text);
+  color: var(--color-beige-pierre);
 }
 
 .breadcrumb a {
-  color: var(--color-gold);
+  color: var(--color-chene-clair);
   text-decoration: none;
   transition: var(--transition);
 }
 
 .breadcrumb a:hover {
-  color: var(--color-gold-light);
+  color: var(--color-onyx-miel);
 }
 
 .breadcrumb span {
-  color: var(--color-grey-text);
+  color: var(--color-beige-pierre);
 }
 
 /* ---------- SECTION TARIFS ---------- */
@@ -79,7 +79,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
-  border-bottom: 1px solid var(--color-gold);
+  border-bottom: 1px solid var(--color-chene-clair);
   padding-bottom: 0;
   margin-bottom: var(--space-lg);
 }
@@ -88,7 +88,7 @@
   background: transparent;
   border: none;
   border-bottom: 2px solid transparent;
-  color: var(--color-gold);
+  color: var(--color-chene-clair);
   font-family: inherit;
   font-size: 0.85rem;
   font-weight: 500;
@@ -102,12 +102,12 @@
 }
 
 .tab-btn:hover {
-  color: var(--color-gold-light);
+  color: var(--color-onyx-miel);
 }
 
 .tab-btn.active {
-  color: var(--color-white);
-  border-bottom: 2px solid var(--color-gold);
+  color: var(--color-blanc-craie);
+  border-bottom: 2px solid var(--color-chene-clair);
 }
 
 /* Tab Panels */
@@ -131,13 +131,13 @@
 
 .tarif-category h3 {
   font-size: 1.3rem;
-  color: var(--color-gold);
+  color: var(--color-chene-clair);
   font-weight: 400;
   letter-spacing: 0.04em;
 }
 
 .tarif-note {
-  color: var(--color-grey-text);
+  color: var(--color-beige-pierre);
   font-size: 0.9rem;
   margin-top: var(--space-xs);
 }
@@ -152,20 +152,20 @@
   grid-template-columns: 2fr 1fr 1fr 1fr;
   align-items: center;
   padding: var(--space-sm) var(--space-sm);
-  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+  border-bottom: 1px solid rgba(199, 167, 124, 0.12);
   transition: var(--transition);
 }
 
 .tarif-row:hover:not(.tarif-row-header) {
-  background: rgba(201, 168, 76, 0.08);
+  background: rgba(199, 167, 124, 0.08);
 }
 
 .tarif-row-header {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-grey-text);
-  border-bottom: 1px solid rgba(201, 168, 76, 0.25);
+  color: var(--color-beige-pierre);
+  border-bottom: 1px solid rgba(199, 167, 124, 0.25);
   padding-bottom: var(--space-xs);
   margin-bottom: 0;
 }
@@ -176,19 +176,19 @@
 
 .col-name {
   font-size: 0.95rem;
-  color: var(--color-white);
+  color: var(--color-blanc-craie);
 }
 
 .col-duration {
   font-size: 0.9rem;
-  color: var(--color-grey-text);
+  color: var(--color-beige-pierre);
 }
 
 .col-price.price,
 .tarif-row .price {
   font-family: var(--font-serif, 'Playfair Display', serif);
   font-size: 1.25rem;
-  color: var(--color-gold);
+  color: var(--color-chene-clair);
   font-weight: 600;
 }
 
@@ -196,7 +196,7 @@
   font-family: inherit;
   font-size: 0.8rem;
   font-weight: 400;
-  color: var(--color-grey-text);
+  color: var(--color-beige-pierre);
 }
 
 .col-action {
@@ -212,7 +212,7 @@
 .tarif-includes {
   display: block;
   font-size: 0.8rem;
-  color: var(--color-grey-text);
+  color: var(--color-beige-pierre);
   margin-top: 0.2em;
   font-style: italic;
 }
@@ -232,8 +232,8 @@
 }
 
 .package-card {
-  background: var(--color-black-card);
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: var(--color-noir-chaud);
+  border: 1px solid rgba(199, 167, 124, 0.2);
   border-radius: var(--radius-md);
   padding: var(--space-lg) var(--space-md);
   text-align: center;
@@ -244,7 +244,7 @@
 }
 
 .package-card:hover {
-  border-color: var(--color-gold);
+  border-color: var(--color-chene-clair);
   transform: translateY(-4px);
 }
 
@@ -252,20 +252,20 @@
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--color-gold);
+  color: var(--color-chene-clair);
   margin-bottom: var(--space-sm);
 }
 
 .package-card h3 {
   font-size: 1.4rem;
-  color: var(--color-white);
+  color: var(--color-blanc-craie);
   margin-bottom: var(--space-xs);
 }
 
 .package-card .divider-gold {
   width: 40px;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-chene-clair);
   margin: var(--space-sm) auto;
 }
 
@@ -277,7 +277,7 @@
 }
 
 .package-card ul li {
-  color: var(--color-grey-text);
+  color: var(--color-beige-pierre);
   font-size: 0.9rem;
   padding: 0.3em 0;
 }
@@ -285,7 +285,7 @@
 .package-price {
   font-family: var(--font-serif, 'Playfair Display', serif);
   font-size: 2rem;
-  color: var(--color-gold);
+  color: var(--color-chene-clair);
   font-weight: 600;
   margin-bottom: var(--space-md);
 }
@@ -293,47 +293,47 @@
 .package-price .price-unit {
   font-size: 0.9rem;
   font-weight: 400;
-  color: var(--color-grey-text);
+  color: var(--color-beige-pierre);
 }
 
 /* Featured package card */
 .package-card.featured {
-  background: var(--color-gold);
-  border-color: var(--color-gold);
+  background: var(--color-chene-clair);
+  border-color: var(--color-chene-clair);
 }
 
 .package-card.featured .package-tag {
-  color: var(--color-black);
+  color: var(--color-noir-chaud);
 }
 
 .package-card.featured h3 {
-  color: var(--color-black);
+  color: var(--color-noir-chaud);
 }
 
 .package-card.featured .divider-gold {
-  background: var(--color-black);
+  background: var(--color-noir-chaud);
 }
 
 .package-card.featured ul li {
-  color: var(--color-black-soft);
+  color: var(--color-noir-chaud);
 }
 
 .package-card.featured .package-price {
-  color: var(--color-black);
+  color: var(--color-noir-chaud);
 }
 
 .package-card.featured .package-price .price-unit {
-  color: var(--color-black-soft);
+  color: var(--color-noir-chaud);
 }
 
 .package-card.featured .btn-primary {
-  background: var(--color-black);
-  color: var(--color-gold);
-  border-color: var(--color-black);
+  background: var(--color-noir-chaud);
+  color: var(--color-chene-clair);
+  border-color: var(--color-noir-chaud);
 }
 
 .package-card.featured .btn-primary:hover {
-  background: var(--color-black-soft);
+  background: var(--color-noir-chaud);
 }
 
 .package-card.featured:hover {
@@ -348,32 +348,32 @@
 }
 
 .conditions-content {
-  background: var(--color-black-card);
-  border: 1px solid rgba(201, 168, 76, 0.15);
+  background: var(--color-noir-chaud);
+  border: 1px solid rgba(199, 167, 124, 0.15);
   border-radius: var(--radius-md);
   padding: var(--space-lg);
 }
 
 .conditions-content h3 {
   font-size: 1.2rem;
-  color: var(--color-gold);
+  color: var(--color-chene-clair);
 }
 
 .conditions-content p {
-  color: var(--color-grey-text);
+  color: var(--color-beige-pierre);
   font-size: 0.9rem;
   line-height: 1.7;
 }
 
 .conditions-content a {
-  color: var(--color-gold);
+  color: var(--color-chene-clair);
   text-decoration: underline;
-  text-decoration-color: rgba(201, 168, 76, 0.4);
+  text-decoration-color: rgba(199, 167, 124, 0.4);
   transition: var(--transition);
 }
 
 .conditions-content a:hover {
-  text-decoration-color: var(--color-gold);
+  text-decoration-color: var(--color-chene-clair);
 }
 
 /* ---------- RESPONSIVE ---------- */
