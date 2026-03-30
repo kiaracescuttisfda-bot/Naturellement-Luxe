@@ -1,0 +1,787 @@
+/* ============================================
+   NATURELLEMENT LUXE — Prestations Pages
+   Styles for: prestations.html, prestation-spa.html,
+   prestation-massage.html, prestation-cours.html,
+   prestation-events.html, prestation-loveroom.html
+   ============================================ */
+
+/* ============================================
+   1. PRESTATIONS GRID PAGE (prestations.html)
+   ============================================ */
+
+.prestations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.prestation-card {
+  background: var(--color-black-card);
+  border: var(--border-gold);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: var(--transition);
+  position: relative;
+}
+
+.prestation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-gold), var(--shadow-card);
+  border-color: rgba(201, 168, 76, 0.5);
+}
+
+.prestation-card .card-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.prestation-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.prestation-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.prestation-card .card-body {
+  padding: var(--space-md);
+}
+
+.prestation-card .card-body h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.prestation-card .card-body p {
+  font-size: var(--text-sm);
+  color: var(--color-grey-text);
+  margin-bottom: var(--space-sm);
+}
+
+.prestation-card .badge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: var(--color-gold);
+  color: var(--color-black);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  z-index: 2;
+}
+
+/* ============================================
+   2. SPA DETAIL PAGE (prestation-spa.html)
+   ============================================ */
+
+.spa-description {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+}
+
+.spa-description p {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--color-grey-text);
+  line-height: 1.9;
+}
+
+.includes-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.includes-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-grey-text);
+  line-height: 1.7;
+  padding: var(--space-xs) 0;
+}
+
+.includes-list li::before {
+  content: '\2666';
+  color: var(--color-gold);
+  font-size: var(--text-sm);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.spa-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.spa-gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  aspect-ratio: 4/3;
+}
+
+.spa-gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.spa-gallery .gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.durations-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.durations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.duration-card {
+  background: var(--color-black-card);
+  border: var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.duration-card:hover {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.duration-card h4 {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: var(--color-white);
+  margin-bottom: var(--space-xs);
+}
+
+.duration-card .duration-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.duration-card .duration-price {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  color: var(--color-gold);
+  font-weight: 300;
+  margin-bottom: var(--space-sm);
+}
+
+.duration-card p {
+  font-size: var(--text-sm);
+  color: var(--color-grey-text);
+}
+
+/* ============================================
+   3. MASSAGE PAGE (prestation-massage.html)
+   ============================================ */
+
+.massage-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.massage-card {
+  background: var(--color-black-card);
+  border: var(--border-gold);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.massage-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-gold), var(--shadow-card);
+  border-color: rgba(201, 168, 76, 0.5);
+}
+
+.massage-card .card-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+}
+
+.massage-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.massage-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.massage-card .card-body {
+  padding: var(--space-md);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.massage-card .card-body h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.massage-card .card-body p {
+  font-size: var(--text-sm);
+  color: var(--color-grey-text);
+  margin-bottom: var(--space-sm);
+  flex: 1;
+}
+
+.massage-card .price {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  color: var(--color-gold);
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: var(--space-xs);
+}
+
+.massage-card .duration-tag {
+  display: inline-block;
+  padding: 4px 14px;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-gold);
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: var(--radius-sm);
+}
+
+.session-steps {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  position: relative;
+}
+
+.session-steps::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 28px;
+  width: 2px;
+  height: 100%;
+  background: rgba(201, 168, 76, 0.2);
+}
+
+.session-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding-bottom: var(--space-md);
+  position: relative;
+}
+
+.session-step:last-child {
+  padding-bottom: 0;
+}
+
+.session-step .step-number {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--color-gold);
+  background: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--color-gold);
+  position: relative;
+  z-index: 1;
+}
+
+.session-step .step-content h4 {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--color-white);
+  margin-bottom: var(--space-xs);
+}
+
+.session-step .step-content p {
+  font-size: var(--text-sm);
+  color: var(--color-grey-text);
+  line-height: 1.8;
+}
+
+/* ============================================
+   4. COURS PAGE (prestation-cours.html)
+   ============================================ */
+
+.cours-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.cours-grid .card {
+  background: var(--color-black-card);
+  border: var(--border-gold);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.sessions-upcoming {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.sessions-upcoming li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+  transition: var(--transition);
+}
+
+.sessions-upcoming li:last-child {
+  border-bottom: none;
+}
+
+.sessions-upcoming li:hover {
+  padding-left: var(--space-xs);
+}
+
+.sessions-upcoming .session-date {
+  flex-shrink: 0;
+  min-width: 80px;
+  text-align: center;
+  padding: var(--space-xs) var(--space-sm);
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: var(--radius-sm);
+}
+
+.sessions-upcoming .session-date .day {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.sessions-upcoming .session-date .month {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-grey-text);
+  margin-top: 2px;
+}
+
+.sessions-upcoming .session-info h4 {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--color-white);
+  margin-bottom: 2px;
+}
+
+.sessions-upcoming .session-info p {
+  font-size: var(--text-sm);
+  color: var(--color-grey-text);
+  margin-bottom: 0;
+}
+
+.sessions-upcoming .session-info .session-time {
+  font-size: var(--text-xs);
+  color: var(--color-gold);
+  letter-spacing: 1px;
+}
+
+/* ============================================
+   5. EVENTS PAGE (prestation-events.html)
+   ============================================ */
+
+.event-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto var(--space-lg);
+  padding: 0 var(--space-md);
+  align-items: center;
+}
+
+.event-section .event-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  aspect-ratio: 4/3;
+}
+
+.event-section .event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.event-section:hover .event-image img {
+  transform: scale(1.04);
+}
+
+.event-section .event-text h3 {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  color: var(--color-white);
+  margin-bottom: var(--space-sm);
+}
+
+.event-section .event-text p {
+  font-size: var(--text-base);
+  color: var(--color-grey-text);
+  line-height: 1.9;
+  margin-bottom: var(--space-sm);
+}
+
+.event-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+  background: var(--color-black-card);
+  border: var(--border-gold);
+  border-radius: var(--radius-md);
+}
+
+.event-form h3 {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.event-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.event-form .btn-primary {
+  width: 100%;
+  text-align: center;
+  margin-top: var(--space-sm);
+}
+
+/* ============================================
+   6. LOVE ROOM PAGE (prestation-loveroom.html)
+   ============================================ */
+
+.loveroom-description {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+}
+
+.loveroom-description p {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: var(--color-grey-text);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.loveroom-price {
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  position: relative;
+}
+
+.loveroom-price::before,
+.loveroom-price::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: var(--color-gold);
+  margin: 0 auto var(--space-md);
+}
+
+.loveroom-price::after {
+  margin: var(--space-md) auto 0;
+}
+
+.loveroom-price .price-amount {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: var(--color-gold);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.loveroom-price .price-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-grey-text);
+  margin-top: var(--space-xs);
+}
+
+.loveroom-includes {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.loveroom-includes li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-grey-text);
+  padding: var(--space-xs) 0;
+  line-height: 1.7;
+}
+
+.loveroom-includes li::before {
+  content: '\2713';
+  color: var(--color-gold);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.loveroom-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.loveroom-gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  aspect-ratio: 4/3;
+  cursor: pointer;
+}
+
+.loveroom-gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.loveroom-gallery .gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.loveroom-gallery .gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(201, 168, 76, 0);
+  transition: var(--transition);
+}
+
+.loveroom-gallery .gallery-item:hover::after {
+  background: rgba(201, 168, 76, 0.2);
+}
+
+/* ============================================
+   RESPONSIVE — Tablet (768px)
+   ============================================ */
+
+@media (min-width: 768px) {
+  /* Prestations grid */
+  .prestations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Spa */
+  .includes-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .spa-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .durations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Massage */
+  .massage-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Cours */
+  .cours-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Events */
+  .event-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .event-section:nth-child(even) {
+    direction: rtl;
+  }
+
+  .event-section:nth-child(even) > * {
+    direction: ltr;
+  }
+
+  .event-form .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Love Room */
+  .loveroom-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   RESPONSIVE — Desktop (1024px)
+   ============================================ */
+
+@media (min-width: 1024px) {
+  /* Prestations grid */
+  .prestations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Spa */
+  .spa-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .durations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Events — use proper grid reversal instead of direction */
+  .event-section:nth-child(even) {
+    direction: ltr;
+  }
+
+  .event-section:nth-child(even) > * {
+    direction: ltr;
+  }
+
+  .event-section:nth-child(even) .event-image {
+    order: 2;
+  }
+
+  .event-section:nth-child(even) .event-text {
+    order: 1;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — Small Mobile (480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+  .spa-description p {
+    font-size: var(--text-lg);
+  }
+
+  .loveroom-description p {
+    font-size: var(--text-xl);
+  }
+
+  .massage-card .price {
+    font-size: var(--text-2xl);
+  }
+
+  .session-step {
+    gap: var(--space-sm);
+  }
+
+  .session-step .step-number {
+    width: 44px;
+    height: 44px;
+    font-size: var(--text-base);
+  }
+
+  .session-steps::before {
+    left: 22px;
+  }
+
+  .event-section .event-text h3 {
+    font-size: var(--text-2xl);
+  }
+
+  .loveroom-price .price-amount {
+    font-size: var(--text-4xl);
+  }
+
+  .duration-card .duration-price {
+    font-size: var(--text-2xl);
+  }
+
+  .sessions-upcoming li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+}

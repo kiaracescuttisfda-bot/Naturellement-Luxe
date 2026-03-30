@@ -1,0 +1,624 @@
+/* ========================================
+   RESERVER PAGE
+   ======================================== */
+
+/* ===== Hero Medium ===== */
+.hero-medium {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.hero-medium .overlay-dark {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-medium-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.hero-medium-content h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.breadcrumb a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-gold);
+}
+
+.breadcrumb-sep {
+  margin: 0 0.5rem;
+  color: var(--color-gold);
+}
+
+.breadcrumb-current {
+  color: var(--color-gold);
+}
+
+/* ===== Reservation Section ===== */
+.section-reservation {
+  padding: var(--space-xl) var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Stepper ===== */
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg) 0;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  position: relative;
+  cursor: default;
+}
+
+.step-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  border: 2px solid var(--color-text-muted);
+  color: var(--color-text-muted);
+  background: transparent;
+  transition: all 0.4s ease;
+}
+
+.step-label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  max-width: 120px;
+  transition: color 0.4s ease;
+}
+
+/* Step states */
+.step.active .step-circle {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.step.active .step-label {
+  color: var(--color-gold);
+}
+
+.step.current .step-circle {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-bg);
+  box-shadow: 0 0 20px rgba(var(--color-gold-rgb, 183, 151, 90), 0.4);
+}
+
+/* Step connector */
+.step-connector {
+  flex: 0 0 80px;
+  height: 2px;
+  background: var(--color-text-muted);
+  margin: 0 var(--space-sm);
+  margin-bottom: var(--space-md);
+  transition: background 0.4s ease;
+  position: relative;
+}
+
+.step.active + .step-connector {
+  background: var(--color-gold);
+}
+
+/* Connector after active step gets gold */
+.step.active ~ .step-connector {
+  background: var(--color-text-muted);
+}
+
+/* Fix: only the connector right after an active step should be gold if the next step is also active */
+
+/* ===== Step Content ===== */
+.step-content {
+  display: none;
+}
+
+.step-content.active {
+  display: block;
+  animation: fadeInUp 0.4s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-content h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--color-gold);
+  margin-bottom: var(--space-lg);
+}
+
+/* ===== Reservation Layout ===== */
+.reservation-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+/* ===== Prestation Selection Grid ===== */
+.prestation-select-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.prestation-select-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md, 8px);
+  padding: var(--space-lg);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.prestation-select-card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+.prestation-select-card.selected {
+  border-color: var(--color-gold);
+  border-width: 2px;
+  box-shadow: 0 0 24px rgba(183, 151, 90, 0.2);
+}
+
+.prestation-card-icon {
+  font-size: 1.6rem;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.prestation-select-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.prestation-price {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.prestation-price strong {
+  color: var(--color-gold);
+  font-size: 1.1rem;
+}
+
+/* ===== Step Actions ===== */
+.step-actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: flex-end;
+  margin-top: var(--space-lg);
+}
+
+.step-actions .btn-continue:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ===== Calendar Placeholder ===== */
+.calendar-placeholder {
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md, 8px);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.calendar-month {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--color-gold);
+}
+
+.calendar-nav {
+  background: none;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.calendar-nav:hover {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: var(--space-sm);
+}
+
+.calendar-weekdays span {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-xs) 0;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-days .day,
+.calendar-days .day-empty {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.calendar-days .day-empty {
+  background: transparent;
+}
+
+.calendar-days .day {
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.calendar-days .day:hover {
+  background: rgba(183, 151, 90, 0.15);
+  color: var(--color-gold);
+}
+
+.calendar-days .day.today {
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+}
+
+.calendar-days .day.selected {
+  background: var(--color-gold);
+  color: var(--color-bg);
+  font-weight: 700;
+}
+
+/* ===== Time Slots ===== */
+.time-slots-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.time-slot {
+  background: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 64px;
+  text-align: center;
+}
+
+.time-slot:hover {
+  background: rgba(183, 151, 90, 0.15);
+}
+
+.time-slot.selected {
+  background: var(--color-gold);
+  color: var(--color-bg);
+  font-weight: 700;
+}
+
+/* ===== Reservation Form ===== */
+.reservation-form {
+  max-width: 100%;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.form-group .required {
+  color: var(--color-gold);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md, 8px);
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 2px rgba(183, 151, 90, 0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23b7975a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-md) center;
+  padding-right: var(--space-xl);
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: auto;
+  margin-top: 3px;
+  accent-color: var(--color-gold);
+}
+
+.form-checkbox label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.form-checkbox a {
+  color: var(--color-gold);
+  text-decoration: underline;
+}
+
+/* ===== Sidebar ===== */
+.reservation-sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+.sidebar-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-md, 8px);
+  padding: var(--space-lg);
+}
+
+.sidebar-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.sidebar-card .divider-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin: var(--space-md) 0;
+}
+
+.sidebar-summary {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-summary li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-xs) 0;
+}
+
+.summary-label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.summary-value {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.sidebar-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-sm);
+}
+
+.total-label {
+  font-size: 1rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.total-price {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--color-gold);
+  font-weight: 700;
+}
+
+.conditions-note {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: var(--space-md);
+  text-align: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .reservation-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .reservation-sidebar {
+    position: static;
+    order: -1;
+    margin-bottom: var(--space-lg);
+  }
+
+  .prestation-select-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .stepper {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .step-connector {
+    flex: 0 0 40px;
+    margin: 0 var(--space-xs);
+    margin-bottom: var(--space-md);
+  }
+
+  .step-circle {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  .step-label {
+    font-size: 0.75rem;
+    max-width: 90px;
+  }
+
+  .prestation-select-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  .prestation-select-card {
+    padding: var(--space-md);
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .step-actions {
+    flex-direction: column;
+  }
+
+  .step-actions .btn-outline,
+  .step-actions .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .prestation-select-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step-connector {
+    flex: 0 0 24px;
+  }
+}

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Réservez votre séance au Spa Privatif Naturellement Luxe — Jacuzzi, massages, balnéothérapie en toute intimité au cœur de Paris.">
+  <title>Réserver — Naturellement Luxe | Spa Privatif Paris</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages/reserver.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="logo"><a href="index.html">Naturellement Luxe</a></div>
+
+      <nav class="nav-main" role="navigation" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="prestations.html">Prestations</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="carte-cadeau.html">Carte Cadeau</a>
+        <a href="contact.html">Contact</a>
+        <a href="reserver.html" class="btn-primary active">Réserver</a>
+      </nav>
+
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="nav-mobile-overlay" role="navigation" aria-label="Navigation mobile">
+      <a href="index.html">Accueil</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="prestation-spa.html">Spa Privatif</a>
+      <a href="prestation-massage.html">Massages</a>
+      <a href="prestation-cours.html">Cours & Ateliers</a>
+      <a href="prestation-events.html">Événements</a>
+      <a href="prestation-loveroom.html">Love Room</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="carte-cadeau.html">Carte Cadeau</a>
+      <a href="contact.html">Contact</a>
+      <a href="reserver.html" class="active">Réserver</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO MEDIUM ========== -->
+    <section class="hero-medium" aria-label="Réserver" style="background-image: url('https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=1920&q=80');">
+      <div class="overlay-dark"></div>
+      <div class="hero-medium-content">
+        <h1>Réserver</h1>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html">Accueil</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Réserver</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== RESERVATION SECTION ========== -->
+    <section class="section-reservation" aria-label="Formulaire de réservation">
+
+      <!-- Stepper -->
+      <div class="stepper">
+        <div class="step active current" data-step="1">
+          <div class="step-circle">&#10022;</div>
+          <div class="step-label">Choisir une prestation</div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step" data-step="2">
+          <div class="step-circle">&#128197;</div>
+          <div class="step-label">Date & Heure</div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step" data-step="3">
+          <div class="step-circle">&#10004;</div>
+          <div class="step-label">Confirmation</div>
+        </div>
+      </div>
+
+      <!-- Reservation Layout -->
+      <div class="reservation-layout">
+
+        <!-- Main Content -->
+        <div class="reservation-main">
+
+          <!-- STEP 1: Choisir une prestation -->
+          <div class="step-content active" data-step="1">
+            <h2>Choisissez votre prestation</h2>
+            <div class="prestation-select-grid">
+
+              <div class="prestation-select-card" data-prestation="Spa Privatif Solo" data-price="99">
+                <div class="prestation-card-icon">&#10022;</div>
+                <h3>Spa Privatif Solo</h3>
+                <p class="prestation-price">à partir de <strong>99&euro;</strong></p>
+              </div>
+
+              <div class="prestation-select-card" data-prestation="Spa Privatif Duo" data-price="119">
+                <div class="prestation-card-icon">&#10022;</div>
+                <h3>Spa Privatif Duo</h3>
+                <p class="prestation-price">à partir de <strong>119&euro;</strong></p>
+              </div>
+
+              <div class="prestation-select-card" data-prestation="Spa Privatif Duo Weekend" data-price="149">
+                <div class="prestation-card-icon">&#10022;</div>
+                <h3>Spa Privatif Duo Weekend</h3>
+                <p class="prestation-price">à partir de <strong>149&euro;</strong></p>
+              </div>
+
+              <div class="prestation-select-card" data-prestation="Massage Californien" data-price="60">
+                <div class="prestation-card-icon">&#10022;</div>
+                <h3>Massage Californien</h3>
+                <p class="prestation-price">à partir de <strong>60&euro;</strong></p>
+              </div>
+
+              <div class="prestation-select-card" data-prestation="Massage Réflexologie" data-price="60">
+                <div class="prestation-card-icon">&#10022;</div>
+                <h3>Massage Réflexologie</h3>
+                <p class="prestation-price"><strong>60&euro;</strong></p>
+              </div>
+
+              <div class="prestation-select-card" data-prestation="Cours Initiation Duo" data-price="250">
+                <div class="prestation-card-icon">&#10022;</div>
+                <h3>Cours Initiation Duo</h3>
+                <p class="prestation-price"><strong>250&euro;</strong></p>
+              </div>
+
+              <div class="prestation-select-card" data-prestation="EVJF/Groupe" data-price="70">
+                <div class="prestation-card-icon">&#10022;</div>
+                <h3>EVJF / Groupe</h3>
+                <p class="prestation-price"><strong>70&euro;</strong>/pers</p>
+              </div>
+
+              <div class="prestation-select-card" data-prestation="Bain de Minuit" data-price="399">
+                <div class="prestation-card-icon">&#10022;</div>
+                <h3>Bain de Minuit</h3>
+                <p class="prestation-price"><strong>399&euro;</strong></p>
+              </div>
+
+            </div>
+            <div class="step-actions">
+              <button class="btn-primary btn-continue" data-step-target="2" disabled>Continuer</button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Date & Heure -->
+          <div class="step-content" data-step="2">
+            <h2>Choisissez la date et l'heure</h2>
+
+            <div class="calendar-placeholder">
+              <div class="calendar-header">
+                <button class="calendar-nav" aria-label="Mois précédent">&lsaquo;</button>
+                <span class="calendar-month">Mars 2026</span>
+                <button class="calendar-nav" aria-label="Mois suivant">&rsaquo;</button>
+              </div>
+              <div class="calendar-weekdays">
+                <span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span>
+              </div>
+              <div class="calendar-days">
+                <!-- Empty cells for offset (March 2026 starts on Sunday) -->
+                <span class="day-empty"></span>
+                <span class="day-empty"></span>
+                <span class="day-empty"></span>
+                <span class="day-empty"></span>
+                <span class="day-empty"></span>
+                <span class="day-empty"></span>
+                <span class="day">1</span>
+                <span class="day">2</span>
+                <span class="day">3</span>
+                <span class="day">4</span>
+                <span class="day">5</span>
+                <span class="day">6</span>
+                <span class="day">7</span>
+                <span class="day">8</span>
+                <span class="day">9</span>
+                <span class="day">10</span>
+                <span class="day">11</span>
+                <span class="day">12</span>
+                <span class="day">13</span>
+                <span class="day">14</span>
+                <span class="day">15</span>
+                <span class="day">16</span>
+                <span class="day">17</span>
+                <span class="day">18</span>
+                <span class="day">19</span>
+                <span class="day">20</span>
+                <span class="day">21</span>
+                <span class="day">22</span>
+                <span class="day">23</span>
+                <span class="day">24</span>
+                <span class="day">25</span>
+                <span class="day">26</span>
+                <span class="day">27</span>
+                <span class="day">28</span>
+                <span class="day">29</span>
+                <span class="day today">30</span>
+                <span class="day">31</span>
+              </div>
+            </div>
+
+            <h3 class="time-slots-title">Créneaux disponibles</h3>
+            <div class="time-slots">
+              <button class="time-slot">10h</button>
+              <button class="time-slot">11h</button>
+              <button class="time-slot">12h</button>
+              <button class="time-slot">14h</button>
+              <button class="time-slot">15h</button>
+              <button class="time-slot">16h</button>
+              <button class="time-slot">17h</button>
+              <button class="time-slot">18h</button>
+              <button class="time-slot">19h</button>
+            </div>
+
+            <div class="step-actions">
+              <button class="btn-outline btn-back" data-step-target="1">Retour</button>
+              <button class="btn-primary btn-continue" data-step-target="3" disabled>Continuer</button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Confirmation -->
+          <div class="step-content" data-step="3">
+            <h2>Vos informations</h2>
+
+            <form class="reservation-form" id="reservationForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nom">Nom <span class="required">*</span></label>
+                  <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                  <label for="prenom">Prénom <span class="required">*</span></label>
+                  <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                </div>
+                <div class="form-group">
+                  <label for="telephone">Téléphone <span class="required">*</span></label>
+                  <input type="tel" id="telephone" name="telephone" required placeholder="06 12 34 56 78">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="personnes">Nombre de personnes</label>
+                <select id="personnes" name="personnes">
+                  <option value="1">1 personne</option>
+                  <option value="2" selected>2 personnes</option>
+                  <option value="3">3 personnes</option>
+                  <option value="4">4 personnes</option>
+                  <option value="5">5 personnes</option>
+                  <option value="6">6 personnes</option>
+                  <option value="7">7 personnes</option>
+                  <option value="8">8 personnes</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message / Demandes spéciales</label>
+                <textarea id="message" name="message" rows="4" placeholder="Anniversaire, occasion spéciale, demandes particulières..."></textarea>
+              </div>
+
+              <div class="form-group form-checkbox">
+                <input type="checkbox" id="conditions" name="conditions" required>
+                <label for="conditions">J'accepte les <a href="#">conditions générales de vente</a> et la <a href="#">politique d'annulation</a>. <span class="required">*</span></label>
+              </div>
+
+              <div class="step-actions">
+                <button type="button" class="btn-outline btn-back" data-step-target="2">Retour</button>
+                <button type="submit" class="btn-primary">Confirmer la réservation</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="reservation-sidebar">
+          <div class="sidebar-card">
+            <h3>Récapitulatif</h3>
+            <div class="divider-gold"></div>
+            <ul class="sidebar-summary">
+              <li>
+                <span class="summary-label">Prestation</span>
+                <span class="summary-value" id="summary-prestation">--</span>
+              </li>
+              <li>
+                <span class="summary-label">Date</span>
+                <span class="summary-value" id="summary-date">--</span>
+              </li>
+              <li>
+                <span class="summary-label">Heure</span>
+                <span class="summary-value" id="summary-heure">--</span>
+              </li>
+              <li>
+                <span class="summary-label">Personnes</span>
+                <span class="summary-value" id="summary-personnes">2</span>
+              </li>
+            </ul>
+            <div class="divider-gold"></div>
+            <div class="sidebar-total">
+              <span class="total-label">Total estimé</span>
+              <span class="total-price" id="summary-prix">--</span>
+            </div>
+          </div>
+          <p class="conditions-note">Annulable ou modifiable jusqu'à 48h avant selon nos CGV.</p>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-logo">Naturellement Luxe</div>
+        <p class="footer-baseline">Votre Spa en Privé — Depuis 2014</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="TripAdvisor">TA</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a><br>
+        <a href="prestations.html">Prestations</a><br>
+        <a href="tarifs.html">Tarifs</a><br>
+        <a href="carte-cadeau.html">Carte Cadeau</a><br>
+        <a href="contact.html">Contact</a><br>
+        <a href="reserver.html">Réserver</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>15 rue du Croissant<br>75002 Paris</p>
+        <p>01 42 36 06 07</p>
+        <p>contact@naturellementluxe.com</p>
+        <p style="margin-top: var(--space-xs);">
+          <small>Métro : Sentier (L3)<br>Bonne Nouvelle (L8, L9)</small>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2014 — 2026 Naturellement Luxe. Tous droits réservés.</span>
+      <span>
+        <a href="#">CGV</a>
+        <a href="#">Mentions légales</a>
+        <a href="#">Charte & Règlement</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    // ===== Reservation Page Logic =====
+    document.addEventListener('DOMContentLoaded', function() {
+      const steps = document.querySelectorAll('.stepper .step');
+      const stepContents = document.querySelectorAll('.step-content');
+      const prestationCards = document.querySelectorAll('.prestation-select-card');
+      const timeSlots = document.querySelectorAll('.time-slot');
+      const calendarDays = document.querySelectorAll('.calendar-days .day');
+
+      let selectedPrestation = null;
+      let selectedDate = null;
+      let selectedTime = null;
+
+      // Navigate to step
+      function goToStep(stepNum) {
+        steps.forEach(s => {
+          const sNum = parseInt(s.dataset.step);
+          s.classList.remove('active', 'current');
+          if (sNum < stepNum) s.classList.add('active');
+          if (sNum === stepNum) { s.classList.add('active', 'current'); }
+        });
+        stepContents.forEach(sc => {
+          sc.classList.toggle('active', parseInt(sc.dataset.step) === stepNum);
+        });
+      }
+
+      // Prestation selection
+      prestationCards.forEach(card => {
+        card.addEventListener('click', function() {
+          prestationCards.forEach(c => c.classList.remove('selected'));
+          this.classList.add('selected');
+          selectedPrestation = this.dataset.prestation;
+          const price = this.dataset.price;
+          document.getElementById('summary-prestation').textContent = selectedPrestation;
+          document.getElementById('summary-prix').textContent = price + '\u20AC';
+          document.querySelector('.step-content[data-step="1"] .btn-continue').disabled = false;
+        });
+      });
+
+      // Calendar day selection
+      calendarDays.forEach(day => {
+        if (!day.classList.contains('day-empty')) {
+          day.addEventListener('click', function() {
+            calendarDays.forEach(d => d.classList.remove('selected'));
+            this.classList.add('selected');
+            selectedDate = this.textContent + ' Mars 2026';
+            document.getElementById('summary-date').textContent = selectedDate;
+            checkStep2Continue();
+          });
+        }
+      });
+
+      // Time slot selection
+      timeSlots.forEach(slot => {
+        slot.addEventListener('click', function() {
+          timeSlots.forEach(s => s.classList.remove('selected'));
+          this.classList.add('selected');
+          selectedTime = this.textContent;
+          document.getElementById('summary-heure').textContent = selectedTime;
+          checkStep2Continue();
+        });
+      });
+
+      function checkStep2Continue() {
+        const btn = document.querySelector('.step-content[data-step="2"] .btn-continue');
+        btn.disabled = !(selectedDate && selectedTime);
+      }
+
+      // Continue / Back buttons
+      document.querySelectorAll('[data-step-target]').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          if (this.type === 'submit') return;
+          e.preventDefault();
+          const target = parseInt(this.dataset.stepTarget);
+          goToStep(target);
+          window.scrollTo({ top: document.querySelector('.stepper').offsetTop - 100, behavior: 'smooth' });
+        });
+      });
+
+      // Personnes select
+      const personnesSelect = document.getElementById('personnes');
+      if (personnesSelect) {
+        personnesSelect.addEventListener('change', function() {
+          document.getElementById('summary-personnes').textContent = this.value;
+        });
+      }
+
+      // Form submit
+      const form = document.getElementById('reservationForm');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          alert('Merci ! Votre demande de réservation a bien été envoyée. Nous vous contacterons sous 24h pour confirmer votre créneau.');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

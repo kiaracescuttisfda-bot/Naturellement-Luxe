@@ -1,0 +1,518 @@
+/* ============================================================
+   CARTE CADEAU — Page Styles
+   Naturellement Luxe — Spa Privatif Paris
+   ============================================================ */
+
+:root {
+  --color-black: #0A0A0A;
+  --color-black-card: #161616;
+  --color-gold: #C9A84C;
+  --color-gold-light: #E2C47A;
+  --color-white: #FAFAF8;
+  --color-grey-text: #9A9A9A;
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-sans: "Montserrat", "Helvetica Neue", sans-serif;
+  --font-script: "Great Vibes", cursive;
+  --border-gold: 1px solid var(--color-gold);
+  --shadow-gold: 0 4px 24px rgba(201, 168, 76, 0.15);
+  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius-md: 12px;
+}
+
+/* ========== GIFT INTRO SECTION ========== */
+
+.section-gift-intro {
+  padding: var(--space-xxl, 6rem) var(--space-lg, 2rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gift-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl, 3rem);
+  align-items: center;
+}
+
+.gift-hero-visual {
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.gift-hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  aspect-ratio: 4 / 3;
+}
+
+.gift-intro-text h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  color: var(--color-white);
+  line-height: 1.3;
+}
+
+.gift-intro-text p {
+  color: var(--color-grey-text);
+  line-height: 1.8;
+  margin-bottom: var(--space-sm, 1rem);
+}
+
+/* ========== FORMULAS SECTION ========== */
+
+.section-formulas {
+  padding: var(--space-xxl, 6rem) var(--space-lg, 2rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.formulas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg, 2rem);
+  margin-top: var(--space-xl, 3rem);
+}
+
+.formula-card {
+  background: var(--color-black-card);
+  border: var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl, 3rem) var(--space-lg, 2rem);
+  text-align: center;
+  position: relative;
+  transition: var(--transition);
+}
+
+.formula-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-gold);
+}
+
+.formula-icon {
+  font-size: 2rem;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm, 1rem);
+}
+
+.formula-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-bottom: var(--space-xs, 0.5rem);
+}
+
+.divider-gold-sm {
+  width: 40px;
+  height: 2px;
+  background: var(--color-gold);
+  margin: var(--space-sm, 1rem) auto;
+}
+
+.formula-desc {
+  color: var(--color-grey-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-md, 1.5rem);
+}
+
+.formula-price {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-gold);
+  font-weight: 700;
+  margin-bottom: var(--space-md, 1.5rem);
+}
+
+.formula-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-gold);
+  color: var(--color-black);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 6px 20px;
+  border-radius: 20px;
+}
+
+/* Featured card */
+.formula-card.featured {
+  background: var(--color-gold);
+  border-color: var(--color-gold-light);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-gold);
+}
+
+.formula-card.featured:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+.formula-card.featured h3,
+.formula-card.featured .formula-icon,
+.formula-card.featured .formula-price {
+  color: var(--color-black);
+}
+
+.formula-card.featured .formula-desc {
+  color: rgba(10, 10, 10, 0.7);
+}
+
+.formula-card.featured .divider-gold-sm {
+  background: var(--color-black);
+}
+
+/* ========== PROCESS STEPS SECTION ========== */
+
+.section-process {
+  padding: var(--space-xxl, 6rem) var(--space-lg, 2rem);
+  background: var(--color-black-card);
+}
+
+.process-steps {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl, 3rem);
+  max-width: 1100px;
+  margin: var(--space-xl, 3rem) auto 0;
+}
+
+.process-step {
+  flex: 1;
+  text-align: center;
+  max-width: 320px;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-md, 1.5rem);
+  border-radius: 50%;
+  border: 2px solid var(--color-gold);
+  font-size: 2rem;
+  color: var(--color-gold);
+  background: transparent;
+  transition: var(--transition);
+}
+
+.process-step:hover .step-number {
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+.process-step h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--color-white);
+  margin-bottom: var(--space-xs, 0.5rem);
+}
+
+.process-step p {
+  color: var(--color-grey-text);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ========== GIFT ORDER FORM ========== */
+
+.section-gift-form {
+  padding: var(--space-xxl, 6rem) var(--space-lg, 2rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gift-form {
+  max-width: 680px;
+  margin: var(--space-xl, 3rem) auto 0;
+  background: var(--color-black-card);
+  border: var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl, 3rem);
+}
+
+.form-group {
+  margin-bottom: var(--space-md, 1.5rem);
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-xs, 0.5rem);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--color-black);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: 8px;
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: var(--transition);
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-grey-text);
+  opacity: 0.6;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9A84C' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  cursor: pointer;
+}
+
+.form-group select option {
+  background: var(--color-black-card);
+  color: var(--color-white);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Radio Group */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm, 1rem);
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 12px 16px;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.radio-label:hover {
+  border-color: var(--color-gold);
+  background: rgba(201, 168, 76, 0.05);
+}
+
+.radio-label input[type="radio"] {
+  display: none;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--color-grey-text);
+  position: relative;
+  transition: var(--transition);
+}
+
+.radio-label input[type="radio"]:checked ~ .radio-custom {
+  border-color: var(--color-gold);
+}
+
+.radio-label input[type="radio"]:checked ~ .radio-custom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: var(--color-gold);
+  border-radius: 50%;
+}
+
+.radio-label input[type="radio"]:checked ~ .radio-text {
+  color: var(--color-white);
+}
+
+.radio-text {
+  font-size: 0.95rem;
+  color: var(--color-grey-text);
+  transition: var(--transition);
+}
+
+/* Submit button full width */
+.btn-full {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: var(--space-md, 1.5rem);
+  padding: 16px 32px;
+  font-size: 1rem;
+}
+
+/* ========== FAQ ACCORDION ========== */
+
+.section-faq {
+  padding: var(--space-xxl, 6rem) var(--space-lg, 2rem);
+  background: var(--color-black-card);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: var(--space-xl, 3rem) auto 0;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.accordion-item:first-child {
+  border-top: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md, 1.5rem) 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.accordion-header:hover {
+  color: var(--color-gold);
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  color: var(--color-gold);
+  transition: var(--transition);
+  flex-shrink: 0;
+  margin-left: var(--space-md, 1.5rem);
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 300px;
+  padding-bottom: var(--space-md, 1.5rem);
+}
+
+.accordion-content p {
+  color: var(--color-grey-text);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 1024px) {
+  .formulas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .formula-card.featured {
+    grid-column: 1 / -1;
+    max-width: 400px;
+    justify-self: center;
+  }
+
+  .process-steps {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .gift-intro-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg, 2rem);
+  }
+
+  .gift-hero-visual {
+    order: -1;
+  }
+
+  .formulas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .formula-card.featured {
+    transform: scale(1);
+    max-width: none;
+  }
+
+  .formula-card.featured:hover {
+    transform: translateY(-8px);
+  }
+
+  .process-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .process-step {
+    max-width: 100%;
+  }
+
+  .gift-form {
+    padding: var(--space-lg, 2rem) var(--space-md, 1.5rem);
+  }
+
+  .radio-group {
+    gap: var(--space-xs, 0.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .section-gift-intro,
+  .section-formulas,
+  .section-gift-form {
+    padding-left: var(--space-md, 1.5rem);
+    padding-right: var(--space-md, 1.5rem);
+  }
+
+  .gift-form {
+    padding: var(--space-md, 1.5rem);
+  }
+}

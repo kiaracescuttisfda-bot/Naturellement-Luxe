@@ -1,0 +1,257 @@
+{
+  "site": {
+    "name": "Naturellement Luxe",
+    "tagline": "Votre Spa en Privé",
+    "description": "Historiquement le premier Spa Privatif de Paris",
+    "since": "2014",
+    "philosophy": "Un luxe naturel — bien-être et simplicité se conjuguent"
+  },
+  "navigation": [
+    "Accueil",
+    "Concept",
+    "Prestations",
+    "Spa Privatif",
+    "Massages",
+    "Cours & Ateliers",
+    "Événements",
+    "Love Room",
+    "Tarifs",
+    "Carte Cadeau",
+    "Contact",
+    "Réserver"
+  ],
+  "contact": {
+    "address": "15 rue du Croissant, 75002 Paris",
+    "phone": "01 42 36 06 07",
+    "phone_international": "0033 (0)1 42 36 06 07",
+    "email": "contact@naturellementluxe.com",
+    "metro": "Sentier (L3), Bonne Nouvelle (L8, L9)",
+    "parking": "Place de la Bourse (payant)",
+    "parking_velo": "Sur place",
+    "horaires": {
+      "lundi": "Fermé",
+      "mardi": "10h00 - 21h00",
+      "mercredi": "10h00 - 21h00",
+      "jeudi": "10h00 - 21h00",
+      "vendredi": "10h00 - 21h00",
+      "samedi": "10h00 - 21h00",
+      "dimanche": "10h00 - 21h00"
+    }
+  },
+  "concept": {
+    "title": "Le Spa Privatif",
+    "subtitle": "Naturellement Luxe",
+    "intro": "Historiquement le premier Spa Privatif de Paris, Naturellement Luxe vous accueille dans un univers où bien-être et simplicité se conjuguent pour créer une expérience unique de détente absolue.",
+    "philosophy": "La beauté du corps passe aussi par la beauté des lieux. Chez Naturellement Luxe, nous avons créé un espace où chaque détail est pensé pour votre confort et votre sérénité.",
+    "quote": "L'abandon de soi, l'évasion et la relaxation totale",
+    "salon": "Un cocon de détente avec une décoration harmonieuse, espace d'exposition d'artistes — illustrateurs, photographes. La beauté du corps passe aussi par la beauté des lieux.",
+    "cabines": "Spacieuses et lumineuses, avec grands miroirs et douche pluie à l'italienne. Le luxe des sens.",
+    "valeurs": [
+      "Intimité absolue",
+      "Luxe accessible",
+      "Bien-être naturel",
+      "Expérience sur-mesure"
+    ]
+  },
+  "prestations": {
+    "spa_privatif": {
+      "name": "Spa Privatif",
+      "description": "Un espace de 35m² entièrement privatisé pour vous. Jacuzzi, balnéothérapie, sauna, luminothérapie, futon — votre bulle de sérénité au cœur de Paris.",
+      "equipements": [
+        "Jacuzzi / Balnéothérapie 2-3 places",
+        "Sauna",
+        "Luminothérapie",
+        "Fauteuil chauffant",
+        "Futon 2m × 2m",
+        "Douche pluie à l'italienne",
+        "Sélection musicale personnalisée via tablette",
+        "Linges et produits d'hygiène fournis"
+      ],
+      "surface": "35m²",
+      "formats": ["Solo", "Duo", "Groupe"]
+    },
+    "massages": {
+      "name": "Massages",
+      "description": "Des massages traditionnels réalisés par des professionnels pour un moment de relaxation profonde.",
+      "types": [
+        {
+          "name": "Massage Réflexologie Crânien",
+          "duration": "30 min",
+          "price": "60 €"
+        },
+        {
+          "name": "Massage Sur Mesure Californien",
+          "duration": "30 min",
+          "price": "60 €"
+        },
+        {
+          "name": "Massage Sur Mesure Californien",
+          "duration": "1h",
+          "price": "120 €"
+        },
+        {
+          "name": "Cours Initiation Massage Duo",
+          "duration": "2h",
+          "price": "250 €",
+          "note": "1h30 de cours sur table de massage et 30 min en privé. Fiole 200ml huile offerte."
+        }
+      ]
+    },
+    "cours": {
+      "name": "Cours & Ateliers",
+      "description": "Initiez-vous aux techniques de massage en duo. Une expérience unique à partager à deux.",
+      "details": "1h30 de cours sur table de massage et 30 min en spa privé. Fiole 200ml d'huile offerte."
+    },
+    "evenements": {
+      "name": "Événements",
+      "description": "EVJF, Baby Shower, Anniversaire — célébrez vos moments spéciaux dans un cadre privatif d'exception.",
+      "types": [
+        {
+          "name": "EVJF",
+          "description": "Enterrement de vie de jeune fille dans un cadre élégant et festif. 2h de spa privatif entre amies."
+        },
+        {
+          "name": "Baby Shower",
+          "description": "Célébrez l'arrivée de bébé dans une ambiance douce et raffinée."
+        },
+        {
+          "name": "Anniversaire",
+          "description": "Fêtez votre anniversaire dans un cadre unique et privatif."
+        },
+        {
+          "name": "Saint-Valentin",
+          "description": "Un moment romantique et inoubliable pour les amoureux."
+        }
+      ],
+      "conditions": "Minimum 5, maximum 7 personnes",
+      "price_per_person": "70 €",
+      "duration": "2h spa privatif"
+    },
+    "love_room": {
+      "name": "Bain de Minuit",
+      "subtitle": "Nuit en Spa Privatif",
+      "description": "Une nuit entière dans notre spa privatif. L'expérience ultime de romantisme et de détente à deux.",
+      "price": "399 €",
+      "includes": [
+        "Nuit complète en spa privatif",
+        "1 bouteille de champagne brut",
+        "1 plateau de 16 macarons"
+      ]
+    }
+  },
+  "tarifs": {
+    "spa_solo_semaine": [
+      {"duration": "1h", "price": "99 €"},
+      {"duration": "1h30", "price": "149 €"},
+      {"duration": "2h", "price": "189 €"}
+    ],
+    "spa_duo_semaine": [
+      {"duration": "1h", "price": "119 €"},
+      {"duration": "1h30", "price": "170 €"},
+      {"duration": "2h", "price": "200 €"},
+      {"duration": "2h30", "price": "250 €"},
+      {"duration": "3h", "price": "290 €"},
+      {"duration": "4h", "price": "380 €"}
+    ],
+    "spa_duo_weekend": [
+      {"duration": "1h", "price": "149 €"},
+      {"duration": "1h30", "price": "199 €"},
+      {"duration": "2h", "price": "229 €"},
+      {"duration": "2h30", "price": "280 €"},
+      {"duration": "3h", "price": "330 €"},
+      {"duration": "4h", "price": "420 €"}
+    ],
+    "massages": [
+      {"name": "Massage Réflexologie Crânien", "duration": "30 min", "price": "60 €"},
+      {"name": "Massage Sur Mesure Californien", "duration": "30 min", "price": "60 €"},
+      {"name": "Massage Sur Mesure Californien", "duration": "1h", "price": "120 €"},
+      {"name": "Cours Initiation Massage Duo", "duration": "2h", "price": "250 €"}
+    ],
+    "groupe": {
+      "price_per_person": "70 €",
+      "duration": "2h",
+      "min": 5,
+      "max": 7
+    },
+    "nuitee": {
+      "name": "Bain de Minuit (Duo)",
+      "price": "399 €"
+    },
+    "options": [
+      {"name": "Champagne brut (bouteille)", "price": "45 €"},
+      {"name": "Champagne brut (coupe)", "price": "10 €"},
+      {"name": "Pétillant rosé (bouteille)", "price": "25 €"},
+      {"name": "Pétillant rosé (coupe)", "price": "5 €"},
+      {"name": "Plateau 16 macarons", "price": "20 €"},
+      {"name": "Décoration romantique", "price": "35 €"},
+      {"name": "Rose rouge fraîche", "price": "15 €"},
+      {"name": "Huile massage neutre 200ml", "price": "10 €"},
+      {"name": "Gel Aloe Vera BIO 200ml", "price": "15 €"},
+      {"name": "Cœur mousse", "price": "5 €"},
+      {"name": "Kit savon noir + gant Kessa", "price": "10 €"}
+    ]
+  },
+  "carte_cadeau": {
+    "title": "Offrez votre Carte Cadeau",
+    "description": "Un bon cadeau valide 12 mois, glissé dans une belle petite enveloppe.",
+    "achat": [
+      "Par téléphone : 01 42 36 06 07",
+      "Par email : contact@naturellementluxe.com",
+      "Directement à l'institut",
+      "En ligne"
+    ],
+    "conditions": "Les cartes/chèques/bons cadeaux correspondent uniquement à une valeur numéraire. Utilisables 1 an."
+  },
+  "temoignages": [
+    {"name": "Florence", "age": "41 ans", "text": "Merci pour cet accueil, cette bienveillance... Conquise."},
+    {"name": "Maeva", "age": "20 ans", "text": "Spa privatif chaleureux... massage duo merveilleusement relaxant."},
+    {"name": "Frédéric", "text": "90 minutes de relaxation à deux, en toute intimité."},
+    {"name": "Anna", "text": "Une bulle d'évasion ! C'était comme chez nous mais en mieux."},
+    {"name": "Yann", "text": "Quel bonheur que ce petit cocon dans Paris."},
+    {"name": "Ines", "text": "C'était parfait de A à Z."},
+    {"name": "Tiff", "text": "EVJF au top... vraiment l'endroit à faire !!!"},
+    {"name": "Ophélie", "text": "Encore mieux que sur les photos."},
+    {"name": "Amina", "text": "Un avant Noël ultra romantique à Paris !!!"},
+    {"name": "Benjamin", "text": "Très beau lieu, les installations sont supers."},
+    {"name": "Jamila", "age": "49 ans", "text": "Très professionnelle, la masseuse a des mains de fées."},
+    {"name": "Marie", "text": "Très bon moment de détente... bulle totalement privée."}
+  ],
+  "faq": [
+    {
+      "question": "Comment prendre rendez-vous ?",
+      "answer": "Vous pouvez prendre rendez-vous sur notre site internet via l'onglet réservation en ligne, par téléphone au 01 42 36 06 07 ou par mail."
+    },
+    {
+      "question": "Le spa est-il totalement privatif ?",
+      "answer": "Oui totalement. Le spa privatif vous est entièrement réservé. Le mode de fonctionnement vous est expliqué à l'arrivée, vous êtes seuls et autonomes."
+    },
+    {
+      "question": "Les massages sont-ils inclus dans le Spa Privatif ?",
+      "answer": "Les massages ne sont pas compris dans le Spa Privatif, ils peuvent être réservés en supplément."
+    },
+    {
+      "question": "Que dois-je apporter ?",
+      "answer": "Seul votre maillot de bain ainsi que votre brosse à cheveux. Nous fournissons le linge, les sandales, le gel, le sèche-cheveux et le lisseur."
+    },
+    {
+      "question": "Quels sont les équipements du spa ?",
+      "answer": "Spa 35m² : jacuzzi, balnéothérapie, sauna, luminothérapie, fauteuil chauffant, futon 2m×2m, douche italienne. Cabine massage 15m² : table chauffante, douche."
+    },
+    {
+      "question": "Quelle est votre politique d'annulation ?",
+      "answer": "Annulable ou modifiable jusqu'à 48h avant selon nos CGV."
+    },
+    {
+      "question": "Acceptez-vous les chèques vacances ?",
+      "answer": "Nous n'acceptons pas les chèques vacances. Règlement par carte bancaire ou espèces."
+    },
+    {
+      "question": "L'établissement est-il accessible PMR ?",
+      "answer": "Oui, portes réglementaires, rampe amovible et marchepied jacuzzi."
+    },
+    {
+      "question": "Les femmes enceintes sont-elles acceptées ?",
+      "answer": "Les femmes enceintes sont accueillies. Le sauna et la forte chaleur sont proscrits, mais le jacuzzi/balnéothérapie à température de relaxation est possible."
+    }
+  ]
+}
