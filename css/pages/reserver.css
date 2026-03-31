@@ -3,7 +3,7 @@
    ============================================ */
 
 /* ===== Reservation Section ===== */
-.section-reservation { padding: var(--space-xl) var(--space-md); max-width: 1200px; margin: 0 auto; }
+.section-reservation { padding: var(--space-xl) 0; }
 
 /* ===== Stepper ===== */
 .stepper { display: flex; align-items: center; justify-content: center; gap: 0; margin-bottom: var(--space-xl); padding: var(--space-lg) 0; }
@@ -40,7 +40,7 @@
 }
 .prestation-select-card:hover { border-color: var(--chene); transform: translateY(-2px); }
 .prestation-select-card.selected { border-color: var(--chene); border-width: 2px; box-shadow: 0 0 24px rgba(199,167,124,0.2); }
-.prestation-card-icon { font-size: 1.6rem; color: var(--chene); margin-bottom: var(--space-sm); }
+.prestation-card-icon { width: 32px; height: 32px; stroke: var(--chene); stroke-width: 1.5; margin: 0 auto var(--space-sm); display: block; }
 .prestation-select-card h3 { font-family: var(--font-serif); font-size: 1.05rem; color: var(--craie); margin-bottom: var(--space-xs); }
 .prestation-price { font-size: 0.9rem; color: var(--sable); }
 .prestation-price strong { color: var(--chene); font-size: 1.1rem; }

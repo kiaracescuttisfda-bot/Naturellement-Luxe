@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/reserver.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -55,21 +56,22 @@
 
     <!-- ========== RESERVATION SECTION ========== -->
     <section class="section-reservation reveal" aria-label="Formulaire de réservation">
+      <div class="container">
 
       <!-- Stepper -->
       <div class="stepper">
         <div class="step active current" data-step="1">
-          <div class="step-circle">&#10022;</div>
+          <div class="step-circle"><i data-lucide="sparkles"></i></div>
           <div class="step-label">Choisir une prestation</div>
         </div>
         <div class="step-connector"></div>
         <div class="step" data-step="2">
-          <div class="step-circle">&#128197;</div>
+          <div class="step-circle"><i data-lucide="calendar"></i></div>
           <div class="step-label">Date & Heure</div>
         </div>
         <div class="step-connector"></div>
         <div class="step" data-step="3">
-          <div class="step-circle">&#10004;</div>
+          <div class="step-circle"><i data-lucide="user"></i></div>
           <div class="step-label">Confirmation</div>
         </div>
       </div>
@@ -86,49 +88,49 @@
             <div class="prestation-select-grid">
 
               <div class="prestation-select-card" data-prestation="Spa Privatif Solo" data-price="99">
-                <div class="prestation-card-icon">&#10022;</div>
+                <i data-lucide="droplets" class="prestation-card-icon"></i>
                 <h3>Spa Privatif Solo</h3>
                 <p class="prestation-price">à partir de <strong>99&euro;</strong></p>
               </div>
 
               <div class="prestation-select-card" data-prestation="Spa Privatif Duo" data-price="119">
-                <div class="prestation-card-icon">&#10022;</div>
+                <i data-lucide="droplets" class="prestation-card-icon"></i>
                 <h3>Spa Privatif Duo</h3>
                 <p class="prestation-price">à partir de <strong>119&euro;</strong></p>
               </div>
 
               <div class="prestation-select-card" data-prestation="Spa Privatif Duo Weekend" data-price="149">
-                <div class="prestation-card-icon">&#10022;</div>
+                <i data-lucide="droplets" class="prestation-card-icon"></i>
                 <h3>Spa Privatif Duo Weekend</h3>
                 <p class="prestation-price">à partir de <strong>149&euro;</strong></p>
               </div>
 
               <div class="prestation-select-card" data-prestation="Massage Californien" data-price="60">
-                <div class="prestation-card-icon">&#10022;</div>
+                <i data-lucide="hand" class="prestation-card-icon"></i>
                 <h3>Massage Californien</h3>
                 <p class="prestation-price">à partir de <strong>60&euro;</strong></p>
               </div>
 
               <div class="prestation-select-card" data-prestation="Massage Réflexologie" data-price="60">
-                <div class="prestation-card-icon">&#10022;</div>
+                <i data-lucide="hand" class="prestation-card-icon"></i>
                 <h3>Massage Réflexologie</h3>
                 <p class="prestation-price"><strong>60&euro;</strong></p>
               </div>
 
               <div class="prestation-select-card" data-prestation="Cours Initiation Duo" data-price="250">
-                <div class="prestation-card-icon">&#10022;</div>
+                <i data-lucide="book-open" class="prestation-card-icon"></i>
                 <h3>Cours Initiation Duo</h3>
                 <p class="prestation-price"><strong>250&euro;</strong></p>
               </div>
 
               <div class="prestation-select-card" data-prestation="EVJF/Groupe" data-price="70">
-                <div class="prestation-card-icon">&#10022;</div>
+                <i data-lucide="users" class="prestation-card-icon"></i>
                 <h3>EVJF / Groupe</h3>
                 <p class="prestation-price"><strong>70&euro;</strong>/pers</p>
               </div>
 
               <div class="prestation-select-card" data-prestation="Bain de Minuit" data-price="399">
-                <div class="prestation-card-icon">&#10022;</div>
+                <i data-lucide="moon" class="prestation-card-icon"></i>
                 <h3>Bain de Minuit</h3>
                 <p class="prestation-price"><strong>399&euro;</strong></p>
               </div>
@@ -306,6 +308,7 @@
         </aside>
 
       </div>
+      </div>
     </section>
   </main>
 
@@ -365,6 +368,7 @@
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
+<script>lucide.createIcons();</script>
 <script>
     // ===== Reservation Page Logic =====
     document.addEventListener('DOMContentLoaded', function() {

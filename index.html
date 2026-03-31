@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/home.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -102,22 +103,22 @@
       </div>
       <div class="equipements-grid">
         <div class="equipment-card">
-          <span class="equipment-icon">&#9674;</span>
+          <i data-lucide="waves" class="equipment-icon"></i>
           <div class="equipment-title">Jacuzzi Balnéo</div>
           <p class="equipment-text">Balnéothérapie 2-3 places avec jets hydro-massants et sels de mer morte.</p>
         </div>
         <div class="equipment-card">
-          <span class="equipment-icon">&#9674;</span>
+          <i data-lucide="flame" class="equipment-icon"></i>
           <div class="equipment-title">Sauna</div>
           <p class="equipment-text">Chaleur sèche 60-80°C pour une détoxification profonde et une relaxation totale.</p>
         </div>
         <div class="equipment-card">
-          <span class="equipment-icon">&#9674;</span>
+          <i data-lucide="sun" class="equipment-icon"></i>
           <div class="equipment-title">Luminothérapie</div>
           <p class="equipment-text">Synthétise la vitamine D sans UV. Combat les effets du manque de lumière.</p>
         </div>
         <div class="equipment-card">
-          <span class="equipment-icon">&#9674;</span>
+          <i data-lucide="bed-double" class="equipment-icon"></i>
           <div class="equipment-title">Futon King-Size</div>
           <p class="equipment-text">Futon 2m × 2m pour se relaxer entre deux sessions de bien-être.</p>
         </div>
@@ -336,5 +337,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

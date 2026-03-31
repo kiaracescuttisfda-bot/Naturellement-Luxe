@@ -3,7 +3,7 @@
    ============================================ */
 
 /* ---- Contact Section ---- */
-.contact-section { padding: var(--space-xl) var(--space-md); max-width: 1200px; margin: 0 auto; }
+.contact-section { padding: var(--space-xl) 0; }
 .contact-section > .grid-2 { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-xl); align-items: start; }
 
 /* ---- Form Wrapper ---- */
@@ -23,7 +23,7 @@
 .contact-info h3 { font-family: var(--font-serif); font-size: clamp(1.3rem, 2vw, 1.6rem); color: var(--craie); }
 .info-item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: var(--space-md); }
 .info-item:last-child { margin-bottom: 0; }
-.info-icon { color: var(--chene); font-size: 1.1rem; line-height: 1.6; flex-shrink: 0; }
+.info-icon { width: 22px; height: 22px; stroke: var(--chene); stroke-width: 1.5; flex-shrink: 0; margin-top: 2px; }
 .info-item strong { display: block; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--chene); margin-bottom: 0.25rem; }
 .info-item p { font-size: 0.92rem; color: var(--craie); line-height: 1.6; margin: 0; }
 .info-item a { color: var(--craie); transition: var(--transition); }
@@ -39,7 +39,7 @@
 .horaires-list .closed .time { color: #8B4545; font-style: italic; }
 
 /* ---- Map ---- */
-.map-section { padding: var(--space-xl) var(--space-md); max-width: 1200px; margin: 0 auto; }
+.map-section { padding: var(--space-xl) 0; }
 .map-section .section-title h2 { color: var(--noir); }
 .map-container { margin-top: var(--space-md); }
 .map-placeholder { position: relative; aspect-ratio: 16/9; background: var(--charbon); border: 1px solid rgba(199,167,124,0.25); border-radius: var(--radius-md); overflow: hidden; }

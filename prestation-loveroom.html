@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/prestations.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -70,38 +71,38 @@
     <section class="container" aria-label="Équipements">
       <div class="section-title reveal">
         <h2>Vos Équipements</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
         <p>Tout le nécessaire pour une nuit d'exception</p>
       </div>
 
       <div class="grid-3 reveal">
         <div class="card" aria-label="Jacuzzi privatif">
-          <div class="card-icon" aria-hidden="true">&#9832;</div>
+          <i data-lucide="droplets" class="card-icon" aria-hidden="true"></i>
           <h3>Jacuzzi Privatif</h3>
           <p>Bain bouillonnant pour deux dans une ambiance tamisée</p>
         </div>
         <div class="card" aria-label="Sauna">
-          <div class="card-icon" aria-hidden="true">&#9728;</div>
+          <i data-lucide="thermometer" class="card-icon" aria-hidden="true"></i>
           <h3>Sauna</h3>
           <p>Chaleur sèche purifiante pour un moment de bien-être intense</p>
         </div>
         <div class="card" aria-label="Luminothérapie">
-          <div class="card-icon" aria-hidden="true">&#10022;</div>
+          <i data-lucide="sun" class="card-icon" aria-hidden="true"></i>
           <h3>Luminothérapie</h3>
           <p>Jeux de lumières apaisants pour une atmosphère unique</p>
         </div>
         <div class="card" aria-label="Futon king-size">
-          <div class="card-icon" aria-hidden="true">&#9790;</div>
+          <i data-lucide="bed-double" class="card-icon" aria-hidden="true"></i>
           <h3>Futon King-Size</h3>
           <p>Literie de qualité supérieure pour une nuit de confort absolu</p>
         </div>
         <div class="card" aria-label="Douche italienne">
-          <div class="card-icon" aria-hidden="true">&#9687;</div>
+          <i data-lucide="shower-head" class="card-icon" aria-hidden="true"></i>
           <h3>Douche Italienne</h3>
           <p>Douche spacieuse à l'italienne avec produits de soin</p>
         </div>
         <div class="card" aria-label="Musique personnalisée">
-          <div class="card-icon" aria-hidden="true">&#9835;</div>
+          <i data-lucide="music" class="card-icon" aria-hidden="true"></i>
           <h3>Musique Personnalisée</h3>
           <p>Système audio Bluetooth pour votre playlist préférée</p>
         </div>
@@ -138,7 +139,7 @@
     <section class="container" aria-label="Galerie Bain de Minuit">
       <div class="section-title reveal">
         <h2>L'Atmosphère</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
         <p>Plongez dans l'ambiance de votre future nuit d'exception</p>
       </div>
 
@@ -166,10 +167,12 @@
 
     <!-- ========== CTA RESERVATION ========== -->
     <section class="section-cta" aria-label="Réserver maintenant">
+      <div class="container">
       <div class="reveal">
         <h2>Prêt pour une nuit inoubliable ?</h2>
         <p>Réservez votre Bain de Minuit et vivez l'expérience ultime de romantisme à deux.</p>
         <a href="reserver.html" class="btn-dark">Réserver — 399&euro;</a>
+      </div>
       </div>
     </section>
   </main>
@@ -230,5 +233,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

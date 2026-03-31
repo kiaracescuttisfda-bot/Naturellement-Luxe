@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/prestations.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -59,7 +60,7 @@
     <section class="container" aria-label="Introduction événements">
       <div class="section-title reveal">
         <h2>Célébrez vos Moments Précieux</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
         <p>Des événements sur-mesure dans un cadre privatif d'exception</p>
       </div>
     </section>
@@ -160,7 +161,7 @@
     <section class="container" id="sur-mesure" aria-label="Événement sur-mesure">
       <div class="section-title reveal">
         <h2>Créez votre Événement Sur-Mesure</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
         <p>Décrivez-nous votre projet, nous le rendons inoubliable</p>
       </div>
 
@@ -196,10 +197,12 @@
 
     <!-- ========== CTA RESERVATION ========== -->
     <section class="section-cta" aria-label="Réserver maintenant">
+      <div class="container">
       <div class="reveal">
         <h2>Envie de célébrer un moment unique ?</h2>
         <p>Contactez-nous pour organiser votre événement privatif sur-mesure.</p>
         <a href="reserver.html" class="btn-dark">Réserver maintenant</a>
+      </div>
       </div>
     </section>
   </main>
@@ -260,5 +263,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

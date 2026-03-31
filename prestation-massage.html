@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/prestations.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -71,7 +72,7 @@
       <div class="container">
         <div class="section-title reveal">
           <h2>Nos Massages</h2>
-          <div class="ornament"><span>&#9830;</span></div>
+          <div class="ornament"><i data-lucide="diamond"></i></div>
           <p>Choisissez la prestation qui vous correspond</p>
         </div>
 
@@ -128,7 +129,7 @@
       <div class="container">
         <div class="section-title reveal">
           <h2>Déroulement d'une séance</h2>
-          <div class="ornament"><span>&#9830;</span></div>
+          <div class="ornament"><i data-lucide="diamond"></i></div>
         </div>
 
         <div class="steps-grid">
@@ -158,10 +159,12 @@
 
     <!-- ========== CTA RESERVATION ========== -->
     <section class="section-cta" aria-label="Réserver un massage">
+      <div class="container">
       <div class="reveal">
         <h2>Envie d'un moment de détente absolue ?</h2>
         <p>Réservez votre massage et offrez-vous une parenthèse de bien-être au cœur de Paris.</p>
         <a href="reserver.html" class="btn-primary">Réserver maintenant</a>
+      </div>
       </div>
     </section>
   </main>
@@ -222,5 +225,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

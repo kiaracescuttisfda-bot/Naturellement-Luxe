@@ -5,12 +5,11 @@
 
 /* ---------- SECTION TARIFS ---------- */
 .section-tarifs {
-  padding: var(--space-xl) var(--space-md);
-  max-width: 1100px;
-  margin: 0 auto;
   background: var(--noir);
   color: var(--craie);
+  padding: var(--space-xl) 0;
 }
+.section-tarifs > .container { max-width: 1100px; }
 
 /* ---------- TABS ---------- */
 .tabs { width: 100%; }
@@ -75,9 +74,8 @@
 
 /* ---------- PACKAGES ---------- */
 .section-packages {
-  padding: var(--space-xl) var(--space-md);
-  max-width: 1200px; margin: 0 auto;
-  background: var(--noir);
+  background: var(--charbon);
+  padding: var(--space-xl) 0;
 }
 .packages-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -111,9 +109,10 @@
 
 /* ---------- CONDITIONS ---------- */
 .section-conditions {
-  padding: var(--space-lg) var(--space-md);
-  max-width: 900px; margin: 0 auto;
+  background: var(--noir);
+  padding: var(--space-lg) 0;
 }
+.section-conditions > .container { max-width: 900px; }
 .conditions-content {
   background: var(--charbon);
   border: 1px solid rgba(199,167,124,0.15); border-radius: var(--radius-md);

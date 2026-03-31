@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/carte-cadeau.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -72,15 +73,16 @@
 
     <!-- ========== SECTION — NOS FORMULES ========== -->
     <section class="section-formulas" aria-label="Nos formules cadeau">
+      <div class="container">
       <div class="section-title reveal">
         <h2>Nos Formules</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
         <p>Choisissez la formule qui correspond le mieux à vos envies</p>
       </div>
 
       <div class="formulas-grid">
         <div class="formula-card reveal reveal-delay-1">
-          <div class="formula-icon">&#9830;</div>
+          <i data-lucide="gift" class="formula-icon"></i>
           <h3>Montant Libre</h3>
           <div class="divider-gold-sm"></div>
           <p class="formula-desc">Choisissez le montant de votre choix</p>
@@ -89,7 +91,7 @@
         </div>
 
         <div class="formula-card reveal reveal-delay-2">
-          <div class="formula-icon">&#10022;</div>
+          <i data-lucide="sparkles" class="formula-icon"></i>
           <h3>Prestation au Choix</h3>
           <div class="divider-gold-sm"></div>
           <p class="formula-desc">Offrez une prestation spécifique</p>
@@ -99,7 +101,7 @@
 
         <div class="formula-card featured reveal reveal-delay-3">
           <div class="formula-badge">Populaire</div>
-          <div class="formula-icon">&#9733;</div>
+          <i data-lucide="crown" class="formula-icon"></i>
           <h3>Package Complet</h3>
           <div class="divider-gold-sm"></div>
           <p class="formula-desc">L'expérience complète spa + massage</p>
@@ -107,41 +109,45 @@
           <a href="#commander" class="btn-dark">Choisir</a>
         </div>
       </div>
+      </div>
     </section>
 
     <!-- ========== SECTION — COMMENT CA MARCHE ========== -->
     <section class="section-process" aria-label="Comment ça marche">
+      <div class="container">
       <div class="section-title reveal">
         <h2>Comment ça marche ?</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
       </div>
 
       <div class="process-steps">
         <div class="process-step reveal reveal-delay-1">
-          <div class="step-number">&#9312;</div>
+          <i data-lucide="mouse-pointer-click" class="step-icon"></i>
           <h3>Choisissez votre formule</h3>
           <p>Sélectionnez le montant libre, une prestation spécifique ou un package complet selon vos envies.</p>
         </div>
 
         <div class="process-step reveal reveal-delay-2">
-          <div class="step-number">&#9998;</div>
+          <i data-lucide="credit-card" class="step-icon"></i>
           <h3>Personnalisez votre message</h3>
           <p>Ajoutez un message personnel pour rendre votre cadeau encore plus unique et mémorable.</p>
         </div>
 
         <div class="process-step reveal reveal-delay-3">
-          <div class="step-number">&#10084;</div>
+          <i data-lucide="heart" class="step-icon"></i>
           <h3>Offrez le bonheur</h3>
           <p>Recevez votre carte cadeau par email instantanément ou dans une élégante enveloppe par courrier.</p>
         </div>
+      </div>
       </div>
     </section>
 
     <!-- ========== SECTION — FORMULAIRE DE COMMANDE ========== -->
     <section class="section-gift-form" id="commander" aria-label="Commander une carte cadeau">
+      <div class="container">
       <div class="section-title reveal">
         <h2>Commander votre Carte Cadeau</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
         <p>Remplissez le formulaire ci-dessous pour offrir un moment d'exception</p>
       </div>
 
@@ -199,13 +205,15 @@
 
         <button type="submit" class="btn-primary btn-full">Commander la Carte Cadeau</button>
       </form>
+      </div>
     </section>
 
     <!-- ========== SECTION — FAQ ========== -->
     <section class="section-faq" aria-label="Questions fréquentes">
+      <div class="container">
       <div class="section-title reveal">
         <h2>Questions Fréquentes</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
       </div>
 
       <div class="faq-list reveal">
@@ -268,6 +276,7 @@
             <p>Oui, toutes les prestations de notre carte sont disponibles avec la carte cadeau : spa privatif, massages, soins du visage, packages duo et événements. Le destinataire pourra choisir librement lors de sa réservation.</p>
           </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -337,5 +346,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

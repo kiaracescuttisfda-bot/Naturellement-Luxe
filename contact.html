@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/contact.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -56,6 +57,7 @@
 
     <!-- ========== CONTACT SECTION ========== -->
     <section class="contact-section reveal" aria-label="Formulaire de contact et informations">
+      <div class="container">
       <div class="grid-2">
 
         <!-- LEFT — Contact Form -->
@@ -118,7 +120,7 @@
           <div class="divider-gold" style="margin: var(--space-sm) 0 var(--space-md);"></div>
 
           <div class="info-item">
-            <span class="info-icon">&#9679;</span>
+            <i data-lucide="map-pin" class="info-icon"></i>
             <div>
               <strong>Adresse</strong>
               <p>15 rue du Croissant<br>75002 Paris</p>
@@ -126,7 +128,7 @@
           </div>
 
           <div class="info-item">
-            <span class="info-icon">&#9743;</span>
+            <i data-lucide="phone" class="info-icon"></i>
             <div>
               <strong>Téléphone</strong>
               <p><a href="tel:+33142360607">01 42 36 06 07</a></p>
@@ -134,7 +136,7 @@
           </div>
 
           <div class="info-item">
-            <span class="info-icon">&#9993;</span>
+            <i data-lucide="mail" class="info-icon"></i>
             <div>
               <strong>Email</strong>
               <p><a href="mailto:contact@naturellementluxe.com">contact@naturellementluxe.com</a></p>
@@ -142,7 +144,7 @@
           </div>
 
           <div class="info-item">
-            <span class="info-icon">&#9200;</span>
+            <i data-lucide="clock" class="info-icon"></i>
             <div>
               <strong>Horaires d'ouverture</strong>
               <ul class="horaires-list">
@@ -158,7 +160,7 @@
           </div>
 
           <div class="info-item">
-            <span class="info-icon">&#9688;</span>
+            <i data-lucide="train-front" class="info-icon"></i>
             <div>
               <strong>Métro</strong>
               <p>Sentier (Ligne 3)<br>Bonne Nouvelle (Lignes 8, 9)</p>
@@ -166,7 +168,7 @@
           </div>
 
           <div class="info-item">
-            <span class="info-icon">&#9632;</span>
+            <i data-lucide="car" class="info-icon"></i>
             <div>
               <strong>Parking</strong>
               <p>Place de la Bourse</p>
@@ -175,13 +177,15 @@
         </div>
 
       </div>
+      </div>
     </section>
 
     <!-- ========== MAP SECTION ========== -->
     <section class="map-section reveal" aria-label="Comment venir">
+      <div class="container">
       <div class="section-title reveal">
         <h2>Comment venir</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
         <p>Retrouvez-nous au coeur du 2<sup>e</sup> arrondissement de Paris</p>
       </div>
 
@@ -203,6 +207,7 @@
             <a href="https://maps.google.com/?q=15+rue+du+Croissant+75002+Paris" target="_blank" rel="noopener" class="btn-outline">Ouvrir dans Google Maps</a>
           </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -264,5 +269,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

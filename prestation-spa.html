@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/prestations.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -71,7 +72,7 @@
     <section class="section-inclus" aria-label="Ce qui est inclus">
       <div class="section-title reveal">
         <h2>Ce qui est inclus</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
         <p>Tout est prévu pour votre confort</p>
       </div>
 
@@ -123,7 +124,7 @@
     <section class="section-gallery-spa" aria-label="Galerie du Spa Privatif">
       <div class="section-title reveal">
         <h2>L'espace en images</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
       </div>
 
       <div class="gallery-grid gallery-4">
@@ -146,7 +147,7 @@
     <section class="section-durees" aria-label="Durées et options">
       <div class="section-title reveal">
         <h2>Durées & Options</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
         <p>Choisissez la formule qui vous ressemble</p>
       </div>
 
@@ -212,10 +213,12 @@
 
     <!-- ========== CTA RESERVATION ========== -->
     <section class="section-cta" aria-label="Réserver maintenant">
+      <div class="container">
       <div class="reveal">
         <h2>Réservez votre Spa Privatif</h2>
         <p>Offrez-vous une parenthèse de bien-être en toute intimité. Réservation simple et rapide.</p>
         <a href="reserver.html" class="btn-dark">Réserver</a>
+      </div>
       </div>
     </section>
   </main>
@@ -276,5 +279,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

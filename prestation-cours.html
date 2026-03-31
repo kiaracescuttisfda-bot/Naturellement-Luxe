@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/prestations.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -69,7 +70,7 @@
       <div class="container">
         <div class="section-title reveal">
           <h2>Nos Cours & Ateliers</h2>
-          <div class="ornament"><span>&#9830;</span></div>
+          <div class="ornament"><i data-lucide="diamond"></i></div>
           <p>Des expériences à vivre seul ou en duo</p>
         </div>
 
@@ -115,7 +116,7 @@
       <div class="container">
         <div class="section-title reveal">
           <h2>Prochaines Sessions</h2>
-          <div class="ornament"><span>&#9830;</span></div>
+          <div class="ornament"><i data-lucide="diamond"></i></div>
           <p>Retrouvez les dates de nos prochains ateliers</p>
         </div>
 
@@ -177,10 +178,12 @@
 
     <!-- ========== CTA INSCRIPTION ========== -->
     <section class="section-cta" aria-label="S'inscrire à un atelier">
+      <div class="container">
       <div class="reveal">
         <h2>Envie d'apprendre et de partager ?</h2>
         <p>Inscrivez-vous à l'un de nos cours ou ateliers et vivez une expérience enrichissante dans un cadre d'exception.</p>
         <a href="reserver.html" class="btn-primary">S'inscrire maintenant</a>
+      </div>
       </div>
     </section>
   </main>
@@ -241,5 +244,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

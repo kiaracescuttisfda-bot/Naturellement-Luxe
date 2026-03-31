@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/tarifs.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -56,6 +57,7 @@
 
     <!-- ========== TARIFS TABS ========== -->
     <section class="section-tarifs" aria-label="Grille tarifaire">
+      <div class="container">
       <div class="tabs reveal">
         <div class="tabs-nav">
           <button class="tab-btn active" data-tab="spa">Spa Privatif</button>
@@ -361,13 +363,15 @@
           </div>
         </div>
       </div>
+      </div>
     </section>
 
     <!-- ========== OFFRES & PACKAGES ========== -->
     <section class="section-packages" aria-label="Offres et packages">
+      <div class="container">
       <div class="section-title reveal">
         <h2>Offres & Packages</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
         <p>Nos formules tout compris pour une expérience inoubliable</p>
       </div>
 
@@ -415,14 +419,17 @@
           <a href="reserver.html" class="btn-primary">Réserver</a>
         </div>
       </div>
+      </div>
     </section>
 
     <!-- ========== CONDITIONS ========== -->
     <section class="section-conditions" aria-label="Conditions">
+      <div class="container">
       <div class="conditions-content reveal">
         <h3>Informations & Conditions</h3>
         <div class="divider-gold" style="margin: var(--space-sm) 0 var(--space-md);"></div>
         <p>Tous les tarifs sont en TTC. Les réservations se font en ligne ou par téléphone au <strong>01 42 36 06 07</strong>. Un acompte de 50% est demandé à la réservation. Annulation gratuite jusqu'à 48h avant le créneau réservé. Tout retard sera décompté du temps de séance. Maillot de bain obligatoire. Merci de consulter notre <a href="#">charte & règlement</a> pour plus de détails.</p>
+      </div>
       </div>
     </section>
 
@@ -492,5 +499,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/prestations.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -59,10 +60,12 @@
 
     <!-- ========== INTRO ========== -->
     <section class="section-intro-prestations" aria-label="Introduction prestations">
+      <div class="container">
       <div class="section-title reveal">
         <h2>Un univers de bien-être complet</h2>
-        <div class="ornament"><span>&#9830;</span></div>
+        <div class="ornament"><i data-lucide="diamond"></i></div>
         <p>Que vous cherchiez un moment de détente en solo, une escapade romantique en duo ou une célébration entre amis, Naturellement Luxe vous propose des prestations variées et personnalisées pour chaque envie.</p>
+      </div>
       </div>
     </section>
 
@@ -160,10 +163,12 @@
 
     <!-- ========== CTA RESERVATION ========== -->
     <section class="section-cta" aria-label="Réserver maintenant">
+      <div class="container">
       <div class="reveal">
         <h2>Prêt pour votre moment de détente ?</h2>
         <p>Réservez dès maintenant votre créneau en toute simplicité. Votre parenthèse de bien-être vous attend.</p>
         <a href="reserver.html" class="btn-dark">Réserver maintenant</a>
+      </div>
       </div>
     </section>
   </main>
@@ -224,5 +229,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>
