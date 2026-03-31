@@ -1,503 +1,105 @@
-/* ============================================================
-   CARTE CADEAU — Page Styles
-   Naturellement Luxe — Spa Privatif Paris
-   Variables héritées de design-system.css
-   ============================================================ */
+/* ============================================
+   CARTE CADEAU — Pas de :root ici
+   ============================================ */
 
-/* ========== GIFT INTRO SECTION ========== */
+/* ========== GIFT INTRO ========== */
+.section-gift-intro { padding: var(--space-xl) var(--space-md); max-width: 1200px; margin: 0 auto; }
+.gift-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center; }
+.gift-hero-visual { max-width: 100%; border-radius: var(--radius-md); overflow: hidden; }
+.gift-hero-visual img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md); aspect-ratio: 4/3; }
+.gift-intro-text h2 { font-family: var(--font-serif); font-size: clamp(1.75rem, 3vw, 2.5rem); color: var(--noir); line-height: 1.3; }
+.gift-intro-text p { color: var(--bronze); line-height: 1.8; margin-bottom: var(--space-sm); }
 
-.section-gift-intro {
-  padding: var(--space-xxl, 6rem) var(--space-lg, 2rem);
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.gift-intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl, 3rem);
-  align-items: center;
-}
-
-.gift-hero-visual {
-  max-width: 100%;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-}
-
-.gift-hero-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-  aspect-ratio: 4 / 3;
-}
-
-.gift-intro-text h2 {
-  font-family: var(--font-serif);
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  color: var(--color-blanc-craie);
-  line-height: 1.3;
-}
-
-.gift-intro-text p {
-  color: var(--color-beige-pierre);
-  line-height: 1.8;
-  margin-bottom: var(--space-sm, 1rem);
-}
-
-/* ========== FORMULAS SECTION ========== */
-
-.section-formulas {
-  padding: var(--space-xxl, 6rem) var(--space-lg, 2rem);
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.formulas-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg, 2rem);
-  margin-top: var(--space-xl, 3rem);
-}
-
+/* ========== FORMULAS ========== */
+.section-formulas { padding: var(--space-xl) var(--space-md); max-width: 1200px; margin: 0 auto; background: var(--noir); }
+.section-formulas .section-title h2 { color: var(--craie); }
+.section-formulas .section-title p { color: var(--sable); }
+.formulas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
 .formula-card {
-  background: var(--color-noir-chaud);
-  border: var(--border-accent);
-  border-radius: var(--radius-md);
-  padding: var(--space-xl, 3rem) var(--space-lg, 2rem);
-  text-align: center;
-  position: relative;
-  transition: var(--transition);
+  background: var(--charbon); border: 1px solid rgba(199,167,124,0.2);
+  border-radius: var(--radius-md); padding: var(--space-lg) var(--space-md);
+  text-align: center; position: relative; transition: var(--transition);
 }
-
-.formula-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-glow);
-}
-
-.formula-icon {
-  font-size: 2rem;
-  color: var(--color-chene-clair);
-  margin-bottom: var(--space-sm, 1rem);
-}
-
-.formula-card h3 {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  color: var(--color-blanc-craie);
-  margin-bottom: var(--space-xs, 0.5rem);
-}
-
-.divider-gold-sm {
-  width: 40px;
-  height: 2px;
-  background: var(--color-chene-clair);
-  margin: var(--space-sm, 1rem) auto;
-}
-
-.formula-desc {
-  color: var(--color-beige-pierre);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: var(--space-md, 1.5rem);
-}
-
-.formula-price {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  color: var(--color-chene-clair);
-  font-weight: 700;
-  margin-bottom: var(--space-md, 1.5rem);
-}
-
+.formula-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-glow); }
+.formula-icon { font-size: 2rem; color: var(--chene); margin-bottom: var(--space-sm); }
+.formula-card h3 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--craie); margin-bottom: var(--space-xs); }
+.formula-desc { color: var(--sable); font-size: 0.95rem; line-height: 1.6; margin-bottom: var(--space-md); }
+.formula-price { font-family: var(--font-serif); font-size: 1.5rem; color: var(--chene); font-weight: 700; margin-bottom: var(--space-md); }
 .formula-badge {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--color-chene-clair);
-  color: var(--color-noir-chaud);
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 6px 20px;
-  border-radius: 20px;
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: var(--chene); color: var(--noir);
+  font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 6px 20px; border-radius: 20px;
 }
+.formula-card.featured { background: var(--chene); border-color: var(--miel); transform: scale(1.05); box-shadow: var(--shadow-glow); }
+.formula-card.featured:hover { transform: scale(1.05) translateY(-8px); }
+.formula-card.featured h3, .formula-card.featured .formula-icon, .formula-card.featured .formula-price { color: var(--noir); }
+.formula-card.featured .formula-desc { color: rgba(17,17,16,0.7); }
+.formula-card.featured .divider-gold-sm { background: var(--noir); }
 
-/* Featured card */
-.formula-card.featured {
-  background: var(--color-chene-clair);
-  border-color: var(--color-onyx-miel);
-  transform: scale(1.05);
-  box-shadow: var(--shadow-glow);
-}
-
-.formula-card.featured:hover {
-  transform: scale(1.05) translateY(-8px);
-}
-
-.formula-card.featured h3,
-.formula-card.featured .formula-icon,
-.formula-card.featured .formula-price {
-  color: var(--color-noir-chaud);
-}
-
-.formula-card.featured .formula-desc {
-  color: rgba(22, 22, 22, 0.7);
-}
-
-.formula-card.featured .divider-gold-sm {
-  background: var(--color-noir-chaud);
-}
-
-/* ========== PROCESS STEPS SECTION ========== */
-
-.section-process {
-  padding: var(--space-xxl, 6rem) var(--space-lg, 2rem);
-  background: var(--color-noir-chaud);
-}
-
-.process-steps {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-xl, 3rem);
-  max-width: 1100px;
-  margin: var(--space-xl, 3rem) auto 0;
-}
-
-.process-step {
-  flex: 1;
-  text-align: center;
-  max-width: 320px;
-}
-
-.step-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto var(--space-md, 1.5rem);
-  border-radius: 50%;
-  border: 2px solid var(--color-chene-clair);
-  font-size: 2rem;
-  color: var(--color-chene-clair);
-  background: transparent;
+/* ========== PROCESS ========== */
+.section-process { padding: var(--space-xl) var(--space-md); background: var(--charbon); }
+.section-process .section-title h2 { color: var(--craie); }
+.process-steps { display: flex; justify-content: center; gap: var(--space-lg); max-width: 1100px; margin: var(--space-lg) auto 0; }
+.process-step { flex: 1; text-align: center; max-width: 320px; }
+.process-step .step-number {
+  display: flex; align-items: center; justify-content: center;
+  width: 80px; height: 80px; margin: 0 auto var(--space-md);
+  border-radius: 50%; border: 2px solid var(--chene);
+  font-size: 2rem; color: var(--chene); background: transparent;
   transition: var(--transition);
 }
+.process-step:hover .step-number { background: var(--chene); color: var(--noir); }
+.process-step h3 { font-family: var(--font-serif); font-size: 1.2rem; color: var(--craie); margin-bottom: var(--space-xs); }
+.process-step p { color: var(--sable); font-size: 0.9rem; line-height: 1.7; }
 
-.process-step:hover .step-number {
-  background: var(--color-chene-clair);
-  color: var(--color-noir-chaud);
-}
-
-.process-step h3 {
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
-  color: var(--color-blanc-craie);
-  margin-bottom: var(--space-xs, 0.5rem);
-}
-
-.process-step p {
-  color: var(--color-beige-pierre);
-  font-size: 0.9rem;
-  line-height: 1.7;
-}
-
-/* ========== GIFT ORDER FORM ========== */
-
-.section-gift-form {
-  padding: var(--space-xxl, 6rem) var(--space-lg, 2rem);
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
+/* ========== GIFT FORM ========== */
+.section-gift-form { padding: var(--space-xl) var(--space-md); max-width: 1200px; margin: 0 auto; }
+.section-gift-form .section-title h2 { color: var(--craie); }
 .gift-form {
-  max-width: 680px;
-  margin: var(--space-xl, 3rem) auto 0;
-  background: var(--color-noir-chaud);
-  border: var(--border-accent);
-  border-radius: var(--radius-md);
-  padding: var(--space-xl, 3rem);
+  max-width: 680px; margin: var(--space-lg) auto 0;
+  background: var(--charbon); border: 1px solid rgba(199,167,124,0.2);
+  border-radius: var(--radius-md); padding: var(--space-lg);
 }
-
-.form-group {
-  margin-bottom: var(--space-md, 1.5rem);
-}
-
-.form-group label {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-chene-clair);
-  margin-bottom: var(--space-xs, 0.5rem);
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 14px 18px;
-  background: var(--color-noir-chaud);
-  border: 1px solid rgba(199, 167, 124, 0.3);
-  border-radius: 8px;
-  color: var(--color-blanc-craie);
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  transition: var(--transition);
-  box-sizing: border-box;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--color-chene-clair);
-  box-shadow: 0 0 0 3px rgba(199, 167, 124, 0.15);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--color-beige-pierre);
-  opacity: 0.6;
-}
-
-.form-group select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C7A77C' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 16px center;
-  cursor: pointer;
-}
-
-.form-group select option {
-  background: var(--color-noir-chaud);
-  color: var(--color-blanc-craie);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-/* Radio Group */
-.radio-group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm, 1rem);
-}
-
+.radio-group { display: flex; flex-direction: column; gap: var(--space-sm); }
 .radio-label {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-  padding: 12px 16px;
-  border: 1px solid rgba(199, 167, 124, 0.2);
-  border-radius: 8px;
-  transition: var(--transition);
+  display: flex; align-items: center; gap: 12px; cursor: pointer;
+  padding: 12px 16px; border: 1px solid rgba(199,167,124,0.2);
+  border-radius: var(--radius-sm); transition: var(--transition);
 }
-
-.radio-label:hover {
-  border-color: var(--color-chene-clair);
-  background: rgba(199, 167, 124, 0.05);
-}
-
-.radio-label input[type="radio"] {
-  display: none;
-}
-
+.radio-label:hover { border-color: var(--chene); background: rgba(199,167,124,0.05); }
+.radio-label input[type="radio"] { display: none; }
 .radio-custom {
-  width: 20px;
-  height: 20px;
-  min-width: 20px;
-  border-radius: 50%;
-  border: 2px solid var(--color-beige-pierre);
-  position: relative;
-  transition: var(--transition);
+  width: 20px; height: 20px; min-width: 20px; border-radius: 50%;
+  border: 2px solid var(--sable); position: relative; transition: var(--transition);
 }
-
-.radio-label input[type="radio"]:checked ~ .radio-custom {
-  border-color: var(--color-chene-clair);
-}
-
+.radio-label input[type="radio"]:checked ~ .radio-custom { border-color: var(--chene); }
 .radio-label input[type="radio"]:checked ~ .radio-custom::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
-  background: var(--color-chene-clair);
-  border-radius: 50%;
+  content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 10px; height: 10px; background: var(--chene); border-radius: 50%;
 }
+.radio-label input[type="radio"]:checked ~ .radio-text { color: var(--craie); }
+.radio-text { font-size: 0.95rem; color: var(--sable); transition: var(--transition); }
 
-.radio-label input[type="radio"]:checked ~ .radio-text {
-  color: var(--color-blanc-craie);
-}
-
-.radio-text {
-  font-size: 0.95rem;
-  color: var(--color-beige-pierre);
-  transition: var(--transition);
-}
-
-/* Submit button full width */
-.btn-full {
-  width: 100%;
-  display: block;
-  text-align: center;
-  margin-top: var(--space-md, 1.5rem);
-  padding: 16px 32px;
-  font-size: 1rem;
-}
-
-/* ========== FAQ ACCORDION ========== */
-
-.section-faq {
-  padding: var(--space-xxl, 6rem) var(--space-lg, 2rem);
-  background: var(--color-noir-chaud);
-}
-
-.faq-list {
-  max-width: 800px;
-  margin: var(--space-xl, 3rem) auto 0;
-}
-
-.accordion-item {
-  border-bottom: 1px solid rgba(199, 167, 124, 0.2);
-}
-
-.accordion-item:first-child {
-  border-top: 1px solid rgba(199, 167, 124, 0.2);
-}
-
-.accordion-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space-md, 1.5rem) 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  color: var(--color-blanc-craie);
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  font-weight: 500;
-  transition: var(--transition);
-}
-
-.accordion-header:hover {
-  color: var(--color-chene-clair);
-}
-
-.accordion-icon {
-  font-size: 1.5rem;
-  color: var(--color-chene-clair);
-  transition: var(--transition);
-  flex-shrink: 0;
-  margin-left: var(--space-md, 1.5rem);
-}
-
-.accordion-item.active .accordion-icon {
-  transform: rotate(45deg);
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-}
-
-.accordion-item.active .accordion-content {
-  max-height: 300px;
-  padding-bottom: var(--space-md, 1.5rem);
-}
-
-.accordion-content p {
-  color: var(--color-beige-pierre);
-  line-height: 1.7;
-  font-size: 0.95rem;
-}
+/* ========== FAQ ========== */
+.section-faq { padding: var(--space-xl) var(--space-md); background: var(--charbon); }
+.section-faq .section-title h2 { color: var(--craie); }
+.faq-list { max-width: 800px; margin: var(--space-lg) auto 0; }
 
 /* ========== RESPONSIVE ========== */
-
 @media (max-width: 1024px) {
-  .formulas-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .formula-card.featured {
-    grid-column: 1 / -1;
-    max-width: 400px;
-    justify-self: center;
-  }
-
-  .process-steps {
-    flex-wrap: wrap;
-  }
+  .formulas-grid { grid-template-columns: repeat(2, 1fr); }
+  .formula-card.featured { grid-column: 1/-1; max-width: 400px; justify-self: center; }
+  .process-steps { flex-wrap: wrap; }
 }
-
 @media (max-width: 768px) {
-  .gift-intro-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg, 2rem);
-  }
-
-  .gift-hero-visual {
-    order: -1;
-  }
-
-  .formulas-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .formula-card.featured {
-    transform: scale(1);
-    max-width: none;
-  }
-
-  .formula-card.featured:hover {
-    transform: translateY(-8px);
-  }
-
-  .process-steps {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .process-step {
-    max-width: 100%;
-  }
-
-  .gift-form {
-    padding: var(--space-lg, 2rem) var(--space-md, 1.5rem);
-  }
-
-  .radio-group {
-    gap: var(--space-xs, 0.5rem);
-  }
-}
-
-@media (max-width: 480px) {
-  .section-gift-intro,
-  .section-formulas,
-  .section-gift-form {
-    padding-left: var(--space-md, 1.5rem);
-    padding-right: var(--space-md, 1.5rem);
-  }
-
-  .gift-form {
-    padding: var(--space-md, 1.5rem);
-  }
+  .gift-intro-grid { grid-template-columns: 1fr; gap: var(--space-md); }
+  .gift-hero-visual { order: -1; }
+  .formulas-grid { grid-template-columns: 1fr; }
+  .formula-card.featured { transform: scale(1); max-width: none; }
+  .formula-card.featured:hover { transform: translateY(-8px); }
+  .process-steps { flex-direction: column; align-items: center; }
+  .process-step { max-width: 100%; }
+  .gift-form { padding: var(--space-md); }
 }

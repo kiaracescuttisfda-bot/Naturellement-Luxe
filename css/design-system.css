@@ -1,35 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap');
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ============================================
+   DESIGN SYSTEM — Naturellement Luxe
+   Palette unique, reset, typo, reveal
+   ============================================ */
 
 :root {
-  /* Palette Le Club */
-  --noir:         #161616;
-  --bronze:       #6B5A4C;
-  --chene:        #C7A77C;
-  --miel:         #D4A15A;
-  --beige-pierre: #D6C2A6;
-  --beige-sable:  #E2D2B8;
-  --grege:        #CFC2B1;
-  --creme:        #F1E7D6;
-  --craie:        #F6F3EE;
+  /* Palette — UNE SEULE, pas d'alias */
+  --noir:    #111110;
+  --charbon: #1A1918;
+  --bronze:  #6B5A4C;
+  --chene:   #C7A77C;
+  --miel:    #D4A15A;
+  --sable:   #D6C2A6;
+  --creme:   #F1E7D6;
+  --craie:   #F6F3EE;
+  --blanc:   #FFFFFF;
 
-  /* Sémantique */
-  --bg-dark:    var(--noir);
-  --bg-light:   var(--creme);
-  --accent:     var(--chene);
-  --accent-warm: var(--miel);
-  --text-on-dark:  var(--craie);
-  --text-on-light: var(--bronze);
-  --text-muted-dark: var(--beige-pierre);
-  --text-muted-light: var(--bronze);
-  --border-dark:  rgba(199,167,124,0.2);
-  --border-light: rgba(107,90,76,0.15);
-
-  /* Typographie */
-  --font-serif:  'Cormorant Garamond', Georgia, serif;
-  --font-sans:   'Montserrat', sans-serif;
-  --font-script: 'Great Vibes', cursive;
+  /* Typo */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Montserrat', sans-serif;
 
   /* Tailles */
   --text-xs:   0.6875rem;
@@ -39,118 +29,66 @@
   --text-xl:   1.375rem;
   --text-2xl:  1.75rem;
   --text-3xl:  2.5rem;
+  --text-4xl:  3.5rem;
   --text-hero: clamp(3.5rem, 7vw, 6.5rem);
 
   /* Espacements */
+  --space-xs:  0.5rem;
   --space-sm:  1rem;
   --space-md:  2rem;
   --space-lg:  4rem;
   --space-xl:  7rem;
+  --space-2xl: 10rem;
 
-  /* Effets */
+  /* Rayons */
   --radius-sm:  8px;
   --radius-md:  16px;
   --radius-lg:  24px;
   --radius-xl:  40px;
-  --shadow-light: 0 8px 40px rgba(107,90,76,0.12);
-  --shadow-dark:  0 8px 40px rgba(22,22,22,0.4);
-  --shadow-glow:  0 0 40px rgba(212,161,90,0.15);
-  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius-pill: 30px;
 
-  /* Formes organiques [EXACT de Aigue Marine] */
+  /* Formes organiques */
   --radius-organic-hero: 0px 0px 200px 0px;
   --radius-organic-section: 200px 200px 200px 0px;
   --radius-organic-hero-sub: 100px 100px 0px 100px;
-  --radius-pill: 30px;
   --radius-card: 20px;
   --radius-glass: 90px 0px 0px 0px;
 
-  /* Glassmorphism [EXACT] */
+  /* Glassmorphism */
   --glass-bg: rgba(241, 231, 214, 0.58);
   --glass-border: 2px solid rgba(255, 255, 255, 0.5);
   --glass-blur: 12px;
 
-  /* Spacing Aigue Marine [EXACT] */
-  --space-section: 10rem;
-  --space-section-sm: 6rem;
-  --space-card-padding: 3rem;
-
-  /* Shadows */
-  --shadow-elevated: 0 20px 60px rgba(22, 22, 22, 0.12);
-  --shadow-card-hover: 0 24px 48px rgba(107, 90, 76, 0.18);
+  /* Ombres */
+  --shadow-sm:   0 4px 20px rgba(22,22,22,0.08);
+  --shadow-md:   0 8px 40px rgba(22,22,22,0.12);
+  --shadow-lg:   0 20px 60px rgba(22,22,22,0.18);
+  --shadow-glow: 0 0 40px rgba(199,167,124,0.12);
 
   /* Transitions */
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* ===== ALIAS — utilisés par les fichiers pages/*.css ===== */
-
-  /* Couleurs (alias --color-* → palette Le Club) */
-  --color-noir-chaud:    var(--noir);
-  --color-chene-clair:   var(--chene);
-  --color-blanc-craie:   var(--craie);
-  --color-beige-pierre:  var(--beige-pierre);
-  --color-beige-sable:   var(--beige-sable);
-  --color-grege-pierre:  var(--grege);
-  --color-bronze-fume:   #2A2420;
-  --color-onyx-miel:     #1E1A16;
-  --color-bg:            var(--noir);
-  --color-surface:       #1E1A16;
-  --color-text:          var(--craie);
-  --color-text-muted:    var(--beige-pierre);
-
-  /* Bordures */
-  --border-accent: 1px solid rgba(199, 167, 124, 0.2);
-  --border-warm:   1px solid rgba(199, 167, 124, 0.12);
-
-  /* Ombres */
-  --shadow-card: 0 8px 32px rgba(22, 22, 22, 0.3);
-  --shadow-soft: 0 4px 20px rgba(22, 22, 22, 0.2);
-
-  /* Tailles supplémentaires */
-  --text-4xl:  3.5rem;
-  --space-xs:  0.5rem;
-  --space-2xl: 10rem;
-
-  /* Typographie (alias) */
-  --font-body:    var(--font-sans);
-  --font-heading: var(--font-serif);
 }
 
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-
 body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
   font-weight: 300;
   line-height: 1.8;
-  overflow-x: hidden;
   background: var(--creme);
   color: var(--bronze);
+  overflow-x: hidden;
 }
-
-/* Textes sur fond sombre */
-.dark-section { background: var(--noir); color: var(--craie); }
-.dark-section h1, .dark-section h2, .dark-section h3 { color: var(--craie); }
-.dark-section p { color: var(--beige-pierre); }
-
-/* Textes sur fond clair */
-.light-section { background: var(--creme); color: var(--bronze); }
-.light-section h1, .light-section h2, .light-section h3 { color: var(--noir); }
-.light-section p { color: var(--bronze); }
-
-h1, h2, h3, h4 {
-  font-family: var(--font-serif);
-  font-weight: 300;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
-}
+h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 300; line-height: 1.15; }
 h1 em, h2 em { font-style: italic; color: var(--chene); }
 h1 { font-size: var(--text-hero); }
 h2 { font-size: var(--text-3xl); }
 h3 { font-size: var(--text-2xl); }
-
 p { line-height: 1.85; font-weight: 300; }
-.text-justify { text-align: justify; }
 a { text-decoration: none; color: inherit; transition: var(--transition); }
 img { max-width: 100%; display: block; }
 ul, ol { list-style: none; }
@@ -160,42 +98,23 @@ ul, ol { list-style: none; }
 ::-webkit-scrollbar-track { background: var(--noir); }
 ::-webkit-scrollbar-thumb { background: var(--chene); border-radius: 3px; }
 
-.container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
-
-.section-label {
-  font-family: var(--font-sans);
-  font-size: var(--text-xs);
-  font-weight: 500;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--chene);
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.divider { width: 40px; height: 1px; background: var(--chene); margin: 1.5rem 0; }
-.divider-center { width: 40px; height: 1px; background: var(--chene); margin: 1.5rem auto; }
-
-.botanical-deco { position: absolute; opacity: 0.08; pointer-events: none; z-index: 0; }
-
-/* Animations reveal */
-.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.4, 0, 0.2, 1); }
+/* ---- Reveal animations ---- */
+.reveal     { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s var(--ease-out); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.4, 0, 0.2, 1); }
+.reveal-left  { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s var(--ease-out); }
+.reveal-left.visible  { opacity: 1; transform: translateX(0); }
+.reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s var(--ease-out); }
 .reveal-right.visible { opacity: 1; transform: translateX(0); }
-.reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.4, 0, 0.2, 1); }
-.reveal-left.visible { opacity: 1; transform: translateX(0); }
-.reveal-delay-1 { transition-delay: 0.15s; }
-.reveal-delay-2 { transition-delay: 0.3s; }
-.reveal-delay-3 { transition-delay: 0.45s; }
-.reveal-delay-4 { transition-delay: 0.6s; }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
 
-/* Parallax — aucune transition CSS sur les éléments pilotés par JS */
-[data-speed] {
-  transition: none !important;
-  will-change: transform;
-}
+/* Parallax — aucune transition CSS */
+[data-speed] { will-change: transform; }
 
+/* ---- Keyframes ---- */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeDown { from { opacity: 0; transform: translateY(-15px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
