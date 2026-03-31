@@ -1,17 +1,8 @@
 /* ============================================================
    CARTE CADEAU — Page Styles
    Naturellement Luxe — Spa Privatif Paris
+   Variables héritées de design-system.css
    ============================================================ */
-
-:root {
-  --font-serif: "Playfair Display", "Georgia", serif;
-  --font-sans: "Montserrat", "Helvetica Neue", sans-serif;
-  --font-script: "Great Vibes", cursive;
-  --border-accent: 1px solid var(--color-chene-clair);
-  --shadow-glow: 0 4px 24px rgba(199, 167, 124, 0.15);
-  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  --radius-md: 12px;
-}
 
 /* ========== GIFT INTRO SECTION ========== */
 

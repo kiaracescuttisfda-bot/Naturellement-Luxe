@@ -20,24 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (overlay)     overlay.addEventListener('click', closeMenu);
   if (mobileNav) mobileNav.querySelectorAll('a').forEach(l => l.addEventListener('click', closeMenu));
 
-  // 3. PARALLAXE VERTICAL sur images flottantes
-  const parallaxEls = document.querySelectorAll('[data-speed]');
-  if (parallaxEls.length > 0) {
-    window.addEventListener('scroll', () => {
-      parallaxEls.forEach(el => {
-        const speed = parseFloat(el.dataset.speed) || 0.1;
-        el.style.transform = `translateY(${window.scrollY * speed}px)`;
-      });
-    }, { passive: true });
-  }
-
-  // 4. PARALLAXE sur section pleine largeur
-  const parallaxSection = document.querySelector('.parallax-img');
-  if (parallaxSection) {
-    window.addEventListener('scroll', () => {
-      parallaxSection.style.transform = `translateY(${window.scrollY * 0.25}px)`;
-    }, { passive: true });
-  }
+  // 3. PARALLAXE — géré par animations.js (requestAnimationFrame)
+  // Supprimé ici pour éviter le double-update qui causait les saccades
 
   // 5. ACTIVE NAV
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';

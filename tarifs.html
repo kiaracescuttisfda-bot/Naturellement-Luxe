@@ -492,24 +492,5 @@
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
-<script>
-    // Tab Navigation
-    document.addEventListener('DOMContentLoaded', function () {
-      const tabBtns = document.querySelectorAll('.tab-btn');
-      const tabPanels = document.querySelectorAll('.tab-panel');
-
-      tabBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          const target = this.getAttribute('data-tab');
-
-          tabBtns.forEach(function (b) { b.classList.remove('active'); });
-          tabPanels.forEach(function (p) { p.classList.remove('active'); });
-
-          this.classList.add('active');
-          document.querySelector('[data-panel="' + target + '"]').classList.add('active');
-        });
-      });
-    });
-  </script>
 </body>
 </html>

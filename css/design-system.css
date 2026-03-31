@@ -81,6 +81,39 @@
 
   /* Transitions */
   --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ===== ALIAS — utilisés par les fichiers pages/*.css ===== */
+
+  /* Couleurs (alias --color-* → palette Le Club) */
+  --color-noir-chaud:    var(--noir);
+  --color-chene-clair:   var(--chene);
+  --color-blanc-craie:   var(--craie);
+  --color-beige-pierre:  var(--beige-pierre);
+  --color-beige-sable:   var(--beige-sable);
+  --color-grege-pierre:  var(--grege);
+  --color-bronze-fume:   #2A2420;
+  --color-onyx-miel:     #1E1A16;
+  --color-bg:            var(--noir);
+  --color-surface:       #1E1A16;
+  --color-text:          var(--craie);
+  --color-text-muted:    var(--beige-pierre);
+
+  /* Bordures */
+  --border-accent: 1px solid rgba(199, 167, 124, 0.2);
+  --border-warm:   1px solid rgba(199, 167, 124, 0.12);
+
+  /* Ombres */
+  --shadow-card: 0 8px 32px rgba(22, 22, 22, 0.3);
+  --shadow-soft: 0 4px 20px rgba(22, 22, 22, 0.2);
+
+  /* Tailles supplémentaires */
+  --text-4xl:  3.5rem;
+  --space-xs:  0.5rem;
+  --space-2xl: 10rem;
+
+  /* Typographie (alias) */
+  --font-body:    var(--font-sans);
+  --font-heading: var(--font-serif);
 }
 
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -156,6 +189,12 @@ ul, ol { list-style: none; }
 .reveal-delay-2 { transition-delay: 0.3s; }
 .reveal-delay-3 { transition-delay: 0.45s; }
 .reveal-delay-4 { transition-delay: 0.6s; }
+
+/* Parallax — aucune transition CSS sur les éléments pilotés par JS */
+[data-speed] {
+  transition: none !important;
+  will-change: transform;
+}
 
 @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeDown { from { opacity: 0; transform: translateY(-15px); } to { opacity: 1; transform: translateY(0); } }

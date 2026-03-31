@@ -311,7 +311,7 @@ header.scrolled {
   filter: brightness(0.92);
   box-shadow: var(--shadow-elevated);
   z-index: 2;
-  transition: transform 0.05s linear;
+  will-change: transform;
 }
 .concept-images .img-secondary {
   position: absolute;
@@ -322,7 +322,7 @@ header.scrolled {
   filter: brightness(0.88);
   box-shadow: var(--shadow-elevated);
   z-index: 3;
-  transition: transform 0.05s linear;
+  will-change: transform;
 }
 .concept-images .img-deco-circle {
   position: absolute; bottom: 50px; left: 2%;
@@ -344,12 +344,14 @@ header.scrolled {
 /* ============================ ÉQUIPEMENTS (bande organique sombre) ============================ */
 .section-equipements {
   background: var(--bronze);
+  color: var(--craie);
   padding: 50px;
   border-radius: var(--radius-organic-section);
   overflow: hidden;
 }
 .section-equipements .section-header { text-align: center; margin-bottom: 3rem; }
 .section-equipements .section-header h2 { color: var(--craie); }
+.section-equipements .section-label { color: var(--chene); }
 .equipements-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -357,6 +359,7 @@ header.scrolled {
 }
 .equipment-card {
   background: transparent;
+  color: var(--craie);
   border-radius: 0;
   padding: 2rem;
   text-align: center;
@@ -376,7 +379,7 @@ header.scrolled {
 .equipment-title {
   font-family: var(--font-sans);
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   line-height: 1.3;
   color: var(--craie);
@@ -384,7 +387,7 @@ header.scrolled {
 }
 .equipment-text {
   font-size: 0.875rem;
-  color: #fff;
+  color: rgba(246, 243, 238, 0.85);
   line-height: 1.75;
   max-width: 260px;
   margin: 0 auto;
@@ -454,6 +457,7 @@ header.scrolled {
   opacity: 0.35;
   filter: saturate(0.6);
   top: -10%;
+  will-change: transform;
 }
 .section-parallax .parallax-overlay {
   position: absolute; inset: 0;
