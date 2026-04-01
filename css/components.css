@@ -280,7 +280,7 @@ header.scrolled {
 .hero-tag {
   display: inline-block; font-family: var(--font-sans); font-size: 13px; font-weight: 500;
   letter-spacing: 0.4em; text-transform: uppercase; color: var(--chene);
-  margin-bottom: 2rem; opacity: 0; animation: fadeDown 1s ease 0.3s forwards;
+  margin-top: 3rem; margin-bottom: 2rem; opacity: 0; animation: fadeDown 1s ease 0.3s forwards;
 }
 .hero h1 { color: #fff; font-weight: 300; font-size: clamp(3.5rem, 7vw, 5rem); line-height: 1.2; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 1s ease 0.6s forwards; }
 .hero-subtitle { font-size: 1.125rem; font-weight: 300; letter-spacing: 0.06em; color: #fff; line-height: 1.7; margin-bottom: 3rem; opacity: 0; animation: fadeUp 1s ease 0.9s forwards; }
