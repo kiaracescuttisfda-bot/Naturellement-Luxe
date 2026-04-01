@@ -105,7 +105,8 @@
 .package-card.featured ul li { color: var(--noir); }
 .package-card.featured .package-price { color: var(--noir); }
 .package-card.featured .package-price .price-unit { color: var(--noir); }
-.package-card.featured .btn-primary { background: var(--noir); color: var(--chene); border-color: var(--noir); }
+.package-card.featured .btn-primary { background: var(--noir); color: var(--chene); border-color: var(--noir); border-radius: var(--radius-pill); }
+.package-card.featured .btn-primary:hover { background: var(--blanc); color: var(--noir); border-color: var(--blanc); }
 
 /* ---------- CONDITIONS ---------- */
 .section-conditions {
