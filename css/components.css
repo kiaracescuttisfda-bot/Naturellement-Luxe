@@ -108,7 +108,7 @@ header.scrolled {
 }
 .mobile-overlay.visible { opacity: 1; pointer-events: all; }
 
-/* ============================ BOUTONS — Tous les variants ============================ */
+/* ============================ BOUTONS — Style pill uniforme (ref: header-cta) ============================ */
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 500;
@@ -118,25 +118,41 @@ header.scrolled {
   transition: var(--transition); text-decoration: none; outline: none;
 }
 
-/* Primaire — CTA principal */
+/* Primaire — fond doré, texte noir, flèche → */
 .btn-primary { background: var(--chene); color: var(--noir); border-color: var(--chene); }
 .btn-primary::after { content: '\2192'; transition: transform 0.3s ease; }
 .btn-primary:hover { background: var(--miel); border-color: var(--miel); }
 .btn-primary:hover::after { transform: translateX(4px); }
 
-/* Outline sur fond sombre */
-.btn-outline { background: transparent; color: var(--craie); border-color: rgba(246,243,238,0.4); }
-.btn-outline:hover { border-color: var(--chene); color: var(--chene); }
+/* Outline sur fond sombre — bordure visible au repos (standalone) */
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 14px 28px; cursor: pointer;
+  border: 2px solid var(--chene); border-radius: var(--radius-pill);
+  transition: var(--transition); text-decoration: none;
+  background: transparent; color: var(--craie);
+}
+.btn-outline:hover { background: var(--chene); color: var(--noir); border-color: var(--chene); }
 
 /* Outline sur fond clair */
 .btn-outline-dark { background: transparent; color: var(--bronze); border-color: var(--bronze); }
 .btn-outline-dark:hover { background: var(--bronze); color: var(--blanc); border-color: var(--bronze); }
 
-/* Dark — CTA sections dorées */
-.btn-dark { background: var(--noir); color: var(--craie); border-color: var(--noir); }
-.btn-dark:hover { background: transparent; color: var(--noir); border-color: var(--noir); }
+/* Dark — fond noir, bordure dorée visible, style pill (standalone) */
+.btn-dark {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 14px 28px; cursor: pointer;
+  border: 2px solid var(--chene); border-radius: var(--radius-pill);
+  transition: var(--transition); text-decoration: none;
+  background: var(--noir); color: var(--craie);
+}
+.btn-dark:hover { background: var(--chene); color: var(--noir); border-color: var(--chene); }
 
-/* Ghost — lien discret avec flèche */
+/* Ghost — lien discret avec flèche (PAS de ::after, la flèche est dans le HTML) */
 .btn-ghost {
   background: none; border: none; color: var(--chene); padding: 0;
   font-family: var(--font-sans); font-size: var(--text-sm); font-weight: 500;
@@ -144,15 +160,11 @@ header.scrolled {
   cursor: pointer; transition: var(--transition); text-decoration: none;
   display: inline-flex; align-items: center; gap: 8px;
 }
-.btn-ghost::after { content: '\2192'; margin-left: 4px; transition: transform 0.3s ease; }
 .btn-ghost:hover { color: var(--miel); }
-.btn-ghost:hover::after { transform: translateX(4px); }
 
-/* Small */
+/* Small — tarifs: bouton visible au repos */
 .btn-sm { font-size: 0.75rem; padding: 10px 18px; letter-spacing: 0.1em; }
-
-/* Tarifs — bouton réserver dans les lignes */
-.btn-outline.btn-sm { border-color: rgba(199,167,124,0.4); color: var(--chene); }
+.btn-outline.btn-sm { border-color: var(--chene); color: var(--chene); }
 .btn-outline.btn-sm:hover { background: var(--chene); color: var(--noir); border-color: var(--chene); }
 
 /* Full width */

@@ -44,9 +44,9 @@
 .map-container { margin-top: var(--space-md); }
 .map-placeholder { position: relative; aspect-ratio: 16/9; background: var(--charbon); border: 1px solid rgba(199,167,124,0.25); border-radius: var(--radius-md); overflow: hidden; }
 .map-placeholder iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
-.map-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-sm); background: var(--charbon); z-index: 0; }
-.map-fallback .map-pin { font-size: 2.5rem; color: var(--chene); }
-.map-fallback p { font-size: 1rem; color: var(--sable); }
+.map-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-xs); background: var(--charbon); z-index: 0; }
+.map-fallback p { font-size: 1rem; color: var(--sable); margin: 0; }
+.map-fallback p strong { color: var(--craie); }
 
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
