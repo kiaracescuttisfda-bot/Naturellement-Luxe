@@ -17,7 +17,7 @@
 .step-label { font-size: 0.85rem; color: var(--sable); text-align: center; max-width: 120px; transition: color 0.4s ease; }
 .step.active .step-circle { border-color: var(--chene); color: var(--chene); }
 .step.active .step-label { color: var(--chene); }
-.step.current .step-circle { background: var(--chene); border-color: var(--chene); color: var(--noir); box-shadow: 0 0 20px rgba(199,167,124,0.4); }
+.step.current .step-circle { background: var(--chene); border-color: var(--chene); color: var(--noir); box-shadow: 0 0 20px rgba(207,214,83,0.4); }
 .step-connector { flex: 0 0 80px; height: 2px; background: var(--sable); margin: 0 var(--space-sm); margin-bottom: var(--space-md); transition: background 0.4s ease; }
 .step.active + .step-connector { background: var(--chene); }
 
@@ -34,12 +34,12 @@
 /* ===== Prestation Selection ===== */
 .prestation-select-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin-bottom: var(--space-lg); }
 .prestation-select-card {
-  background: var(--charbon); border: 1px solid rgba(199,167,124,0.15);
+  background: var(--charbon); border: 1px solid rgba(207,214,83,0.15);
   border-radius: var(--radius-md); padding: var(--space-lg);
   text-align: center; cursor: pointer; transition: all 0.3s ease;
 }
 .prestation-select-card:hover { border-color: var(--chene); transform: translateY(-2px); }
-.prestation-select-card.selected { border-color: var(--chene); border-width: 2px; box-shadow: 0 0 24px rgba(199,167,124,0.2); }
+.prestation-select-card.selected { border-color: var(--chene); border-width: 2px; box-shadow: 0 0 24px rgba(207,214,83,0.2); }
 .prestation-card-icon { width: 32px; height: 32px; stroke: var(--chene); stroke-width: 1.5; margin: 0 auto var(--space-sm); display: block; }
 .prestation-select-card h3 { font-family: var(--font-serif); font-size: 1.05rem; color: var(--craie); margin-bottom: var(--space-xs); }
 .prestation-price { font-size: 0.9rem; color: var(--sable); }
@@ -51,7 +51,7 @@
 
 /* ===== Calendar ===== */
 .calendar-placeholder {
-  background: var(--charbon); border: 1px solid rgba(199,167,124,0.15);
+  background: var(--charbon); border: 1px solid rgba(207,214,83,0.15);
   border-radius: var(--radius-md); padding: var(--space-lg); margin-bottom: var(--space-lg);
 }
 .calendar-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md); }
@@ -68,7 +68,7 @@
 .calendar-days .day, .calendar-days .day-empty { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; border-radius: 50%; transition: all 0.3s ease; }
 .calendar-days .day-empty { background: transparent; }
 .calendar-days .day { color: var(--craie); cursor: pointer; }
-.calendar-days .day:hover { background: rgba(199,167,124,0.15); color: var(--chene); }
+.calendar-days .day:hover { background: rgba(207,214,83,0.15); color: var(--chene); }
 .calendar-days .day.today { border: 1px solid var(--chene); color: var(--chene); }
 .calendar-days .day.selected { background: var(--chene); color: var(--noir); font-weight: 700; }
 
@@ -80,7 +80,7 @@
   padding: var(--space-xs) var(--space-md); border-radius: var(--radius-md);
   font-size: 0.95rem; cursor: pointer; transition: all 0.3s ease; min-width: 64px; text-align: center;
 }
-.time-slot:hover { background: rgba(199,167,124,0.15); }
+.time-slot:hover { background: rgba(207,214,83,0.15); }
 .time-slot.selected { background: var(--chene); color: var(--noir); font-weight: 700; }
 
 /* ===== Reservation Form ===== */
