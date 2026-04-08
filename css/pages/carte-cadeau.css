@@ -16,7 +16,7 @@
 .section-formulas .section-title p { color: var(--sable); }
 .formulas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
 .formula-card {
-  background: var(--charbon); border: 1px solid rgba(207,214,83,0.2);
+  background: var(--charbon); border: 1px solid rgba(232,180,180,0.2);
   border-radius: var(--radius-md); padding: var(--space-lg) var(--space-md);
   text-align: center; position: relative; transition: var(--transition);
 }
@@ -36,7 +36,7 @@
 .formula-card.featured { background: var(--chene); border-color: var(--miel); transform: scale(1.05); box-shadow: var(--shadow-glow); }
 .formula-card.featured:hover { transform: scale(1.05) translateY(-8px); }
 .formula-card.featured h3, .formula-card.featured .formula-icon, .formula-card.featured .formula-price { color: var(--noir); }
-.formula-card.featured .formula-desc { color: rgba(10,57,55,0.7); }
+.formula-card.featured .formula-desc { color: rgba(28,20,18,0.7); }
 .formula-card.featured .divider-gold-sm { background: var(--noir); }
 
 /* ========== PROCESS ========== */
@@ -61,16 +61,16 @@
 .section-gift-form .section-title h2 { color: var(--craie); }
 .gift-form {
   max-width: 680px; margin: var(--space-lg) auto 0;
-  background: var(--charbon); border: 1px solid rgba(207,214,83,0.2);
+  background: var(--charbon); border: 1px solid rgba(232,180,180,0.2);
   border-radius: var(--radius-md); padding: var(--space-lg);
 }
 .radio-group { display: flex; flex-direction: column; gap: var(--space-sm); }
 .radio-label {
   display: flex; align-items: center; gap: 12px; cursor: pointer;
-  padding: 12px 16px; border: 1px solid rgba(207,214,83,0.2);
+  padding: 12px 16px; border: 1px solid rgba(232,180,180,0.2);
   border-radius: var(--radius-sm); transition: var(--transition);
 }
-.radio-label:hover { border-color: var(--chene); background: rgba(207,214,83,0.05); }
+.radio-label:hover { border-color: var(--chene); background: rgba(232,180,180,0.05); }
 .radio-label input[type="radio"] { display: none; }
 .radio-custom {
   width: 20px; height: 20px; min-width: 20px; border-radius: 50%;

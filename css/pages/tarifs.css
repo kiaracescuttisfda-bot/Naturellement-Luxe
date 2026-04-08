@@ -15,7 +15,7 @@
 .tabs { width: 100%; }
 .tabs-nav {
   display: flex; flex-wrap: wrap; gap: var(--space-xs);
-  border-bottom: 1px solid rgba(207,214,83,0.3);
+  border-bottom: 1px solid rgba(232,180,180,0.3);
   padding-bottom: 0; margin-bottom: var(--space-lg);
 }
 .tab-btn {
@@ -50,16 +50,16 @@
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
   align-items: center;
   padding: var(--space-sm);
-  border-bottom: 1px solid rgba(207,214,83,0.12);
+  border-bottom: 1px solid rgba(232,180,180,0.12);
   transition: var(--transition);
 }
-.tarif-row:nth-child(even):not(.tarif-row-header) { background: rgba(207,214,83,0.04); }
-.tarif-row:hover:not(.tarif-row-header) { background: rgba(207,214,83,0.08); }
+.tarif-row:nth-child(even):not(.tarif-row-header) { background: rgba(232,180,180,0.04); }
+.tarif-row:hover:not(.tarif-row-header) { background: rgba(232,180,180,0.08); }
 
 .tarif-row-header {
   font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
   color: var(--sable);
-  border-bottom: 1px solid rgba(207,214,83,0.25);
+  border-bottom: 1px solid rgba(232,180,180,0.25);
   padding-bottom: var(--space-xs); margin-bottom: 0;
 }
 
@@ -83,7 +83,7 @@
 }
 .package-card {
   background: var(--charbon);
-  border: 1px solid rgba(207,214,83,0.2); border-radius: var(--radius-md);
+  border: 1px solid rgba(232,180,180,0.2); border-radius: var(--radius-md);
   padding: var(--space-lg) var(--space-md);
   text-align: center; transition: var(--transition);
   display: flex; flex-direction: column; align-items: center;
@@ -116,12 +116,12 @@
 .section-conditions > .container { max-width: 900px; }
 .conditions-content {
   background: var(--charbon);
-  border: 1px solid rgba(207,214,83,0.15); border-radius: var(--radius-md);
+  border: 1px solid rgba(232,180,180,0.15); border-radius: var(--radius-md);
   padding: var(--space-lg);
 }
 .conditions-content h3 { font-size: 1.2rem; color: var(--chene); }
 .conditions-content p { color: var(--sable); font-size: 0.9rem; line-height: 1.7; }
-.conditions-content a { color: var(--chene); text-decoration: underline; text-decoration-color: rgba(207,214,83,0.4); transition: var(--transition); }
+.conditions-content a { color: var(--chene); text-decoration: underline; text-decoration-color: rgba(232,180,180,0.4); transition: var(--transition); }
 .conditions-content a:hover { text-decoration-color: var(--chene); }
 
 /* ---------- RESPONSIVE ---------- */

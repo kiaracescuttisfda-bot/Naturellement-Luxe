@@ -6,15 +6,15 @@
    ============================================ */
 
 :root {
-  /* Palette — Nouvelle charte graphique Spa */
-  --noir:    #0A3937;
-  --charbon: #0E4845;
+  /* Palette — Charte graphique NL (rose + marron) */
+  --noir:    #1C1412;
+  --charbon: #2A201B;
   --bronze:  #9B7C69;
-  --chene:   #CFD653;
-  --miel:    #DBE265;
-  --sable:   #BDA393;
-  --creme:   #F0EDE8;
-  --craie:   #F8F7F4;
+  --chene:   #E8B4B4;
+  --miel:    #F0C8C8;
+  --sable:   #C4A898;
+  --creme:   #FDF5F3;
+  --craie:   #FBF8F7;
   --blanc:   #FFFFFF;
 
   /* Typo */
@@ -55,15 +55,15 @@
   --radius-glass: 90px 0px 0px 0px;
 
   /* Glassmorphism */
-  --glass-bg: rgba(240, 237, 232, 0.6);
+  --glass-bg: rgba(253, 245, 243, 0.6);
   --glass-border: 2px solid rgba(255, 255, 255, 0.5);
   --glass-blur: 12px;
 
   /* Ombres */
-  --shadow-sm:   0 4px 20px rgba(10,57,55,0.08);
-  --shadow-md:   0 8px 40px rgba(10,57,55,0.12);
-  --shadow-lg:   0 20px 60px rgba(10,57,55,0.18);
-  --shadow-glow: 0 0 40px rgba(207,214,83,0.15);
+  --shadow-sm:   0 4px 20px rgba(28,20,18,0.08);
+  --shadow-md:   0 8px 40px rgba(28,20,18,0.12);
+  --shadow-lg:   0 20px 60px rgba(28,20,18,0.18);
+  --shadow-glow: 0 0 40px rgba(232,180,180,0.15);
 
   /* Transitions */
   --ease-out: cubic-bezier(0.4, 0, 0.2, 1);

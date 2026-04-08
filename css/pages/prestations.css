@@ -114,7 +114,7 @@
   gap: var(--space-md); max-width: 1000px; margin: 0 auto;
 }
 .duree-card {
-  background: var(--charbon); border: 1px solid rgba(207,214,83,0.2);
+  background: var(--charbon); border: 1px solid rgba(232,180,180,0.2);
   border-radius: var(--radius-md); overflow: hidden;
   transition: var(--transition); text-align: center;
 }
@@ -200,15 +200,15 @@
 .session-item {
   display: flex; align-items: center; gap: var(--space-md);
   padding: var(--space-sm) 0;
-  border-bottom: 1px solid rgba(207,214,83,0.1);
+  border-bottom: 1px solid rgba(232,180,180,0.1);
   transition: var(--transition);
 }
 .session-item:hover { padding-left: var(--space-xs); }
 .session-date {
   flex-shrink: 0; min-width: 80px; text-align: center;
   padding: var(--space-xs) var(--space-sm);
-  background: rgba(207,214,83,0.08);
-  border: 1px solid rgba(207,214,83,0.2); border-radius: var(--radius-sm);
+  background: rgba(232,180,180,0.08);
+  border: 1px solid rgba(232,180,180,0.2); border-radius: var(--radius-sm);
 }
 .session-day { display: block; font-family: var(--font-serif); font-size: var(--text-2xl); color: var(--chene); line-height: 1; }
 .session-month { display: block; font-family: var(--font-sans); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 2px; color: var(--sable); margin-top: 2px; }
@@ -260,7 +260,7 @@
   max-width: 700px; margin: 0 auto;
   padding: var(--space-lg) var(--space-md);
   background: var(--charbon);
-  border: 1px solid rgba(207,214,83,0.2); border-radius: var(--radius-md);
+  border: 1px solid rgba(232,180,180,0.2); border-radius: var(--radius-md);
 }
 .form-contact h3 { font-family: var(--font-serif); font-size: var(--text-2xl); color: var(--craie); text-align: center; margin-bottom: var(--space-md); }
 
