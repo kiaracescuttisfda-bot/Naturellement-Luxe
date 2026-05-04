@@ -4,137 +4,117 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Naturellement Luxe — Spa Privatif Paris depuis 2014</title>
-<meta name="description" content="Historiquement le premier Spa Privatif de Paris. Jacuzzi, sauna, massages au cœur du 2e arrondissement. Réservez votre bulle d'intimité.">
+<meta name="description" content="Historiquement le premier Spa Privatif de Paris. Jacuzzi, sauna, massages au cœur du 2e arrondissement.">
 <link rel="stylesheet" href="css/design-system.css">
 <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
 
+<!-- TOP BAR -->
+<div class="topbar">Une parenthèse d'exception, de jour comme de nuit</div>
+
 <!-- HEADER -->
 <header class="site-header">
-  <a href="index.html" class="logo">Naturellement <span>Luxe</span></a>
+  <a href="index.html" class="logo">
+    <span class="logo-main"><span class="accent">N</span>aturellement <span class="accent">L</span>uxe</span>
+    <span class="logo-sub">Paris · Depuis 2014</span>
+  </a>
   <nav class="nav">
-    <a href="index.html" class="active">Accueil</a>
-    <a href="#prestations">Prestations</a>
-    <a href="#tarifs">Tarifs</a>
-    <a href="#carte-cadeau">Carte Cadeau</a>
+    <a href="#prestations">Les Prestations</a>
+    <a href="#pimentez">Pimentez l'expérience</a>
     <a href="#contact">Contact</a>
-    <a href="#reserver" class="nav-cta">Réserver</a>
   </nav>
+  <a href="#reserver" class="nav-cta">Réserver</a>
+  <a href="tel:+33142360607" class="nav-icon" aria-label="Téléphone">☎</a>
   <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </header>
+
 <div class="mobile-overlay"></div>
 <nav class="mobile-nav">
   <button class="mobile-close" aria-label="Fermer">&times;</button>
-  <a href="index.html">Accueil</a>
-  <a href="#prestations">Prestations</a>
-  <a href="#tarifs">Tarifs</a>
-  <a href="#carte-cadeau">Carte Cadeau</a>
+  <a href="#prestations">Les Prestations</a>
+  <a href="#pimentez">Pimentez l'expérience</a>
   <a href="#contact">Contact</a>
   <a href="#reserver">Réserver</a>
 </nav>
 
 <main>
 
-  <!-- HERO (image, pas vidéo) -->
+  <!-- HERO court avec image -->
   <section class="hero">
     <img class="hero-bg" src="assets/img/hero.jpg" alt="">
     <div class="hero-content">
-      <span class="hero-headline">Spa Privatif Paris — Depuis 2014</span>
-      <h1>Spa privatif <em>à Paris</em></h1>
-      <p class="hero-subtitle">Historiquement le premier Spa Privatif de Paris. Une parenthèse d'exception, rien que pour vous, au cœur du 2ème arrondissement.</p>
-      <div class="hero-cta">
-        <a href="#reserver" class="btn btn-primary">Réserver maintenant</a>
-        <a href="#prestations" class="btn btn-outline">Découvrir</a>
-      </div>
+      <h1 class="hero-title"><span class="accent">N</span>ATURELLEMENT <span class="accent">L</span>UXE</h1>
+      <div class="hero-subtitle">Le spa privatif de Paris</div>
+      <div class="hero-cta"><a href="#prestations" class="btn btn-primary">Je découvre</a></div>
     </div>
-    <div class="hero-scroll"><span></span></div>
   </section>
 
-  <!-- INTRO h2 (équivalent "Love rooms à Strasbourg pour une expérience unique") -->
-  <section class="intro reveal">
-    <span class="intro-eyebrow">Le Concept</span>
-    <h2>Spa privatif à Paris pour une <em>expérience unique</em></h2>
-    <p>Bien-être et simplicité se conjuguent pour créer une parenthèse de détente absolue. 35m² entièrement privatisés où chaque détail est pensé pour votre confort et votre sérénité.</p>
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="intro-eyebrow">VIVEZ UNE PARENTHÈSE D'EXCEPTION,<br>DE JOUR COMME DE NUIT</div>
+    <h2>Spa privatif à Paris<br>réservation de jour et de nuit</h2>
+    <p>
+      Réservez un moment d'exception dans notre spa privatif à Paris, en journée ou en nuitée. Ainsi, transformez chaque instant en un souvenir inoubliable de bien-être et de détente. De plus, <span class="accent-link">réservez le moment idéal</span> qui correspond à vos envies et à votre rythme, que ce soit pour quelques heures (10h à 21h) en journée ou pour une nuit complète (Bain de Minuit).
+    </p>
+    <br>
+    <p>
+      Nous avons soigneusement aménagé nos espaces pour créer une <strong>atmosphère intime et raffinée</strong>, et en outre, nous avons conçu chaque détail pour éveiller tous vos sens. Par ailleurs, surprenez-vous et savourez un <strong>instant naturellement luxueux</strong>. En effet, nous mettons en lumière la magie de votre détente pour raviver votre bien-être. D'ailleurs, profitez d'un cadre unique avec des prestations de qualité et explorez nos <span class="accent-link">prestations sur-mesure</span>, où tout devient possible.
+    </p>
   </section>
 
-  <!-- SUITE 1 — SPA PRIVATIF (équivalent "LOVE ROOM BALI") -->
-  <section class="suite" id="prestations">
-    <div class="suite-image reveal-left">
+  <!-- SUITE BALI : texte gauche / image overlay droite -->
+  <section class="suite-feature" id="prestations">
+    <div class="suite-feature-content">
+      <h2>Spa privatif à Paris<br>pour une expérience unique</h2>
+      <p>Chaque <span class="accent-link">moment</span> au sein de Naturellement Luxe est conçu pour offrir une expérience inégalée où luxe et confort se rencontrent pour sublimer chaque instant de votre séjour.</p>
+      <p>Plongez dans un univers de raffinement où chaque détail a été pensé pour éveiller vos sens et vous faire vivre une parenthèse de détente absolue.</p>
+      <p>Notre Spa Privatif, spacieux et élégamment décoré, incarne un cadre unique et apaisant. En outre, le soin du détail se reflète dans l'agencement harmonieux et les matériaux nobles choisis pour votre confort.</p>
+      <a href="#reserver" class="btn btn-primary">Je réserve</a>
+    </div>
+    <div class="suite-feature-image">
       <img src="assets/img/spa-privatif.jpg" alt="Spa Privatif">
-    </div>
-    <div class="suite-content reveal-right">
-      <span class="suite-eyebrow">Notre Espace Signature</span>
-      <h3>Le Spa <em>Privatif</em></h3>
-      <p>35m² entièrement privatisés. Jacuzzi, balnéothérapie, sauna, luminothérapie, futon king-size. Votre bulle de sérénité au cœur de Paris.</p>
-      <ul class="suite-features">
-        <li>Jacuzzi 2-3 places</li>
-        <li>Sauna</li>
-        <li>Luminothérapie</li>
-        <li>Futon 2m × 2m</li>
-        <li>Douche italienne</li>
-      </ul>
-      <div class="suite-meta">
-        <div><span>À partir de</span><strong>99 €</strong></div>
-        <div><span>Surface</span><strong>35 m²</strong></div>
-        <div><span>Capacité</span><strong>1-3 pers.</strong></div>
+      <div class="overlay">
+        <h3>Spa Privatif</h3>
+        <a href="#spa" class="btn btn-primary">Je découvre</a>
       </div>
-      <a href="#reserver" class="btn btn-outline-dark">Découvrir le Spa</a>
     </div>
   </section>
 
-  <!-- SUITE 2 — BAIN DE MINUIT (équivalent "LOVE ROOM IBIZA", reverse + dark) -->
-  <section class="suite reverse dark">
-    <div class="suite-image reveal-right">
+  <!-- DUO VIGNETTES : Bain de Minuit + Pimente -->
+  <section class="duo-vignettes" id="pimentez">
+    <div class="vignette">
       <img src="assets/img/bain-de-minuit.jpg" alt="Bain de Minuit">
-    </div>
-    <div class="suite-content reveal-left">
-      <span class="suite-eyebrow">Expérience Romantique</span>
-      <h3>Bain de <em>Minuit</em></h3>
-      <p>Une nuit entière dans notre spa privatif. L'expérience ultime de romantisme et de détente à deux, accompagnée de champagne et de macarons.</p>
-      <ul class="suite-features">
-        <li>Nuit complète privative</li>
-        <li>Champagne brut</li>
-        <li>16 macarons</li>
-        <li>Spa entier</li>
-      </ul>
-      <div class="suite-meta">
-        <div><span>Forfait Duo</span><strong>399 €</strong></div>
-        <div><span>Durée</span><strong>Nuit entière</strong></div>
+      <div class="overlay">
+        <h3>Bain de Minuit</h3>
+        <a href="#bain" class="btn-vignette">Je découvre</a>
       </div>
-      <a href="#reserver" class="btn btn-outline">Découvrir</a>
+    </div>
+    <div class="vignette">
+      <img src="assets/img/pimentez.jpg" alt="Pimentez l'expérience">
+      <div class="overlay">
+        <h3>Je pimente<br>mon expérience</h3>
+        <p>Massages · Cours duo · Événements</p>
+        <a href="#prestations" class="btn-vignette">Je découvre les prestations</a>
+      </div>
     </div>
   </section>
 
-  <!-- FULLWIDTH CTA — équivalent "Je pimente / Explorez votre sensualité" -->
-  <section class="fullwidth-cta">
-    <img src="assets/img/pimentez.jpg" alt="">
-    <div class="fullwidth-cta-content reveal">
-      <span class="eyebrow">Sublimez votre moment</span>
-      <h2>Pimentez votre <em>expérience</em></h2>
-      <p>Massages traditionnels, cours d'initiation duo, événements privatifs — découvrez nos prestations sur-mesure pour rendre votre instant inoubliable.</p>
-      <a href="#prestations" class="btn btn-primary">Voir les prestations</a>
+  <!-- SECTION CENTRÉE : Explorez votre bien-être -->
+  <section class="section-center">
+    <h2>Explorez votre bien-être</h2>
+    <p>Découvrez nos <span class="accent-link">prestations exclusives</span>, où raffinement et sérénité se mêlent pour une expérience inoubliable de détente et de luxe accessible. Laissez-vous porter.</p>
+    <div class="cta-row">
+      <a href="#prestations" class="btn btn-primary">Je découvre nos prestations</a>
     </div>
   </section>
 
-  <!-- ABOUT + INFOS PRATIQUES (template) -->
-  <section class="about-infos" id="contact">
-    <div class="about-block reveal-left">
-      <h2>À <em>propos</em></h2>
-      <p>Naturellement Luxe vous accueille depuis 2014 dans un univers où bien-être et simplicité se conjuguent. La beauté du corps passe aussi par la beauté des lieux.</p>
-      <p>Un cocon de détente avec une décoration harmonieuse, espace d'exposition d'artistes — illustrateurs, photographes. Cabines spacieuses, lumineuses, avec grands miroirs et douche pluie italienne.</p>
-      <p class="quote">« L'abandon de soi, l'évasion et la relaxation totale. »</p>
-    </div>
-    <div class="infos-block reveal-right">
-      <h2>Infos <em>pratiques</em></h2>
-      <ul>
-        <li><strong>Adresse</strong>15 rue du Croissant, 75002 Paris</li>
-        <li><strong>Téléphone</strong>01 42 36 06 07</li>
-        <li><strong>Email</strong>contact@naturellementluxe.com</li>
-        <li><strong>Métro</strong>Sentier (L3), Bonne Nouvelle (L8, L9)</li>
-        <li><strong>Horaires</strong>Mardi → Dimanche, 10h–21h</li>
-        <li><strong>Lundi</strong>Fermé</li>
-      </ul>
+  <!-- SECTION QUESTION -->
+  <section class="section-center" id="contact">
+    <h2>Vous avez une question ?</h2>
+    <div class="cta-row">
+      <a href="#faq" class="btn btn-primary">Voir notre FAQ</a>
+      <a href="#contact" class="btn btn-outline">Nous contacter</a>
     </div>
   </section>
 
@@ -143,40 +123,33 @@
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="index.html" class="logo">Naturellement <span>Luxe</span></a>
-      <p>Historiquement le premier Spa Privatif de Paris. Une parenthèse d'exception depuis 2014.</p>
-    </div>
     <div class="footer-col">
-      <h4>Naviguer</h4>
+      <h4>À PROPOS</h4>
       <ul>
         <li><a href="#prestations">Prestations</a></li>
-        <li><a href="#tarifs">Tarifs</a></li>
-        <li><a href="#carte-cadeau">Carte Cadeau</a></li>
-        <li><a href="#reserver">Réserver</a></li>
+        <li><a href="#pimentez">Pimentez l'expérience</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h4>INFOS PRATIQUES</h4>
       <ul>
-        <li><span>15 rue du Croissant</span></li>
-        <li><span>75002 Paris</span></li>
-        <li><a href="tel:+33142360607">01 42 36 06 07</a></li>
-        <li><a href="mailto:contact@naturellementluxe.com">contact@naturellementluxe.com</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#privacy">Politique de confidentialité</a></li>
+        <li><a href="#mentions">Mentions légales</a></li>
+        <li><a href="#cgv">Conditions générales de location</a></li>
       </ul>
     </div>
-    <div class="footer-col">
-      <h4>Horaires</h4>
-      <ul>
-        <li><span>Mardi → Dimanche</span></li>
-        <li><span>10h00 — 21h00</span></li>
-        <li><span style="opacity:0.5;">Fermé le lundi</span></li>
-      </ul>
+    <div class="footer-col footer-brand">
+      <a href="index.html" class="logo">
+        <span class="logo-main"><span class="accent">N</span>aturellement <span class="accent">L</span>uxe</span>
+        <span class="logo-sub">Paris · Depuis 2014</span>
+      </a>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 Naturellement Luxe. Tous droits réservés.</p>
-    <p><a href="#">Mentions légales</a> · <a href="#">CGV</a></p>
+    <p>15 rue du Croissant, 75002 Paris · 01 42 36 06 07</p>
+    <p>© 2025 Naturellement Luxe</p>
   </div>
 </footer>
 
