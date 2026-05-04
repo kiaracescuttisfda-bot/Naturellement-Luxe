@@ -29,7 +29,7 @@
 .logo span { color: var(--chene); font-style: italic; font-weight: 300; }
 
 .nav { display: flex; align-items: center; gap: 2.25rem; }
-.nav > a, .nav-item > a {
+.nav > a:not(.nav-cta), .nav-item > a {
   font-family: var(--font-body);
   font-size: 12px; font-weight: 500;
   letter-spacing: 0.22em; text-transform: uppercase;
@@ -37,7 +37,7 @@
   padding: 4px 0;
   transition: color 0.3s;
 }
-.nav > a:hover, .nav-item:hover > a, .nav .active { color: var(--chene); }
+.nav > a:not(.nav-cta):hover, .nav-item:hover > a, .nav .active:not(.nav-cta) { color: var(--chene); }
 
 /* Dropdown — carré, sans bordure ronde */
 .nav-item { position: relative; }
@@ -61,17 +61,18 @@
 }
 .nav-dropdown a:hover { color: var(--chene); background: rgba(232, 180, 180, 0.06); }
 
-/* CTA dans le header */
+/* CTA dans le header — même style que .btn-primary, version compacte */
 .nav-cta {
+  display: inline-flex; align-items: center; justify-content: center;
   font-family: var(--font-body);
   font-size: 11px; font-weight: 600;
   letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--noir); background: var(--chene);
+  border: 1.5px solid var(--chene); border-radius: 0;
   padding: 12px 24px;
-  border: none;
-  transition: background 0.3s;
+  transition: var(--transition);
 }
-.nav-cta:hover { background: var(--miel); }
+.nav-cta:hover { background: var(--miel); border-color: var(--miel); color: var(--noir); }
 
 /* Burger mobile */
 .burger { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
