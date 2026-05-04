@@ -15,20 +15,11 @@
   <a href="index.html" class="logo">Naturellement <span>Luxe</span></a>
   <nav class="nav">
     <a href="index.html" class="active">Accueil</a>
-    <div class="nav-item">
-      <a href="prestations.html">Prestations</a>
-      <div class="nav-dropdown">
-        <a href="spa-privatif.html">Spa Privatif</a>
-        <a href="massages.html">Massages</a>
-        <a href="cours-massage-duo.html">Cours Duo</a>
-        <a href="evenements.html">Événements</a>
-        <a href="bain-de-minuit.html">Bain de Minuit</a>
-      </div>
-    </div>
-    <a href="tarifs.html">Tarifs</a>
-    <a href="carte-cadeau.html">Carte Cadeau</a>
-    <a href="contact.html">Contact</a>
-    <a href="reserver.html" class="nav-cta">Réserver</a>
+    <a href="#prestations">Prestations</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#carte-cadeau">Carte Cadeau</a>
+    <a href="#contact">Contact</a>
+    <a href="#reserver" class="nav-cta">Réserver</a>
   </nav>
   <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </header>
@@ -36,54 +27,44 @@
 <nav class="mobile-nav">
   <button class="mobile-close" aria-label="Fermer">&times;</button>
   <a href="index.html">Accueil</a>
-  <a href="prestations.html">Prestations</a>
-  <a href="tarifs.html">Tarifs</a>
-  <a href="carte-cadeau.html">Carte Cadeau</a>
-  <a href="contact.html">Contact</a>
-  <a href="reserver.html">Réserver</a>
+  <a href="#prestations">Prestations</a>
+  <a href="#tarifs">Tarifs</a>
+  <a href="#carte-cadeau">Carte Cadeau</a>
+  <a href="#contact">Contact</a>
+  <a href="#reserver">Réserver</a>
 </nav>
 
 <main>
 
-  <!-- HERO -->
-  <section class="hero hero-vertical">
-    <!-- Background: même vidéo zoomée + blur pour remplir l'écran -->
-    <video class="hero-bg-blur" autoplay muted loop playsinline aria-hidden="true">
-      <source src="assets/video/hero.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-    <!-- Foreground: vidéo verticale centrée -->
-    <video class="hero-video-portrait" autoplay muted loop playsinline>
-      <source src="assets/video/hero.mp4" type="video/mp4">
-    </video>
+  <!-- HERO (image, pas vidéo) -->
+  <section class="hero">
+    <img class="hero-bg" src="assets/img/hero.jpg" alt="">
     <div class="hero-content">
       <span class="hero-headline">Spa Privatif Paris — Depuis 2014</span>
       <h1>Spa privatif <em>à Paris</em></h1>
       <p class="hero-subtitle">Historiquement le premier Spa Privatif de Paris. Une parenthèse d'exception, rien que pour vous, au cœur du 2ème arrondissement.</p>
       <div class="hero-cta">
-        <a href="reserver.html" class="btn btn-primary">Réserver maintenant</a>
-        <a href="prestations.html" class="btn btn-outline">Découvrir</a>
+        <a href="#reserver" class="btn btn-primary">Réserver maintenant</a>
+        <a href="#prestations" class="btn btn-outline">Découvrir</a>
       </div>
     </div>
     <div class="hero-scroll"><span></span></div>
   </section>
 
-  <!-- INTRO h2 ("Love rooms à Strasbourg pour une expérience unique" → équivalent NL) -->
-  <section class="section">
-    <div class="section-title reveal">
-      <span class="section-eyebrow">Le Concept</span>
-      <h2>Spa privatif à Paris pour une <em>expérience unique</em></h2>
-      <p>Bien-être et simplicité se conjuguent pour créer une parenthèse de détente absolue. 35m² entièrement privatisés où chaque détail est pensé pour votre confort et votre sérénité.</p>
-    </div>
+  <!-- INTRO h2 (équivalent "Love rooms à Strasbourg pour une expérience unique") -->
+  <section class="intro reveal">
+    <span class="intro-eyebrow">Le Concept</span>
+    <h2>Spa privatif à Paris pour une <em>expérience unique</em></h2>
+    <p>Bien-être et simplicité se conjuguent pour créer une parenthèse de détente absolue. 35m² entièrement privatisés où chaque détail est pensé pour votre confort et votre sérénité.</p>
   </section>
 
   <!-- SUITE 1 — SPA PRIVATIF (équivalent "LOVE ROOM BALI") -->
-  <section class="suite">
+  <section class="suite" id="prestations">
     <div class="suite-image reveal-left">
       <img src="assets/img/spa-privatif.jpg" alt="Spa Privatif">
     </div>
     <div class="suite-content reveal-right">
-      <span class="section-eyebrow">Notre Espace Signature</span>
+      <span class="suite-eyebrow">Notre Espace Signature</span>
       <h3>Le Spa <em>Privatif</em></h3>
       <p>35m² entièrement privatisés. Jacuzzi, balnéothérapie, sauna, luminothérapie, futon king-size. Votre bulle de sérénité au cœur de Paris.</p>
       <ul class="suite-features">
@@ -94,11 +75,11 @@
         <li>Douche italienne</li>
       </ul>
       <div class="suite-meta">
-        <div>À partir de<strong>99 €</strong></div>
-        <div>Surface<strong>35 m²</strong></div>
-        <div>Capacité<strong>1-3 pers.</strong></div>
+        <div><span>À partir de</span><strong>99 €</strong></div>
+        <div><span>Surface</span><strong>35 m²</strong></div>
+        <div><span>Capacité</span><strong>1-3 pers.</strong></div>
       </div>
-      <a href="spa-privatif.html" class="btn btn-outline-dark">Découvrir le Spa</a>
+      <a href="#reserver" class="btn btn-outline-dark">Découvrir le Spa</a>
     </div>
   </section>
 
@@ -108,7 +89,7 @@
       <img src="assets/img/bain-de-minuit.jpg" alt="Bain de Minuit">
     </div>
     <div class="suite-content reveal-left">
-      <span class="section-eyebrow">Expérience Romantique</span>
+      <span class="suite-eyebrow">Expérience Romantique</span>
       <h3>Bain de <em>Minuit</em></h3>
       <p>Une nuit entière dans notre spa privatif. L'expérience ultime de romantisme et de détente à deux, accompagnée de champagne et de macarons.</p>
       <ul class="suite-features">
@@ -118,67 +99,31 @@
         <li>Spa entier</li>
       </ul>
       <div class="suite-meta">
-        <div>Forfait Duo<strong>399 €</strong></div>
-        <div>Durée<strong>Nuit entière</strong></div>
+        <div><span>Forfait Duo</span><strong>399 €</strong></div>
+        <div><span>Durée</span><strong>Nuit entière</strong></div>
       </div>
-      <a href="bain-de-minuit.html" class="btn btn-outline">Découvrir</a>
+      <a href="#reserver" class="btn btn-outline">Découvrir</a>
     </div>
   </section>
 
   <!-- FULLWIDTH CTA — équivalent "Je pimente / Explorez votre sensualité" -->
   <section class="fullwidth-cta">
-    <img src="assets/img/fullwidth-massages.jpg" alt="">
+    <img src="assets/img/pimentez.jpg" alt="">
     <div class="fullwidth-cta-content reveal">
-      <span class="section-eyebrow">Sublimez votre moment</span>
+      <span class="eyebrow">Sublimez votre moment</span>
       <h2>Pimentez votre <em>expérience</em></h2>
       <p>Massages traditionnels, cours d'initiation duo, événements privatifs — découvrez nos prestations sur-mesure pour rendre votre instant inoubliable.</p>
-      <a href="prestations.html" class="btn btn-primary">Voir les prestations</a>
+      <a href="#prestations" class="btn btn-primary">Voir les prestations</a>
     </div>
   </section>
 
-  <!-- TÉMOIGNAGES -->
-  <section class="testimonials">
-    <div class="section-title reveal">
-      <span class="section-eyebrow">Ils nous ont aimés</span>
-      <h2>Ils en <em>parlent</em></h2>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card reveal">
-        <div class="stars">★★★★★</div>
-        <blockquote>« Une bulle d'évasion ! C'était comme chez nous mais en mieux. »</blockquote>
-        <cite>— Anna</cite>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-1">
-        <div class="stars">★★★★★</div>
-        <blockquote>« 90 minutes de relaxation à deux, en toute intimité. »</blockquote>
-        <cite>— Frédéric</cite>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-2">
-        <div class="stars">★★★★★</div>
-        <blockquote>« Quel bonheur que ce petit cocon dans Paris. »</blockquote>
-        <cite>— Yann</cite>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ TEASER section -->
-  <section class="fullwidth-cta" style="min-height:50vh;">
-    <img src="assets/img/fullwidth-faq.jpg" alt="">
-    <div class="fullwidth-cta-content reveal">
-      <span class="section-eyebrow">FAQ</span>
-      <h2>Vous avez une <em>question</em> ?</h2>
-      <p>Comment réserver, que faut-il apporter, l'établissement est-il accessible PMR ? Retrouvez toutes nos réponses.</p>
-      <a href="contact.html" class="btn btn-outline">Consulter la FAQ</a>
-    </div>
-  </section>
-
-  <!-- À PROPOS + INFOS PRATIQUES — grid 2col (template) -->
-  <section class="about-infos">
+  <!-- ABOUT + INFOS PRATIQUES (template) -->
+  <section class="about-infos" id="contact">
     <div class="about-block reveal-left">
       <h2>À <em>propos</em></h2>
       <p>Naturellement Luxe vous accueille depuis 2014 dans un univers où bien-être et simplicité se conjuguent. La beauté du corps passe aussi par la beauté des lieux.</p>
       <p>Un cocon de détente avec une décoration harmonieuse, espace d'exposition d'artistes — illustrateurs, photographes. Cabines spacieuses, lumineuses, avec grands miroirs et douche pluie italienne.</p>
-      <p style="margin-top:1.5rem;font-style:italic;color:var(--chene);font-family:var(--font-display);font-size:var(--text-lg);">« L'abandon de soi, l'évasion et la relaxation totale. »</p>
+      <p class="quote">« L'abandon de soi, l'évasion et la relaxation totale. »</p>
     </div>
     <div class="infos-block reveal-right">
       <h2>Infos <em>pratiques</em></h2>
@@ -205,10 +150,10 @@
     <div class="footer-col">
       <h4>Naviguer</h4>
       <ul>
-        <li><a href="prestations.html">Prestations</a></li>
-        <li><a href="tarifs.html">Tarifs</a></li>
-        <li><a href="carte-cadeau.html">Carte Cadeau</a></li>
-        <li><a href="reserver.html">Réserver</a></li>
+        <li><a href="#prestations">Prestations</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#carte-cadeau">Carte Cadeau</a></li>
+        <li><a href="#reserver">Réserver</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -236,6 +181,5 @@
 </footer>
 
 <script src="js/main.js"></script>
-<script src="js/animations.js"></script>
 </body>
 </html>

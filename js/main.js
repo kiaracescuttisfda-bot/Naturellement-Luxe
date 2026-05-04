@@ -21,17 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
   overlay?.addEventListener('click', close);
   document.querySelectorAll('.mobile-nav a').forEach(a => a.addEventListener('click', close));
 
-  // FAQ accordion
-  document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      item.classList.toggle('open');
+  // Reveal scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
     });
-  });
-
-  // Active nav link
-  const path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav a, .mobile-nav a').forEach(a => {
-    if (a.getAttribute('href') === path) a.classList.add('active');
-  });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
 });
