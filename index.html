@@ -1,54 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Naturellement Luxe — Le premier Spa Privatif de Paris depuis 2014. Jacuzzi, sauna, balnéothérapie, massages en toute intimité au cœur du 2e arrondissement.">
-  <title>Naturellement Luxe — Spa Privatif Paris | Votre Spa en Privé</title>
-  <link rel="stylesheet" href="css/design-system.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages/home.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naturellement Luxe — Spa Privatif Paris depuis 2014</title>
+<meta name="description" content="Historiquement le premier Spa Privatif de Paris. Jacuzzi, sauna, massages au cœur du 2e arrondissement. Réservez votre bulle d'intimité.">
+<link rel="stylesheet" href="css/design-system.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages/home.css">
 </head>
 <body>
 
 <!-- HEADER -->
-<header>
-  <a href="index.html" class="header-logo">Naturellement <span>Luxe</span></a>
-  <nav>
-    <ul class="header-nav">
-      <li><a href="index.html">Concept</a></li>
-      <li class="has-dropdown">
-        <a href="prestations.html">Prestations</a>
-        <ul class="dropdown">
-          <li><a href="prestation-spa.html">Spa Privatif</a></li>
-          <li><a href="prestation-massage.html">Massage</a></li>
-          <li><a href="prestation-cours.html">Cours</a></li>
-          <li><a href="prestation-loveroom.html">Love Room</a></li>
-          <li class="has-dropdown">
-            <a href="prestation-events.html">Events</a>
-            <ul class="dropdown dropdown-right">
-              <li><a href="#">EVJF</a></li>
-              <li><a href="#">Baby Shower</a></li>
-              <li><a href="#">Anniv</a></li>
-              <li><a href="#">St Valentin</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="tarifs.html">Tarifs</a></li>
-      <li><a href="carte-cadeau.html">Carte Cadeau</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<header class="site-header">
+  <a href="index.html" class="logo">Naturellement <span>Luxe</span></a>
+  <nav class="nav">
+    <a href="index.html">Accueil</a>
+    <div class="nav-item">
+      <a href="prestations.html">Prestations</a>
+      <div class="nav-dropdown">
+        <a href="spa-privatif.html">Spa Privatif</a>
+        <a href="massages.html">Massages</a>
+        <a href="cours-massage-duo.html">Cours Duo</a>
+        <a href="evenements.html">Événements</a>
+        <a href="bain-de-minuit.html">Bain de Minuit</a>
+      </div>
+    </div>
+    <a href="tarifs.html">Tarifs</a>
+    <a href="carte-cadeau.html">Carte Cadeau</a>
+    <a href="contact.html">Contact</a>
+    <a href="reserver.html" class="btn btn-primary" style="padding:10px 22px;font-size:11px;">Réserver</a>
   </nav>
-  <a href="reserver.html" class="header-cta">Réserver</a>
-  <button class="burger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </header>
 <div class="mobile-overlay"></div>
 <nav class="mobile-nav">
-  <button class="mobile-close">&#10005;</button>
+  <button class="mobile-close" aria-label="Fermer">&times;</button>
   <a href="index.html">Accueil</a>
   <a href="prestations.html">Prestations</a>
   <a href="tarifs.html">Tarifs</a>
@@ -59,301 +46,176 @@
 
 <main>
 
-  <!-- HERO (fond sombre) -->
+  <!-- HERO -->
   <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline
-      poster="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=85&auto=format&fit=crop">
+    <video class="hero-media" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=85">
       <source src="https://videos.pexels.com/video-files/3327263/3327263-uhd_2560_1440_30fps.mp4" type="video/mp4">
     </video>
-    <img class="hero-bg-img" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=85&auto=format&fit=crop" alt="">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <span class="hero-tag">Spa Privatif &amp; Bien-être — Paris</span>
+      <span class="hero-eyebrow">Spa Privatif Paris — Depuis 2014</span>
       <h1>Naturellement <em>Luxe</em></h1>
-      <p class="hero-subtitle">Une parenthèse d'exception, rien que pour vous<br>Historiquement le premier Spa Privatif de Paris</p>
-      <div class="hero-buttons">
+      <p class="hero-subtitle">Historiquement le premier Spa Privatif de Paris. Une parenthèse d'exception, rien que pour vous.</p>
+      <div class="hero-cta">
         <a href="reserver.html" class="btn btn-primary">Réserver</a>
         <a href="prestations.html" class="btn btn-outline">Découvrir</a>
       </div>
-      <div class="hero-price">
-        <span class="price-from">Dès</span>
-        <span class="price-amount">99</span>
-        <span class="price-currency">€</span>
-        <span class="price-unit">/ pers.</span>
-      </div>
     </div>
-    <div class="scroll-indicator"><span></span></div>
+    <div class="hero-scroll"><span></span></div>
   </section>
 
-  <!-- CONCEPT (fond CRÈME) -->
-  <section class="section-concept">
-    <div class="container">
-      <div class="concept-grid">
-        <div class="concept-text reveal-left">
-          <span class="section-label">Notre concept</span>
-          <h2>Un moment unique,<br><em>hors du temps</em></h2>
-          <p>Naturellement Luxe vous accueille dans un univers où bien-être et simplicité se conjuguent pour créer une expérience unique de détente absolue. Depuis 2014, nous avons fait le choix de l'intimité et du sur-mesure.</p>
-          <p>La beauté du corps passe aussi par la beauté des lieux. Chaque détail est pensé pour votre confort et votre sérénité.</p>
-          <div class="divider"></div>
-          <a href="prestations.html" class="btn btn-outline-dark" style="margin-top:1rem">En savoir plus</a>
-        </div>
-        <div class="concept-images reveal-right">
-          <img class="img-main" data-speed="0.17"
-            src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=85&auto=format&fit=crop"
-            alt="Pierres chaudes massage">
-          <img class="img-secondary" data-speed="-0.33"
-            src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=500&q=85&auto=format&fit=crop"
-            alt="Zen fleurs spa">
-          <div class="img-deco-circle"></div>
-        </div>
-      </div>
-      <div class="concept-quote reveal">&laquo; L'abandon de soi, l'évasion et la relaxation totale &raquo;</div>
-    </div>
-  </section>
-
-  <!-- ÉQUIPEMENTS (fond SOMBRE — cards arrondies) -->
-  <section class="section-equipements">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label" style="text-align:center;display:block">Nos équipements</span>
-        <h2 style="color:var(--craie);text-align:center">Un espace <em>tout équipé</em></h2>
-      </div>
-      <div class="equipements-grid">
-        <div class="equipment-card">
-          <i data-lucide="waves" class="equipment-icon"></i>
-          <div class="equipment-title">Jacuzzi Balnéo</div>
-          <p class="equipment-text">Balnéothérapie 2-3 places avec jets hydro-massants et sels de mer morte.</p>
-        </div>
-        <div class="equipment-card">
-          <i data-lucide="flame" class="equipment-icon"></i>
-          <div class="equipment-title">Sauna</div>
-          <p class="equipment-text">Chaleur sèche 60-80°C pour une détoxification profonde et une relaxation totale.</p>
-        </div>
-        <div class="equipment-card">
-          <i data-lucide="sun" class="equipment-icon"></i>
-          <div class="equipment-title">Luminothérapie</div>
-          <p class="equipment-text">Synthétise la vitamine D sans UV. Combat les effets du manque de lumière.</p>
-        </div>
-        <div class="equipment-card">
-          <i data-lucide="bed-double" class="equipment-icon"></i>
-          <div class="equipment-title">Futon King-Size</div>
-          <p class="equipment-text">Futon 2m × 2m pour se relaxer entre deux sessions de bien-être.</p>
-        </div>
+  <!-- INTRO -->
+  <section class="intro-section">
+    <div class="container-narrow">
+      <div class="reveal" style="text-align:center;">
+        <span class="section-eyebrow">Le Concept</span>
+        <h2>Un spa privatif <em>rien que pour vous</em>, au cœur de Paris</h2>
+        <p class="lead">Bien-être et simplicité se conjuguent pour créer une expérience unique de détente absolue. 35m² entièrement privatisés où chaque détail est pensé pour votre confort et votre sérénité.</p>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES (fond CRÈME — cards portrait Sona) -->
-  <section class="section-services">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Nos prestations</span>
-        <h2>Nos <em>Univers</em></h2>
-        <p>Des expériences sur-mesure pour votre bien-être, en toute intimité.</p>
+  <!-- SUITE 1 — SPA PRIVATIF -->
+  <section class="suite-section">
+    <div class="suite-split">
+      <div class="suite-image reveal-left">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=1000&q=85" alt="Spa Privatif">
       </div>
-      <div class="services-grid">
-        <a href="prestation-spa.html" class="service-card reveal">
-          <div class="card-img-wrap">
-            <img class="card-img" src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=800&q=85&auto=format&fit=crop" alt="Spa privatif jacuzzi">
-          </div>
-          <div class="card-body">
-            <span class="card-category">Bien-être</span>
-            <h3 class="card-title">Spa Privatif</h3>
-            <p class="card-text">35m² entièrement privatisés : jacuzzi, sauna, balnéothérapie et luminothérapie.</p>
-            <span class="card-link">Découvrir &rarr;</span>
-          </div>
-        </a>
-        <a href="prestation-massage.html" class="service-card reveal reveal-delay-2">
-          <div class="card-img-wrap">
-            <img class="card-img" src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&q=85&auto=format&fit=crop" alt="Massage relaxant">
-          </div>
-          <div class="card-body">
-            <span class="card-category">Soins</span>
-            <h3 class="card-title">Massages</h3>
-            <p class="card-text">Massages relaxants, deep tissue ou aux pierres chaudes. Solo ou duo.</p>
-            <span class="card-link">Découvrir &rarr;</span>
-          </div>
-        </a>
-        <a href="prestation-events.html" class="service-card reveal reveal-delay-3">
-          <div class="card-img-wrap">
-            <div class="card-tag">Populaire</div>
-            <img class="card-img" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=85&auto=format&fit=crop" alt="EVJF groupe spa">
-          </div>
-          <div class="card-body">
-            <span class="card-category">Événements</span>
-            <h3 class="card-title">Événements</h3>
-            <p class="card-text">EVJF, Baby Shower, Anniversaire... Jusqu'à 10 personnes dans un cadre d'exception.</p>
-            <span class="card-link">Découvrir &rarr;</span>
-          </div>
-        </a>
-      </div>
-      <div style="text-align:center; margin-top:3rem">
-        <a href="prestations.html" class="btn btn-outline-dark">Voir toutes les prestations</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- PARALLAXE (fond SOMBRE) -->
-  <section class="section-parallax">
-    <img class="parallax-img" src="https://images.unsplash.com/photo-1561047029-3000c68339ca?w=1920&q=85&auto=format&fit=crop" alt="Spa relaxation">
-    <div class="parallax-overlay"></div>
-    <div class="parallax-content reveal">
-      <h2>Un espace de 35m²<br><em>entièrement privatisé</em> pour vous</h2>
-      <p>Jacuzzi, balnéothérapie, sauna, luminothérapie — vivez une parenthèse sensorielle unique, en toute intimité, au cœur de Paris.</p>
-      <a href="reserver.html" class="btn btn-primary">Réserver maintenant</a>
-    </div>
-  </section>
-
-  <!-- CHIFFRES (fond CRÈME) -->
-  <section class="section-chiffres">
-    <div class="container">
-      <div class="chiffres-grid">
-        <div class="chiffre-item"><span class="chiffre-number">2014</span><span class="chiffre-label">Depuis</span></div>
-        <div class="chiffre-item"><span class="chiffre-number">100%</span><span class="chiffre-label">Privatif</span></div>
-        <div class="chiffre-item"><span class="chiffre-number">35m²</span><span class="chiffre-label">D'espace bien-être</span></div>
-        <div class="chiffre-item"><span class="chiffre-number">5/5</span><span class="chiffre-label">Satisfaction client</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TÉMOIGNAGES (fond CRÈME — Sona style) -->
-  <section class="section-temoignages">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Avis clients</span>
-        <h2>Ce qu'ils en <em>disent</em></h2>
-      </div>
-      <div class="temoignage-featured reveal">
-        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600&q=85&auto=format&fit=crop" alt="Spa ambiance">
-        <div class="temoignage-featured-content">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&laquo; Quel bonheur que ce petit cocon dans Paris. Un moment de rêve, en toute intimité. L'accueil est chaleureux et les installations sont superbes. &raquo;</blockquote>
-          <cite>— Yann</cite>
+      <div class="suite-content reveal-right">
+        <span class="section-eyebrow">Spa Privatif</span>
+        <h2>Le Spa <em>Privatif</em></h2>
+        <p>35m² entièrement privatisés. Jacuzzi, balnéothérapie, sauna, luminothérapie, futon king-size. Votre bulle de sérénité au cœur de Paris.</p>
+        <ul class="features">
+          <li>Jacuzzi 2-3 places</li>
+          <li>Sauna</li>
+          <li>Luminothérapie</li>
+          <li>Futon 2m × 2m</li>
+          <li>Douche italienne</li>
+          <li>Musique personnalisée</li>
+        </ul>
+        <div class="suite-meta">
+          <span>À partir de<strong>99 €</strong></span>
+          <span>Surface<strong>35 m²</strong></span>
+          <span>Capacité<strong>1 à 3 pers.</strong></span>
         </div>
-      </div>
-      <div class="temoignages-mini-grid">
-        <div class="temoignage-mini">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&laquo; Une bulle d'évasion ! Spa privatif chaleureux, massage duo merveilleusement relaxant. C'était parfait de A à Z. &raquo;</blockquote>
-          <cite>— Anna</cite>
-        </div>
-        <div class="temoignage-mini">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&laquo; Merci pour cet accueil, cette bienveillance... 90 minutes de relaxation à deux, en toute intimité. Encore mieux que sur les photos. &raquo;</blockquote>
-          <cite>— Florence, 41 ans</cite>
-        </div>
-        <div class="temoignage-mini">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&laquo; Un vrai moment de détente. Le jacuzzi et le sauna sont impeccables. On reviendra sans hésiter ! &raquo;</blockquote>
-          <cite>— Marie &amp; Thomas</cite>
-        </div>
+        <a href="spa-privatif.html" class="btn btn-outline-dark">Découvrir le Spa</a>
       </div>
     </div>
   </section>
 
-  <!-- CARTE CADEAU (fond SOMBRE) -->
-  <section class="section-carte-cadeau">
-    <div class="carte-split">
-      <div class="carte-img reveal-left">
-        <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1000&q=85&auto=format&fit=crop" alt="Carte cadeau luxe">
+  <!-- SUITE 2 — BAIN DE MINUIT (équivalent love room) -->
+  <section class="suite-section dark">
+    <div class="suite-split reverse">
+      <div class="suite-image reveal-right">
+        <img src="https://images.unsplash.com/photo-1559599076-9c61d8e1b77c?w=1000&q=85" alt="Bain de Minuit">
       </div>
-      <div class="carte-content reveal-right">
-        <span class="section-label">Offrir</span>
-        <h2>Offrez une <em>Expérience Unique</em></h2>
-        <p>Valable 12 mois, glissée dans une belle petite enveloppe pour un cadeau d'exception.</p>
-        <a href="carte-cadeau.html" class="btn btn-primary">Offrir une carte cadeau</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALERIE (fond CRÈME) -->
-  <section class="section-galerie">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Notre univers</span>
-        <h2>En <em>images</em></h2>
-      </div>
-      <div class="galerie-grid">
-        <div class="galerie-item"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=85&auto=format&fit=crop" alt="Bougies spa" loading="lazy"></div>
-        <div class="galerie-item"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=85&auto=format&fit=crop" alt="Pierres chaudes" loading="lazy"></div>
-        <div class="galerie-item"><img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=600&q=85&auto=format&fit=crop" alt="Jacuzzi" loading="lazy"></div>
-        <div class="galerie-item"><img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=85&auto=format&fit=crop" alt="Massage" loading="lazy"></div>
-        <div class="galerie-item"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=85&auto=format&fit=crop" alt="Zen fleurs" loading="lazy"></div>
-        <div class="galerie-item"><img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?w=600&q=85&auto=format&fit=crop" alt="Relaxation" loading="lazy"></div>
+      <div class="suite-content reveal-left">
+        <span class="section-eyebrow">Bain de Minuit</span>
+        <h2>Une <em>nuit entière</em> en spa privé</h2>
+        <p>L'expérience ultime de romantisme et de détente à deux. Une nuit complète dans notre spa privatif, accompagnée de champagne et macarons.</p>
+        <ul class="features">
+          <li>Nuit complète</li>
+          <li>Champagne brut</li>
+          <li>16 macarons</li>
+          <li>Spa privé entier</li>
+        </ul>
+        <div class="suite-meta">
+          <span>Forfait Duo<strong>399 €</strong></span>
+          <span>Durée<strong>Nuit entière</strong></span>
+        </div>
+        <a href="bain-de-minuit.html" class="btn btn-outline">Découvrir</a>
       </div>
     </div>
   </section>
 
-  <!-- CTA FINAL (style Sona — image pleine largeur) -->
-  <section class="section-cta-final">
-    <img class="cta-bg" src="https://images.unsplash.com/photo-1561047029-3000c68339ca?w=1920&q=85&auto=format&fit=crop" alt="Spa relaxation">
-    <div class="cta-overlay"></div>
-    <div class="cta-content reveal">
-      <span class="section-label" style="color:var(--chene)">Prêt ?</span>
-      <h2>Votre moment de détente<br>vous <em>attend</em></h2>
-      <p>Réservez dès maintenant votre créneau en toute simplicité.</p>
-      <a href="reserver.html" class="btn btn-primary">Réserver maintenant</a>
+  <!-- CTA — PIMENTEZ L'EXPÉRIENCE (équivalent du template) -->
+  <section class="section-cta">
+    <div class="container-narrow reveal">
+      <span class="section-eyebrow">Massages & Soins</span>
+      <h2>Sublimez votre <em>expérience</em></h2>
+      <p>Massages traditionnels, cours d'initiation duo, événements privatifs — pimentez votre moment avec nos prestations sur-mesure.</p>
+      <a href="prestations.html" class="btn btn-primary">Voir les prestations</a>
+    </div>
+  </section>
+
+  <!-- TÉMOIGNAGES -->
+  <section class="testimonials">
+    <div class="section-title reveal">
+      <span class="section-eyebrow">Ils nous ont aimés</span>
+      <h2>Témoignages</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>« Une bulle d'évasion ! C'était comme chez nous mais en mieux. »</blockquote>
+        <cite>— Anna</cite>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <blockquote>« 90 minutes de relaxation à deux, en toute intimité. »</blockquote>
+        <cite>— Frédéric</cite>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <blockquote>« Quel bonheur que ce petit cocon dans Paris. »</blockquote>
+        <cite>— Yann</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ TEASER -->
+  <section class="section-cta" style="background:var(--creme);">
+    <div class="container-narrow reveal">
+      <span class="section-eyebrow" style="color:var(--bronze);">Vous avez une question ?</span>
+      <h2 style="color:var(--noir);">Toutes nos <em>réponses</em></h2>
+      <p style="color:var(--bronze);">Comment réserver, que faut-il apporter, l'établissement est-il accessible PMR ? Retrouvez toutes les réponses à vos questions.</p>
+      <a href="contact.html" class="btn btn-outline-dark">Consulter la FAQ</a>
     </div>
   </section>
 
 </main>
 
 <!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="brand-name">Naturellement Luxe</span>
-        <span class="brand-tagline">Votre Spa en Privé — Depuis 2014</span>
-        <p>Le premier spa privatif de Paris, au cœur du 2ème arrondissement.</p>
-        <div class="footer-social">
-          <a href="https://instagram.com/SPAPRIVATIF" target="_blank" rel="noopener">IG</a>
-          <a href="https://www.facebook.com/pages/Naturellement-Luxe/413988392021026" target="_blank" rel="noopener">FB</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="prestations.html">Prestations</a></li>
-          <li><a href="tarifs.html">Tarifs</a></li>
-          <li><a href="carte-cadeau.html">Carte Cadeau</a></li>
-          <li><a href="reserver.html">Réserver</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Prestations</h4>
-        <ul>
-          <li><a href="prestation-spa.html">Spa Privatif</a></li>
-          <li><a href="prestation-massage.html">Massages</a></li>
-          <li><a href="prestation-cours.html">Cours & Ateliers</a></li>
-          <li><a href="prestation-events.html">Événements</a></li>
-          <li><a href="prestation-loveroom.html">Love Room</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <div class="footer-contact">
-          <span>15 rue du Croissant, 75002 Paris</span>
-          <a href="tel:+33142360607">01 42 36 06 07</a>
-          <a href="mailto:contact@naturellementluxe.com">contact@naturellementluxe.com</a>
-          <span>Métro : Sentier (L3)</span>
-        </div>
-      </div>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Naturellement <span>Luxe</span></a>
+      <p>Historiquement le premier Spa Privatif de Paris. Une parenthèse d'exception depuis 2014.</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2014 — 2026 Naturellement Luxe. Tous droits réservés.</p>
-      <div class="footer-bottom-links">
-        <a href="#">CGV</a>
-        <a href="#">Mentions légales</a>
-        <a href="#">Charte & Règlement</a>
-      </div>
+    <div class="footer-col">
+      <h4>Naviguer</h4>
+      <ul>
+        <li><a href="prestations.html">Prestations</a></li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="carte-cadeau.html">Carte Cadeau</a></li>
+        <li><a href="reserver.html">Réserver</a></li>
+      </ul>
     </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><span>15 rue du Croissant</span></li>
+        <li><span>75002 Paris</span></li>
+        <li><a href="tel:+33142360607">01 42 36 06 07</a></li>
+        <li><a href="mailto:contact@naturellementluxe.com">contact@naturellementluxe.com</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Horaires</h4>
+      <ul>
+        <li><span>Mardi → Dimanche</span></li>
+        <li><span>10h00 — 21h00</span></li>
+        <li><span style="opacity:0.5;">Fermé le lundi</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Naturellement Luxe. Tous droits réservés.</p>
+    <p><a href="#">Mentions légales</a> · <a href="#">CGV</a></p>
   </div>
 </footer>
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
-<script>lucide.createIcons();</script>
 </body>
 </html>

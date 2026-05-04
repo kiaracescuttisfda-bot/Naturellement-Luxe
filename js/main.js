@@ -1,72 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. SCROLL HEADER
-  const header = document.querySelector('header');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 70);
-  }, { passive: true });
+  // Header scroll
+  const header = document.querySelector('.site-header');
+  const onScroll = () => {
+    if (window.scrollY > 40) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-  // 2. MENU MOBILE
-  const burger      = document.querySelector('.burger');
-  const mobileNav   = document.querySelector('.mobile-nav');
-  const mobileClose = document.querySelector('.mobile-close');
-  const overlay     = document.querySelector('.mobile-overlay');
+  // Mobile menu
+  const burger = document.querySelector('.burger');
+  const mobileNav = document.querySelector('.mobile-nav');
+  const overlay = document.querySelector('.mobile-overlay');
+  const closeBtn = document.querySelector('.mobile-close');
+  const open = () => { mobileNav.classList.add('open'); overlay.classList.add('visible'); };
+  const close = () => { mobileNav.classList.remove('open'); overlay.classList.remove('visible'); };
+  burger?.addEventListener('click', open);
+  closeBtn?.addEventListener('click', close);
+  overlay?.addEventListener('click', close);
+  document.querySelectorAll('.mobile-nav a').forEach(a => a.addEventListener('click', close));
 
-  const openMenu  = () => { mobileNav.classList.add('open'); overlay.classList.add('visible'); document.body.style.overflow = 'hidden'; };
-  const closeMenu = () => { mobileNav.classList.remove('open'); overlay.classList.remove('visible'); document.body.style.overflow = ''; };
-
-  if (burger)      burger.addEventListener('click', openMenu);
-  if (mobileClose) mobileClose.addEventListener('click', closeMenu);
-  if (overlay)     overlay.addEventListener('click', closeMenu);
-  if (mobileNav) mobileNav.querySelectorAll('a').forEach(l => l.addEventListener('click', closeMenu));
-
-  // 3. PARALLAXE — géré par animations.js (requestAnimationFrame)
-  // Supprimé ici pour éviter le double-update qui causait les saccades
-
-  // 5. ACTIVE NAV
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.header-nav a').forEach(link => {
-    if (link.getAttribute('href').split('/').pop() === currentPage) link.classList.add('active');
-  });
-
-  // 6. ACCORDION
-  document.querySelectorAll('.accordion-header').forEach(btn => {
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
-      const item = btn.parentElement;
-      const content = item.querySelector('.accordion-content');
-      const isActive = item.classList.contains('active');
-      document.querySelectorAll('.accordion-item').forEach(ai => {
-        ai.classList.remove('active');
-        const c = ai.querySelector('.accordion-content');
-        if (c) c.style.maxHeight = null;
-      });
-      if (!isActive) { item.classList.add('active'); content.style.maxHeight = content.scrollHeight + 'px'; }
+      const item = btn.closest('.faq-item');
+      item.classList.toggle('open');
     });
   });
 
-  // 7. TABS
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const g = btn.closest('.tabs'), t = btn.dataset.tab;
-      g.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      g.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      const p = g.querySelector(`[data-panel="${t}"]`);
-      if (p) p.classList.add('active');
-    });
+  // Active nav link
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav a, .mobile-nav a').forEach(a => {
+    if (a.getAttribute('href') === path) a.classList.add('active');
   });
-
-  // 8. STEPPER
-  document.querySelectorAll('[data-step-target]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = parseInt(btn.dataset.stepTarget);
-      const stepper = document.querySelector('.stepper');
-      if (!stepper) return;
-      stepper.querySelectorAll('.step').forEach((s, i) => { s.classList.toggle('active', i+1 <= target); s.classList.toggle('current', i+1 === target); });
-      document.querySelectorAll('.step-content').forEach(sc => sc.classList.remove('active'));
-      const tc = document.querySelector(`[data-step="${target}"]`);
-      if (tc) tc.classList.add('active');
-    });
-  });
-
 });

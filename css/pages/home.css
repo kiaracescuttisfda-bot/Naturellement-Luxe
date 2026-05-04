@@ -1,13 +1,17 @@
 /* ============================================
-   HOME — Overrides spécifiques homepage
-   Pas de :root ici — tout dans design-system.css
+   HOME — overrides spécifiques homepage
    ============================================ */
 
-/* Hero responsive overrides */
-@media (max-width: 768px) {
-  .hero h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+.intro-section {
+  padding: var(--space-xl) 0;
+  background: var(--creme);
+  text-align: center;
 }
-@media (max-width: 480px) {
-  .hero h1 { font-size: clamp(2rem, 12vw, 3rem); }
-  .hero-price .price-amount { font-size: 2rem; }
+.intro-section .lead {
+  font-size: var(--text-md);
+  color: var(--bronze);
+  max-width: 680px;
+  margin: 1.5rem auto 0;
+  line-height: 1.8;
 }
+.intro-section h2 em { color: var(--chene); font-style: italic; }
