@@ -33,10 +33,12 @@
 .logo {
   display: flex; align-items: center; justify-content: center;
   text-decoration: none;
-  padding: 6px 12px;
+  padding: 8px 12px;
+  text-align: center;
 }
 .logo-img {
-  height: 52px; width: auto;
+  /* Logo client est vertical (ratio 0.84) — on fixe la hauteur (template = button height ~95px) */
+  height: 75px; width: auto; max-width: 100%;
   display: block;
   object-fit: contain;
   /* Logo PNG est blanc, le rendre noir pour fond blanc du header */
@@ -45,7 +47,7 @@
 /* Logo dans le footer : fond sombre, on garde le logo blanc tel quel */
 .logo-img-footer {
   filter: none;
-  height: 80px;
+  height: 100px;
 }
 
 /* Nav : Baikal 20px weight 300 uppercase, hover accent */
@@ -62,13 +64,12 @@
 }
 .nav a:hover { color: var(--accent); }
 
-/* Bouton RÉSERVER : pleine hauteur du header, fond noir */
+/* Bouton RÉSERVER — valeurs EXACTES du template (padding 33px 63px, 20px weight 600 italic) */
 .nav-cta {
   display: inline-flex; align-items: center; justify-content: center;
-  align-self: stretch;
-  padding: 0 50px;
+  padding: 33px 63px;
   font-family: var(--font-body);
-  font-size: 18px; font-weight: 600;
+  font-size: 20px; font-weight: 600;
   font-style: italic;
   text-transform: capitalize;
   color: var(--secondary);
@@ -76,14 +77,15 @@
   border: none;
   border-radius: 0;
   transition: background 0.3s, color 0.3s;
+  line-height: 1;
 }
 .nav-cta:hover { background: var(--accent); color: var(--primary); }
 
-/* Icône WhatsApp/téléphone : 32px */
+/* Icône WhatsApp/téléphone — valeur exacte template : 40px */
 .nav-icon {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 32px; height: 32px;
-  font-size: 28px;
+  width: 40px; height: 40px;
+  font-size: 36px;
   color: var(--primary);
   text-decoration: none;
   margin: 0 auto;
