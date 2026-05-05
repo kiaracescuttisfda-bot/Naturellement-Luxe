@@ -33,10 +33,10 @@
 .logo {
   display: flex; align-items: center; justify-content: center;
   text-decoration: none;
-  padding: 10px 12px;
+  padding: 6px 12px;
 }
 .logo-img {
-  height: 70px; width: auto;
+  height: 52px; width: auto;
   display: block;
   object-fit: contain;
   /* Logo PNG est blanc, le rendre noir pour fond blanc du header */
@@ -45,7 +45,7 @@
 /* Logo dans le footer : fond sombre, on garde le logo blanc tel quel */
 .logo-img-footer {
   filter: none;
-  height: 90px;
+  height: 80px;
 }
 
 /* Nav : Baikal 20px weight 300 uppercase, hover accent */
@@ -62,12 +62,13 @@
 }
 .nav a:hover { color: var(--accent); }
 
-/* Bouton RÉSERVER : padding 33px 63px, Baikal 20px weight 600 italic, fond noir */
+/* Bouton RÉSERVER : pleine hauteur du header, fond noir */
 .nav-cta {
   display: inline-flex; align-items: center; justify-content: center;
-  padding: 33px 63px;
+  align-self: stretch;
+  padding: 0 50px;
   font-family: var(--font-body);
-  font-size: 20px; font-weight: 600;
+  font-size: 18px; font-weight: 600;
   font-style: italic;
   text-transform: capitalize;
   color: var(--secondary);
@@ -78,11 +79,11 @@
 }
 .nav-cta:hover { background: var(--accent); color: var(--primary); }
 
-/* Icône WhatsApp/téléphone : 40px */
+/* Icône WhatsApp/téléphone : 32px */
 .nav-icon {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 40px; height: 40px;
-  font-size: 40px;
+  width: 32px; height: 32px;
+  font-size: 28px;
   color: var(--primary);
   text-decoration: none;
   margin: 0 auto;
