@@ -29,37 +29,24 @@
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
-/* Logo dans la 1ère colonne, centré dans sa cellule */
+/* Logo image dans la 1ère colonne, centré dans sa cellule */
 .logo {
-  display: flex; flex-direction: column; align-items: center;
-  font-family: var(--font-display);
+  display: flex; align-items: center; justify-content: center;
   text-decoration: none;
-  line-height: 1;
-  padding: 14px 12px;
-  text-align: center;
+  padding: 10px 12px;
 }
-.logo-main {
-  font-size: 28px; font-weight: 700;
-  color: var(--primary);
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+.logo-img {
+  height: 70px; width: auto;
+  display: block;
+  object-fit: contain;
+  /* Logo PNG est blanc, le rendre noir pour fond blanc du header */
+  filter: brightness(0);
 }
-.logo-main .accent { color: var(--accent); }
-.logo-sub {
-  font-family: var(--font-display);
-  font-style: italic; font-weight: 200;
-  font-size: 12px;
-  color: var(--text);
-  margin-top: 4px;
-  position: relative; padding: 0 12px;
-  letter-spacing: 0.05em;
+/* Logo dans le footer : fond sombre, on garde le logo blanc tel quel */
+.logo-img-footer {
+  filter: none;
+  height: 90px;
 }
-.logo-sub::before, .logo-sub::after {
-  content: ''; position: absolute; top: 50%;
-  width: 8px; height: 1px; background: var(--text);
-}
-.logo-sub::before { left: 0; }
-.logo-sub::after { right: 0; }
 
 /* Nav : Baikal 20px weight 300 uppercase, hover accent */
 .nav {
