@@ -136,24 +136,24 @@
   cursor: pointer; text-align: center;
 }
 .btn-primary {
-  background: var(--accent); color: var(--secondary); border-color: var(--accent);
+  background: var(--accent); color: var(--primary); border-color: var(--accent);
 }
 .btn-primary:hover { background: var(--accent-2); border-color: var(--accent-2); color: var(--secondary); }
 
 .btn-outline {
   background: transparent; color: var(--accent); border-color: var(--accent);
 }
-.btn-outline:hover { background: var(--accent); color: var(--secondary); }
+.btn-outline:hover { background: var(--accent); color: var(--primary); }
 
 .btn-light {
   background: var(--secondary); color: var(--primary); border-color: var(--secondary);
 }
 .btn-light:hover { background: var(--accent); color: var(--secondary); border-color: var(--accent); }
 
-/* ============================ HERO (court, image bg) ============================ */
+/* ============================ HERO (image pleine page) ============================ */
 .hero {
   position: relative;
-  height: 80vh; min-height: 520px;
+  height: 100vh; min-height: 700px;
   display: flex; align-items: center; justify-content: center;
   overflow: hidden;
   background: var(--primary);
