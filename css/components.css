@@ -108,6 +108,58 @@
 }
 .submenu a:hover { background: var(--bg); color: var(--accent); }
 
+/* Sous-sous-menu (Events) — sort à droite au hover */
+.submenu-item.has-subsubmenu { position: relative; }
+.submenu-item.has-subsubmenu > a {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px;
+  padding: 10px 18px 10px 24px;
+}
+.submenu-arrow {
+  color: var(--accent);
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.25s;
+}
+.submenu-item.has-subsubmenu:hover > a {
+  background: var(--bg); color: var(--accent);
+}
+.submenu-item.has-subsubmenu:hover > a .submenu-arrow {
+  transform: translateX(3px);
+}
+
+.subsubmenu {
+  position: absolute;
+  top: -14px; left: 100%;
+  min-width: 200px;
+  background: var(--secondary);
+  border-top: 2px solid var(--accent);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  padding: 14px 0;
+  display: flex; flex-direction: column;
+  opacity: 0; visibility: hidden;
+  transform: translateX(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 120;
+}
+.submenu-item.has-subsubmenu:hover .subsubmenu,
+.submenu-item.has-subsubmenu:focus-within .subsubmenu {
+  opacity: 1; visibility: visible;
+  transform: translateX(0);
+}
+.subsubmenu a {
+  font-size: 14px;
+  padding: 9px 22px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: var(--font-body);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--primary);
+}
+.subsubmenu a:hover { background: var(--bg); color: var(--accent); }
+
 /* Bouton RÉSERVER — réduit pour cohérence avec nav 17px */
 .nav-cta {
   display: inline-flex; align-items: center; justify-content: center;
@@ -257,10 +309,76 @@ a.mobile-link:focus-visible {
 }
 .mobile-sublist[hidden] { display: flex; }  /* on garde flex, l'animation gère le hide */
 .mobile-sublist.open {
-  max-height: 400px;
+  max-height: 600px;
   opacity: 1;
   padding: 4px 0 14px 28px;
 }
+
+/* Sous-sous-liste mobile (Events) : Events avec sa propre flèche */
+.mobile-sub-group {
+  display: flex; flex-direction: column;
+  width: 100%;
+}
+.mobile-sub-row {
+  display: flex; align-items: center;
+  width: 100%;
+}
+.mobile-sub-row > a {
+  flex: 1;
+  padding: 10px 28px 10px 18px;
+  font-family: var(--font-body);
+  font-size: 14px; font-weight: 300;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.65);
+  text-transform: none;
+  position: relative;
+  transition: color 0.25s, padding-left 0.25s;
+}
+.mobile-sub-row > a::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  width: 10px; height: 1px;
+  background: rgba(232,180,180,0.5);
+  transition: width 0.25s, background 0.25s;
+}
+.mobile-sub-row > a:hover {
+  color: var(--accent);
+  padding-left: 26px;
+}
+.mobile-sub-row > a:hover::before { width: 18px; background: var(--accent); }
+
+.mobile-link-arrow-sm {
+  width: 40px;
+  font-size: 18px;
+  border-left: 1px solid rgba(255,255,255,0.04);
+  color: rgba(232,180,180,0.7);
+}
+
+/* Sous-sous-liste : items encore plus indentés */
+.mobile-subsublist {
+  padding: 0 0 0 18px;
+  background: rgba(255,255,255,0.04);
+  margin-left: -28px; margin-right: 0;
+  padding-left: 46px;
+}
+.mobile-subsublist.open {
+  padding: 8px 0 12px 46px;
+  max-height: 400px;
+}
+.mobile-subsublist a {
+  padding: 8px 18px 8px 14px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.mobile-subsublist a::before {
+  width: 6px;
+  background: rgba(232,180,180,0.4);
+}
+.mobile-subsublist a:hover { padding-left: 22px; color: var(--accent); }
+.mobile-subsublist a:hover::before { width: 12px; background: var(--accent); }
 .mobile-sublist a {
   padding: 10px 28px 10px 18px;
   font-family: var(--font-body);
@@ -730,7 +848,13 @@ a.mobile-link:focus-visible {
 .footer-col li { margin-bottom: 10px; }
 .footer-col a, .footer-col span { font-size: 14px; line-height: 24px; }
 .footer-col a:hover { color: var(--accent); }
+.footer-link {
+  display: inline-block;
+  cursor: default;
+  color: rgba(255,255,255,0.65);
+}
 .footer-brand { display: flex; flex-direction: column; align-items: center; }
+.footer-logo-static { cursor: default; }
 .footer-brand .logo .logo-main { color: var(--secondary); font-size: 32px; }
 .footer-brand .logo .logo-sub { color: rgba(255,255,255,0.5); }
 .footer-brand .logo .logo-sub::before, .footer-brand .logo .logo-sub::after { background: rgba(255,255,255,0.5); }
@@ -760,15 +884,18 @@ a.mobile-link:focus-visible {
   .nav-icon { width: 28px; height: 28px; }
 }
 @media (max-width: 1100px) {
-  .nav, .nav-cta, .nav-icon { display: none; }
-  /* burger à gauche, logo centré */
+  .nav, .nav-cta { display: none; }
+  /* burger à gauche, logo centré, WhatsApp à droite */
   .burger { display: flex; order: -1; }
   .site-header { grid-template-columns: auto 1fr auto; padding: 0 16px; }
   .logo { padding: 14px 0; align-items: center; justify-content: center; }
-  /* spacer fantôme à droite pour équilibrer le grid (même largeur visuelle que le burger) */
-  .site-header::after {
-    content: ''; display: block; width: 40px; height: 1px;
+  .nav-icon {
+    display: inline-flex;
+    width: 32px; height: 32px;
+    color: var(--primary);
+    margin: 0;
   }
+  .nav-icon:hover { color: #25D366; }
 }
 @media (max-width: 900px) {
   .suite-feature { grid-template-columns: 1fr; }

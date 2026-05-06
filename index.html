@@ -25,7 +25,18 @@
         <a href="#spa-privatif">Spa Privatif</a>
         <a href="#massage">Massage</a>
         <a href="#cours">Cours</a>
-        <a href="#events">Events</a>
+        <div class="submenu-item has-subsubmenu">
+          <a href="#events">
+            <span>Events</span>
+            <span class="submenu-arrow" aria-hidden="true">›</span>
+          </a>
+          <div class="subsubmenu">
+            <a href="#evjf">EVJF</a>
+            <a href="#baby-shower">Baby shower</a>
+            <a href="#anniversaire">Anniversaire</a>
+            <a href="#st-valentin">St Valentin</a>
+          </div>
+        </div>
         <a href="#love-room">Love Room</a>
       </div>
     </div>
@@ -63,7 +74,20 @@
         <a href="#spa-privatif">Spa Privatif</a>
         <a href="#massage">Massage</a>
         <a href="#cours">Cours</a>
-        <a href="#events">Events</a>
+        <div class="mobile-sub-group">
+          <div class="mobile-sub-row">
+            <a href="#events">Events</a>
+            <button type="button" class="mobile-link-arrow mobile-link-arrow-sm" aria-expanded="false" aria-controls="mobile-subsublist-events" aria-label="Afficher les types d'événements">
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+          <div class="mobile-sublist mobile-subsublist" id="mobile-subsublist-events" hidden>
+            <a href="#evjf">EVJF</a>
+            <a href="#baby-shower">Baby shower</a>
+            <a href="#anniversaire">Anniversaire</a>
+            <a href="#st-valentin">St Valentin</a>
+          </div>
+        </div>
         <a href="#love-room">Love Room</a>
       </div>
     </div>
@@ -76,12 +100,6 @@
   </div>
 
   <div class="mobile-nav-foot">
-    <a href="https://wa.me/33142360607" class="mobile-foot-link" target="_blank" rel="noopener">
-      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M16.003 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.59 4.46 1.71 6.41L3.2 28.8l6.59-1.73a12.74 12.74 0 0 0 6.21 1.59h.01c7.07 0 12.8-5.73 12.8-12.8 0-3.42-1.33-6.63-3.75-9.05A12.71 12.71 0 0 0 16.003 3.2zm0 23.32h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.91 1.03 1.04-3.81-.25-.4a10.59 10.59 0 0 1-1.62-5.63c0-5.86 4.77-10.63 10.63-10.63 2.84 0 5.51 1.11 7.52 3.12s3.12 4.68 3.12 7.52c0 5.86-4.77 10.63-10.63 10.63zm5.83-7.96c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.71.16-.21.32-.81 1.04-.99 1.25-.18.21-.36.24-.68.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.78-2.21-.18-.32-.02-.49.14-.65.14-.14.32-.36.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.61-.52-.53-.71-.54l-.61-.01c-.21 0-.55.08-.84.4-.29.32-1.1 1.07-1.1 2.62s1.13 3.04 1.29 3.25c.16.21 2.22 3.4 5.39 4.77.75.32 1.34.52 1.8.66.76.24 1.45.21 2 .13.61-.09 1.89-.77 2.16-1.52.27-.75.27-1.39.18-1.52-.08-.13-.29-.21-.61-.37z"/>
-      </svg>
-      <span>WhatsApp</span>
-    </a>
     <p class="mobile-foot-info">15 rue du Croissant, 75002 Paris<br><a href="tel:+33142360607">01 42 36 06 07</a></p>
   </div>
 </nav>
@@ -245,24 +263,24 @@
     <div class="footer-col">
       <h4>À PROPOS</h4>
       <ul>
-        <li><a href="#prestations">Prestations</a></li>
-        <li><a href="#pimentez">Pimentez l'expérience</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><span class="footer-link">Prestations</span></li>
+        <li><span class="footer-link">Pimentez l'expérience</span></li>
+        <li><span class="footer-link">Contact</span></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>INFOS PRATIQUES</h4>
       <ul>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#privacy">Politique de confidentialité</a></li>
-        <li><a href="#mentions">Mentions légales</a></li>
-        <li><a href="#cgv">Conditions générales de location</a></li>
+        <li><span class="footer-link">FAQ</span></li>
+        <li><span class="footer-link">Politique de confidentialité</span></li>
+        <li><span class="footer-link">Mentions légales</span></li>
+        <li><span class="footer-link">Conditions générales de location</span></li>
       </ul>
     </div>
     <div class="footer-col footer-brand">
-      <a href="index.html" class="logo">
+      <span class="logo footer-logo-static">
         <img src="assets/img/LOGOS-naturellementluxe-11.png" alt="Naturellement Luxe" class="logo-img logo-img-footer">
-      </a>
+      </span>
     </div>
   </div>
   <div class="footer-bottom">
