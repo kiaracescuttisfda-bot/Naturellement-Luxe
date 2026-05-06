@@ -21,6 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
   overlay?.addEventListener('click', close);
   document.querySelectorAll('.mobile-nav a').forEach(a => a.addEventListener('click', close));
 
+  // Toggle sous-menu mobile (Prestations)
+  document.querySelectorAll('.mobile-link-arrow').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = btn.getAttribute('aria-controls');
+      const sublist = id ? document.getElementById(id) : null;
+      if (!sublist) return;
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      sublist.classList.toggle('open', !expanded);
+      if (!expanded) sublist.removeAttribute('hidden');
+      else setTimeout(() => sublist.setAttribute('hidden', ''), 400);
+    });
+  });
+
   // Reveal scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

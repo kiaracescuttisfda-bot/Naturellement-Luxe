@@ -53,11 +53,13 @@
 
   <div class="mobile-nav-body">
     <div class="mobile-group">
-      <a href="#prestations" class="mobile-link mobile-link-parent">
-        <span>Prestations</span>
-        <span class="mobile-link-arrow" aria-hidden="true">›</span>
-      </a>
-      <div class="mobile-sublist">
+      <div class="mobile-link mobile-link-parent">
+        <a href="#prestations">Prestations</a>
+        <button type="button" class="mobile-link-arrow" aria-expanded="false" aria-controls="mobile-sublist-prestations" aria-label="Afficher les prestations">
+          <span aria-hidden="true">›</span>
+        </button>
+      </div>
+      <div class="mobile-sublist" id="mobile-sublist-prestations" hidden>
         <a href="#spa-privatif">Spa Privatif</a>
         <a href="#massage">Massage</a>
         <a href="#cours">Cours</a>
