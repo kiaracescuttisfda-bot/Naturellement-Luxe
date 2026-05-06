@@ -50,26 +50,70 @@
   height: 100px;
 }
 
-/* Nav : Baikal 20px weight 300 uppercase, hover accent */
+/* Nav : Baikal 17px weight 300 uppercase, hover accent (réduit de 20→17 pour caser 4 entrées + dropdown) */
 .nav {
   display: flex; align-items: center; justify-content: center;
-  gap: 36px;
+  gap: 28px;
 }
 .nav a {
   font-family: var(--font-body);
-  font-size: 20px; font-weight: 300;
+  font-size: 17px; font-weight: 300;
   text-transform: uppercase;
   color: var(--primary);
   letter-spacing: 0.02em;
 }
 .nav a:hover { color: var(--accent); }
 
-/* Bouton RÉSERVER — valeurs EXACTES du template (padding 33px 63px, 20px weight 600 italic) */
+/* Sous-menu Prestations (hover) */
+.nav-item {
+  position: relative;
+  display: flex; align-items: center;
+}
+.nav-item.has-submenu > a::after {
+  content: '';
+  display: inline-block;
+  width: 6px; height: 6px;
+  margin-left: 8px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.3s;
+}
+.nav-item.has-submenu:hover > a::after { transform: translateY(0) rotate(225deg); }
+
+.submenu {
+  position: absolute;
+  top: 100%; left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 220px;
+  background: var(--secondary);
+  border-top: 2px solid var(--accent);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  padding: 14px 0;
+  display: flex; flex-direction: column;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 110;
+}
+.nav-item.has-submenu:hover .submenu,
+.nav-item.has-submenu:focus-within .submenu {
+  opacity: 1; visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.submenu a {
+  font-size: 15px;
+  padding: 10px 24px;
+  white-space: nowrap;
+  text-align: left;
+}
+.submenu a:hover { background: var(--bg); color: var(--accent); }
+
+/* Bouton RÉSERVER — réduit pour cohérence avec nav 17px */
 .nav-cta {
   display: inline-flex; align-items: center; justify-content: center;
-  padding: 33px 63px;
+  padding: 33px 50px;
   font-family: var(--font-body);
-  font-size: 20px; font-weight: 600;
+  font-size: 17px; font-weight: 600;
   font-style: italic;
   text-transform: capitalize;
   color: var(--secondary);
@@ -81,16 +125,20 @@
 }
 .nav-cta:hover { background: var(--accent); color: var(--primary); }
 
-/* Icône WhatsApp/téléphone — valeur exacte template : 40px */
+/* Icône WhatsApp — SVG, taille équivalente template */
 .nav-icon {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 40px; height: 40px;
-  font-size: 36px;
+  width: 36px; height: 36px;
   color: var(--primary);
   text-decoration: none;
   margin: 0 auto;
+  transition: color 0.3s, transform 0.3s;
 }
-.nav-icon:hover { color: var(--accent); }
+.nav-icon svg {
+  width: 100%; height: 100%;
+  fill: currentColor;
+}
+.nav-icon:hover { color: #25D366; transform: scale(1.08); }
 
 /* Burger */
 .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
@@ -104,11 +152,17 @@
 }
 .mobile-nav.open { right: 0; }
 .mobile-nav a {
-  font-family: var(--font-body); font-size: 22px; font-weight: 300;
+  font-family: var(--font-body); font-size: 20px; font-weight: 300;
   text-transform: uppercase;
   color: var(--secondary);
 }
 .mobile-nav a:hover { color: var(--accent); }
+.mobile-nav a.mobile-sub {
+  font-size: 14px;
+  padding-left: 18px;
+  opacity: 0.8;
+  text-transform: none;
+}
 .mobile-close { position: absolute; top: 22px; right: 22px; color: var(--secondary); font-size: 28px; }
 .mobile-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 199; opacity: 0; pointer-events: none; transition: opacity 0.45s; }
 .mobile-overlay.visible { opacity: 1; pointer-events: all; }
@@ -396,11 +450,19 @@
 .footer-bottom a { color: var(--accent); }
 
 /* ============================ RESPONSIVE ============================ */
+@media (max-width: 1280px) {
+  .nav { gap: 22px; }
+  .nav a { font-size: 15px; }
+  .submenu a { font-size: 14px; }
+  .nav-cta { padding: 24px 32px; font-size: 15px; }
+  .nav-icon { width: 32px; height: 32px; }
+}
 @media (max-width: 1024px) {
   .site-header { grid-template-columns: 1fr 3fr 1fr 1fr; }
-  .nav a { font-size: 16px; }
-  .nav-cta { padding: 16px 24px; font-size: 16px; }
-  .nav-icon { font-size: 32px; width: 32px; height: 32px; }
+  .nav { gap: 16px; }
+  .nav a { font-size: 14px; }
+  .nav-cta { padding: 18px 22px; font-size: 14px; }
+  .nav-icon { width: 28px; height: 28px; }
 }
 @media (max-width: 1100px) {
   .nav, .nav-cta, .nav-icon { display: none; }
