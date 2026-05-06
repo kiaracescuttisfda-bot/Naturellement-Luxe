@@ -144,30 +144,163 @@
 .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; }
 .burger span { width: 28px; height: 1.5px; background: var(--primary); transition: 0.3s; }
 
-/* Mobile nav : panneau plein écran qui descend du haut */
+/* ============================ MOBILE NAV ============================ */
+/* Panneau plein écran qui descend du haut, fond très sombre, structure 3 zones (head / body / foot) */
 .mobile-nav {
   position: fixed; top: -100%; left: 0; width: 100%; height: 100vh;
-  background: var(--primary); z-index: 200;
-  display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
-  padding: 80px 30px 40px; gap: 18px;
+  background: linear-gradient(180deg, #1C1412 0%, #0F0908 100%);
+  color: var(--secondary);
+  z-index: 200;
+  display: flex; flex-direction: column;
   overflow-y: auto;
   transition: top 0.5s cubic-bezier(0.4,0,0.2,1);
 }
 .mobile-nav.open { top: 0; }
-.mobile-nav a {
-  font-family: var(--font-body); font-size: 20px; font-weight: 300;
+
+/* HEAD : logo + close, séparé par hairline */
+.mobile-nav-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.mobile-nav-logo {
+  display: inline-flex; align-items: center;
+}
+.mobile-nav-logo img {
+  height: 48px; width: auto;
+  /* Logo PNG blanc → garder blanc sur fond sombre, donc pas de filter */
+}
+.mobile-close {
+  color: var(--secondary);
+  font-size: 38px; line-height: 1;
+  width: 44px; height: 44px;
+  display: inline-flex; align-items: center; justify-content: center;
+  position: static;
+  transition: color 0.25s, transform 0.25s;
+}
+.mobile-close:hover { color: var(--accent); transform: rotate(90deg); }
+
+/* BODY : liste de liens */
+.mobile-nav-body {
+  flex: 1;
+  display: flex; flex-direction: column;
+  padding: 18px 0;
+}
+
+.mobile-link {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 28px;
+  font-family: var(--font-body);
+  font-size: 17px; font-weight: 300;
   text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--secondary);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: background 0.25s, color 0.25s, padding-left 0.25s;
+}
+.mobile-link:hover,
+.mobile-link:focus-visible {
+  color: var(--accent);
+  padding-left: 36px;
+  background: rgba(232,180,180,0.04);
+}
+
+.mobile-link-parent { border-bottom: none; }
+.mobile-link-arrow {
+  font-size: 22px;
+  color: var(--accent);
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* Sous-liste Prestations */
+.mobile-group { border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-sublist {
+  display: flex; flex-direction: column;
+  padding: 4px 0 14px 28px;
+  background: rgba(255,255,255,0.02);
+}
+.mobile-sublist a {
+  padding: 10px 28px 10px 18px;
+  font-family: var(--font-body);
+  font-size: 14px; font-weight: 300;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.65);
+  text-transform: none;
+  position: relative;
+  transition: color 0.25s, padding-left 0.25s;
+}
+.mobile-sublist a::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  width: 10px; height: 1px;
+  background: rgba(232,180,180,0.5);
+  transition: width 0.25s, background 0.25s;
+}
+.mobile-sublist a:hover {
+  color: var(--accent);
+  padding-left: 26px;
+}
+.mobile-sublist a:hover::before { width: 18px; background: var(--accent); }
+
+/* CTA Réserver */
+.mobile-cta {
+  margin: 24px 28px 8px;
+  padding: 18px 24px;
+  background: var(--accent);
+  color: var(--secondary);
+  font-family: var(--font-body);
+  font-size: 16px; font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--accent);
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+}
+.mobile-cta:hover {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
   color: var(--secondary);
 }
-.mobile-nav a:hover { color: var(--accent); }
-.mobile-nav a.mobile-sub {
-  font-size: 14px;
-  padding-left: 0;
-  opacity: 0.7;
-  text-transform: none;
-  letter-spacing: 0.05em;
+
+/* FOOT : WhatsApp + adresse + tél */
+.mobile-nav-foot {
+  padding: 22px 28px 32px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex; flex-direction: column; gap: 14px;
+  text-align: center;
 }
-.mobile-close { position: absolute; top: 22px; right: 22px; color: var(--secondary); font-size: 36px; line-height: 1; }
+.mobile-foot-link {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 12px 18px;
+  font-family: var(--font-body);
+  font-size: 14px; font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--secondary);
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+}
+.mobile-foot-link svg {
+  width: 20px; height: 20px;
+  fill: currentColor;
+}
+.mobile-foot-link:hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: var(--secondary);
+}
+.mobile-foot-info {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.04em;
+}
+.mobile-foot-info a { color: rgba(255,255,255,0.75); }
+.mobile-foot-info a:hover { color: var(--accent); }
+
 .mobile-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 199; opacity: 0; pointer-events: none; transition: opacity 0.45s; }
 .mobile-overlay.visible { opacity: 1; pointer-events: all; }
 
