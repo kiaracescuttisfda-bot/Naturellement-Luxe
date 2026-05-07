@@ -21,8 +21,8 @@
   /* Palette charte client (doré champagne + marron taupe) */
   --primary:   #1C1412;   /* texte principal / fond sombre */
   --secondary: #FFFFFF;
-  --accent:    #C9A961;   /* doré champagne — remplace l'ancien rose #E8B4B4 */
-  --accent-2:  #A88940;   /* doré antique foncé — remplace l'ancien rose #C68585 */
+  --accent:    #A88940;   /* doré foncé — choix client (ex-J'offre l'expérience) */
+  --accent-2:  #8B7030;   /* doré profond pour les hover (~18% plus sombre) */
   --text:      #9B7C69;   /* marron taupe — accord chaud avec le doré */
   --bg:        #FAF6EE;   /* crème dorée — remplace l'ancien crème rosé #FDF5F3 */
   --bg-light:  #FCFAF5;

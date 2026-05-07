@@ -259,7 +259,7 @@ a.mobile-link:hover,
 a.mobile-link:focus-visible {
   color: var(--accent);
   padding-left: 36px;
-  background: rgba(201,169,97,0.04);
+  background: rgba(168,137,64,0.04);
 }
 
 /* Lien parent (Prestations) : <a> + bouton arrow côte à côte, chacun cliquable */
@@ -275,7 +275,7 @@ a.mobile-link:focus-visible {
 .mobile-link-parent > a:focus-visible {
   color: var(--accent);
   padding-left: 36px;
-  background: rgba(201,169,97,0.04);
+  background: rgba(168,137,64,0.04);
 }
 .mobile-link-arrow {
   display: inline-flex; align-items: center; justify-content: center;
@@ -293,7 +293,7 @@ a.mobile-link:focus-visible {
   display: inline-block;
   transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
 }
-.mobile-link-arrow:hover { background: rgba(201,169,97,0.08); }
+.mobile-link-arrow:hover { background: rgba(168,137,64,0.08); }
 .mobile-link-arrow[aria-expanded="true"] > span { transform: rotate(90deg); }
 
 /* Sous-liste Prestations : repliée par défaut, animée via max-height */
@@ -339,7 +339,7 @@ a.mobile-link:focus-visible {
   position: absolute;
   left: 0; top: 50%;
   width: 10px; height: 1px;
-  background: rgba(201,169,97,0.5);
+  background: rgba(168,137,64,0.5);
   transition: width 0.25s, background 0.25s;
 }
 .mobile-sub-row > a:hover {
@@ -352,7 +352,7 @@ a.mobile-link:focus-visible {
   width: 40px;
   font-size: 18px;
   border-left: 1px solid rgba(255,255,255,0.04);
-  color: rgba(201,169,97,0.7);
+  color: rgba(168,137,64,0.7);
 }
 
 /* Sous-sous-liste : items encore plus indentés */
@@ -375,7 +375,7 @@ a.mobile-link:focus-visible {
 }
 .mobile-subsublist a::before {
   width: 6px;
-  background: rgba(201,169,97,0.4);
+  background: rgba(168,137,64,0.4);
 }
 .mobile-subsublist a:hover { padding-left: 22px; color: var(--accent); }
 .mobile-subsublist a:hover::before { width: 12px; background: var(--accent); }
@@ -394,7 +394,7 @@ a.mobile-link:focus-visible {
   position: absolute;
   left: 0; top: 50%;
   width: 10px; height: 1px;
-  background: rgba(201,169,97,0.5);
+  background: rgba(168,137,64,0.5);
   transition: width 0.25s, background 0.25s;
 }
 .mobile-sublist a:hover {
@@ -491,28 +491,6 @@ a.mobile-link:focus-visible {
   background: var(--secondary); color: var(--primary); border-color: var(--secondary);
 }
 .btn-light:hover { background: var(--accent); color: var(--secondary); border-color: var(--accent); }
-
-/* ============================ TEST DORÉS — TEMPORAIRE ============================
-   5 nuances de doré à comparer en hover. Quand le choix est fait, retirer ces
-   classes + supprimer .gold-test/.gold-N partout dans index.html, puis mettre
-   la couleur retenue dans --accent (design-system.css).
-   Hover = même teinte assombrie ~18%. */
-.gold-test { transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease; }
-
-.gold-1 { background: #C9A961; border-color: #C9A961; color: var(--secondary); }
-.gold-1:hover { background: #B0904A; border-color: #B0904A; color: var(--secondary); }
-
-.gold-2 { background: #B8954F; border-color: #B8954F; color: var(--secondary); }
-.gold-2:hover { background: #9B7C3D; border-color: #9B7C3D; color: var(--secondary); }
-
-.gold-3 { background: #D4AF37; border-color: #D4AF37; color: var(--primary); }
-.gold-3:hover { background: #B89328; border-color: #B89328; color: var(--primary); }
-
-.gold-4 { background: #BE9C5C; border-color: #BE9C5C; color: var(--secondary); }
-.gold-4:hover { background: #9F8147; border-color: #9F8147; color: var(--secondary); }
-
-.gold-5 { background: #A88940; border-color: #A88940; color: var(--secondary); }
-.gold-5:hover { background: #8B7030; border-color: #8B7030; color: var(--secondary); }
 
 /* ============================ HERO ============================ */
 /* Template: vidéo bg + overlay, spacer 109px haut, titre Alaska 64px weight 700 */
