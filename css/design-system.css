@@ -18,14 +18,14 @@
 }
 
 :root {
-  /* Palette charte client (rose doux + marron taupe) */
-  --primary:   #1C1412;   /* texte principal / fond sombre — équiv noir template */
+  /* Palette charte client (doré champagne + marron taupe) */
+  --primary:   #1C1412;   /* texte principal / fond sombre */
   --secondary: #FFFFFF;
-  --accent:    #E8B4B4;   /* rose doux — équiv rouge bordeaux #E8563D du template */
-  --accent-2:  #C68585;   /* rose foncé — équiv #a90707 */
-  --text:      #9B7C69;   /* marron taupe — équiv beige #A29A8F */
-  --bg:        #FDF5F3;   /* crème rosé — équiv #ECE4D9 */
-  --bg-light:  #FBF8F7;
+  --accent:    #C9A961;   /* doré champagne — remplace l'ancien rose #E8B4B4 */
+  --accent-2:  #A88940;   /* doré antique foncé — remplace l'ancien rose #C68585 */
+  --text:      #9B7C69;   /* marron taupe — accord chaud avec le doré */
+  --bg:        #FAF6EE;   /* crème dorée — remplace l'ancien crème rosé #FDF5F3 */
+  --bg-light:  #FCFAF5;
 
   /* Typo — valeurs EXACTES extraites du template */
   --font-display: 'Alaska', Georgia, serif;

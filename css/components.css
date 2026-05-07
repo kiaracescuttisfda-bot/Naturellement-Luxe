@@ -259,7 +259,7 @@ a.mobile-link:hover,
 a.mobile-link:focus-visible {
   color: var(--accent);
   padding-left: 36px;
-  background: rgba(232,180,180,0.04);
+  background: rgba(201,169,97,0.04);
 }
 
 /* Lien parent (Prestations) : <a> + bouton arrow côte à côte, chacun cliquable */
@@ -275,7 +275,7 @@ a.mobile-link:focus-visible {
 .mobile-link-parent > a:focus-visible {
   color: var(--accent);
   padding-left: 36px;
-  background: rgba(232,180,180,0.04);
+  background: rgba(201,169,97,0.04);
 }
 .mobile-link-arrow {
   display: inline-flex; align-items: center; justify-content: center;
@@ -293,7 +293,7 @@ a.mobile-link:focus-visible {
   display: inline-block;
   transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
 }
-.mobile-link-arrow:hover { background: rgba(232,180,180,0.08); }
+.mobile-link-arrow:hover { background: rgba(201,169,97,0.08); }
 .mobile-link-arrow[aria-expanded="true"] > span { transform: rotate(90deg); }
 
 /* Sous-liste Prestations : repliée par défaut, animée via max-height */
@@ -339,7 +339,7 @@ a.mobile-link:focus-visible {
   position: absolute;
   left: 0; top: 50%;
   width: 10px; height: 1px;
-  background: rgba(232,180,180,0.5);
+  background: rgba(201,169,97,0.5);
   transition: width 0.25s, background 0.25s;
 }
 .mobile-sub-row > a:hover {
@@ -352,7 +352,7 @@ a.mobile-link:focus-visible {
   width: 40px;
   font-size: 18px;
   border-left: 1px solid rgba(255,255,255,0.04);
-  color: rgba(232,180,180,0.7);
+  color: rgba(201,169,97,0.7);
 }
 
 /* Sous-sous-liste : items encore plus indentés */
@@ -375,7 +375,7 @@ a.mobile-link:focus-visible {
 }
 .mobile-subsublist a::before {
   width: 6px;
-  background: rgba(232,180,180,0.4);
+  background: rgba(201,169,97,0.4);
 }
 .mobile-subsublist a:hover { padding-left: 22px; color: var(--accent); }
 .mobile-subsublist a:hover::before { width: 12px; background: var(--accent); }
@@ -394,7 +394,7 @@ a.mobile-link:focus-visible {
   position: absolute;
   left: 0; top: 50%;
   width: 10px; height: 1px;
-  background: rgba(232,180,180,0.5);
+  background: rgba(201,169,97,0.5);
   transition: width 0.25s, background 0.25s;
 }
 .mobile-sublist a:hover {
