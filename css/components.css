@@ -652,8 +652,7 @@ a.mobile-link:focus-visible {
 .vignette .overlay {
   position: absolute; inset: 0;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-align: center;
-  padding: 20px 20px 110px;  /* bottom padding réservé pour le CTA absolument positionné */
+  text-align: center; padding: 20px;
   background: rgba(0,0,0,0.15);
   transition: background 0.4s;
 }
@@ -671,18 +670,8 @@ a.mobile-link:focus-visible {
   font-family: var(--font-body);
   font-size: 16px; font-weight: 200; font-style: italic;
   color: var(--secondary);
-  margin-bottom: 0;
+  margin-bottom: 24px;
   text-shadow: 0 2px 12px rgba(0,0,0,0.5);
-}
-/* CTA ancré en bas (position fixe) pour aligner les boutons des deux vignettes */
-.vignette .overlay > .btn,
-.vignette .overlay > .btn-primary,
-.vignette .overlay > .btn-vignette {
-  position: absolute;
-  bottom: 56px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
 }
 .vignette .overlay .btn-vignette {
   display: inline-block;
@@ -930,10 +919,6 @@ a.mobile-link:focus-visible {
   .intro { padding: 50px 24px; }
   .section-center { padding: 50px 24px; }
   .section-center .cta-row .btn { flex: 1 1 auto; max-width: 220px; }
-  .vignette .overlay { padding: 20px 20px 80px; }
-  .vignette .overlay > .btn,
-  .vignette .overlay > .btn-primary,
-  .vignette .overlay > .btn-vignette { bottom: 36px; }
   .vignette .overlay h3 { font-size: 32px; line-height: 1.1; }
   .suite-feature-image .overlay h3 { font-size: 32px; line-height: 1.1; }
   .faq { padding: 60px 22px; }
