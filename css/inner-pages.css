@@ -1,0 +1,443 @@
+/* ============================================
+   INNER PAGES — Naturellement Luxe
+   Pages : Prestations, Tarifs, Cartes Cadeau
+   Inspiré du template L'instant Insoupçonné
+   ============================================ */
+
+/* ============================ PAGE HERO ============================ */
+.page-hero {
+  position: relative;
+  min-height: 480px;
+  height: 56vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  background: var(--primary);
+}
+.page-hero-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.page-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+.page-hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  padding: 80px 30px 0;
+  max-width: 960px;
+}
+.page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 68px);
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  opacity: 0; animation: fadeUp 1s ease 0.3s forwards;
+}
+.page-hero-title .italic {
+  font-weight: 400;
+  font-style: italic;
+  display: block;
+}
+.page-hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.6vw, 17px);
+  font-weight: 200;
+  font-style: italic;
+  color: var(--secondary);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0; animation: fadeUp 1s ease 0.6s forwards;
+}
+
+/* ============================ PAGE INTRO ============================ */
+.page-intro {
+  padding: 80px 30px 40px;
+  background: var(--secondary);
+  text-align: center;
+}
+.page-intro h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 300;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.page-intro p {
+  font-family: var(--font-body);
+  font-size: 15px; line-height: 26px;
+  color: var(--text);
+  max-width: 760px;
+  margin: 0 auto 16px;
+}
+.page-intro p strong { color: var(--primary); font-weight: 600; }
+.page-intro p .accent-link { color: var(--accent); text-decoration: underline; }
+
+/* ============================ FEATURE BLOCK (alterné) ============================ */
+.feature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--secondary);
+  align-items: stretch;
+}
+.feature-block + .feature-block { border-top: 1px solid rgba(0,0,0,0.04); }
+
+.feature-block-image {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+.feature-block-image img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.4s cubic-bezier(0.4,0,0.2,1);
+}
+.feature-block:hover .feature-block-image img { transform: scale(1.04); }
+
+.feature-block-content {
+  padding: 80px 60px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.feature-block-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--primary);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.feature-block-content h2 .italic {
+  font-weight: 400;
+  font-style: italic;
+  display: block;
+}
+.feature-block-price {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--accent);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.feature-block-content p {
+  font-family: var(--font-body);
+  font-size: 15px; line-height: 26px;
+  color: var(--text);
+  margin-bottom: 16px;
+  max-width: 520px;
+}
+.feature-block-content p strong { color: var(--primary); font-weight: 600; }
+.feature-block-content ul {
+  margin: 8px 0 20px;
+  padding-left: 4px;
+  max-width: 520px;
+}
+.feature-block-content li {
+  font-family: var(--font-body);
+  font-size: 14px; line-height: 24px;
+  color: var(--text);
+  padding-left: 18px;
+  position: relative;
+}
+.feature-block-content li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 11px;
+  width: 8px; height: 1px;
+  background: var(--accent);
+}
+
+.feature-block-cta {
+  margin-top: 24px;
+  display: flex; flex-direction: column;
+  gap: 10px;
+  max-width: 460px;
+}
+.feature-block-cta .btn { width: 100%; }
+.feature-block-cta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Alternance : image à droite via order */
+.feature-block.reverse .feature-block-image { order: 2; }
+.feature-block.reverse .feature-block-content { order: 1; }
+
+/* ============================ TARIFS GRID ============================ */
+.tarifs-section {
+  padding: 80px 30px;
+  background: var(--bg);
+}
+.tarifs-section .section-eyebrow {
+  font-family: var(--font-body);
+  font-size: 13px; font-weight: 600;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.tarifs-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 300;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.tarifs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.tarif-card {
+  background: var(--secondary);
+  padding: 44px 32px 36px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: transform 0.4s, box-shadow 0.4s, border-color 0.4s;
+  display: flex; flex-direction: column;
+}
+.tarif-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(28,20,18,0.08);
+  border-color: var(--accent);
+}
+.tarif-card h3 {
+  font-family: var(--font-display);
+  font-size: 26px; font-weight: 300;
+  color: var(--primary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.tarif-card .tarif-tagline {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+.tarif-card .tarif-price {
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1;
+  margin: 14px 0;
+}
+.tarif-card .tarif-price small {
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text);
+  font-style: italic;
+  margin-top: 6px;
+}
+.tarif-card ul {
+  text-align: left;
+  margin: 22px 0 28px;
+  display: flex; flex-direction: column; gap: 10px;
+  flex: 1;
+}
+.tarif-card li {
+  font-family: var(--font-body);
+  font-size: 14px; line-height: 22px;
+  color: var(--text);
+  position: relative;
+  padding-left: 22px;
+}
+.tarif-card li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 10px;
+  width: 12px; height: 1px;
+  background: var(--accent);
+}
+.tarif-card .btn { margin-top: auto; }
+.tarif-card .tarif-todo {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--accent-2);
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+/* Carte mise en avant */
+.tarif-card.featured {
+  background: var(--primary);
+  color: rgba(255,255,255,0.85);
+  border-color: var(--primary);
+}
+.tarif-card.featured:hover { border-color: var(--accent); }
+.tarif-card.featured h3 { color: var(--secondary); }
+.tarif-card.featured .tarif-tagline { color: rgba(255,255,255,0.6); }
+.tarif-card.featured .tarif-price small { color: rgba(255,255,255,0.6); }
+.tarif-card.featured li { color: rgba(255,255,255,0.75); }
+
+/* ============================ CARTES CADEAU ============================ */
+.gift-section {
+  padding: 80px 30px;
+  background: var(--secondary);
+}
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gift-card {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  color: var(--secondary);
+  padding: 50px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s, box-shadow 0.4s;
+  display: flex; flex-direction: column;
+}
+.gift-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(168,137,64,0.35);
+}
+.gift-card::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, transparent 55%);
+  pointer-events: none;
+}
+.gift-card-inner {
+  position: relative;
+  display: flex; flex-direction: column;
+  flex: 1;
+}
+.gift-card h3 {
+  font-family: var(--font-display);
+  font-size: 24px; font-weight: 300;
+  margin-bottom: 8px;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.gift-card .gift-amount {
+  font-family: var(--font-display);
+  font-size: 64px; font-weight: 500;
+  margin: 18px 0 12px;
+  line-height: 1;
+}
+.gift-card .gift-tagline {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-style: italic;
+  opacity: 0.85;
+  margin-bottom: 28px;
+  flex: 1;
+}
+.gift-card .btn {
+  background: var(--secondary);
+  color: var(--accent-2);
+  border-color: var(--secondary);
+  margin-top: auto;
+}
+.gift-card .btn:hover {
+  background: transparent;
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+/* Bloc "comment ça marche" */
+.how-it-works {
+  padding: 80px 30px;
+  background: var(--bg);
+}
+.how-it-works-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.how-it-works h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 300;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+}
+.step {
+  text-align: center;
+}
+.step-number {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 56px; height: 56px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+.step h3 {
+  font-family: var(--font-display);
+  font-size: 18px; font-weight: 400;
+  color: var(--primary);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.step p {
+  font-family: var(--font-body);
+  font-size: 14px; line-height: 22px;
+  color: var(--text);
+}
+
+/* ============================ NAV ACTIVE STATE ============================ */
+.nav a[aria-current="page"],
+.nav-item.has-submenu > a[aria-current="page"],
+.mobile-link[aria-current="page"],
+.mobile-link-parent > a[aria-current="page"] {
+  color: var(--accent);
+}
+
+/* ============================ RESPONSIVE ============================ */
+@media (max-width: 900px) {
+  .feature-block { grid-template-columns: 1fr; }
+  .feature-block.reverse .feature-block-image { order: 0; }
+  .feature-block.reverse .feature-block-content { order: 0; }
+  .feature-block-image { min-height: 360px; }
+  .feature-block-content { padding: 50px 28px; }
+  .feature-block-cta { max-width: 100%; }
+  .tarifs-section, .gift-section, .how-it-works { padding: 60px 22px; }
+  .page-intro { padding: 60px 24px 30px; }
+}
+
+@media (max-width: 640px) {
+  .page-hero { height: 70vh; min-height: 420px; max-height: 560px; }
+  .page-hero-content { padding: 60px 22px 0; }
+  .gift-card .gift-amount { font-size: 52px; }
+  .tarif-card { padding: 36px 26px 30px; }
+  .tarif-card .tarif-price { font-size: 38px; }
+}
