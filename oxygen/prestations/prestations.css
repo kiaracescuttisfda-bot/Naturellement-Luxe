@@ -1,0 +1,190 @@
+/* ============================================
+   PRESTATIONS CSS — Page /prestations/ uniquement
+   Suppose les variables et .btn / .section-center définies dans Header CSS.
+   ============================================ */
+
+/* ============================ PAGE HERO ============================ */
+.page-hero {
+  position: relative;
+  min-height: 480px;
+  height: 56vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  background: var(--primary);
+}
+.page-hero-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.page-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+.page-hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  padding: 80px 30px 0;
+  max-width: 960px;
+}
+.page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 68px);
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  opacity: 0; animation: fadeUp 1s ease 0.3s forwards;
+}
+.page-hero-title .italic {
+  font-weight: 400;
+  font-style: italic;
+  display: block;
+}
+.page-hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.6vw, 17px);
+  font-weight: 200;
+  font-style: italic;
+  color: var(--secondary);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0; animation: fadeUp 1s ease 0.6s forwards;
+}
+
+/* ============================ PAGE INTRO ============================ */
+.page-intro {
+  padding: 80px 30px 40px;
+  background: var(--secondary);
+  text-align: center;
+}
+.page-intro h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 300;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.page-intro p {
+  font-family: var(--font-body);
+  font-size: 15px; line-height: 26px;
+  color: var(--text);
+  max-width: 760px;
+  margin: 0 auto 16px;
+}
+.page-intro p strong { color: var(--primary); font-weight: 600; }
+
+/* ============================ FEATURE BLOCK ============================ */
+.feature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--secondary);
+  align-items: stretch;
+}
+.feature-block + .feature-block { border-top: 1px solid rgba(0,0,0,0.04); }
+
+.feature-block-image {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+.feature-block-image img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.4s cubic-bezier(0.4,0,0.2,1);
+}
+.feature-block:hover .feature-block-image img { transform: scale(1.04); }
+
+.feature-block-content {
+  padding: 80px 60px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.feature-block-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--primary);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.feature-block-content h2 .italic {
+  font-weight: 400;
+  font-style: italic;
+  display: block;
+}
+.feature-block-price {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--accent);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.feature-block-content p {
+  font-family: var(--font-body);
+  font-size: 15px; line-height: 26px;
+  color: var(--text);
+  margin-bottom: 16px;
+  max-width: 520px;
+}
+.feature-block-content p strong { color: var(--primary); font-weight: 600; }
+.feature-block-content ul {
+  margin: 8px 0 20px;
+  padding-left: 4px;
+  max-width: 520px;
+}
+.feature-block-content li {
+  font-family: var(--font-body);
+  font-size: 14px; line-height: 24px;
+  color: var(--text);
+  padding-left: 18px;
+  position: relative;
+}
+.feature-block-content li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 11px;
+  width: 8px; height: 1px;
+  background: var(--accent);
+}
+
+.feature-block-cta {
+  margin-top: 24px;
+  display: flex; flex-direction: column;
+  gap: 10px;
+  max-width: 460px;
+}
+.feature-block-cta .btn { width: 100%; }
+.feature-block-cta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Alternance image à droite */
+.feature-block.reverse .feature-block-image { order: 2; }
+.feature-block.reverse .feature-block-content { order: 1; }
+
+/* ============================ RESPONSIVE ============================ */
+@media (max-width: 900px) {
+  .feature-block { grid-template-columns: 1fr; }
+  .feature-block.reverse .feature-block-image { order: 0; }
+  .feature-block.reverse .feature-block-content { order: 0; }
+  .feature-block-image { min-height: 360px; }
+  .feature-block-content { padding: 50px 28px; }
+  .feature-block-cta { max-width: 100%; }
+  .page-intro { padding: 60px 24px 30px; }
+}
+@media (max-width: 640px) {
+  .page-hero { height: 70vh; min-height: 420px; max-height: 560px; }
+  .page-hero-content { padding: 60px 22px 0; }
+}

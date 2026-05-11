@@ -1,0 +1,227 @@
+/* ============================================
+   CARTES CADEAU CSS — Page /cartes-cadeau/ uniquement
+   Suppose les variables et .btn / .section-center définies dans Header CSS.
+   ============================================ */
+
+/* ============================ PAGE HERO ============================ */
+.page-hero {
+  position: relative;
+  min-height: 480px;
+  height: 56vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  background: var(--primary);
+}
+.page-hero-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.page-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+.page-hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  padding: 80px 30px 0;
+  max-width: 960px;
+}
+.page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 68px);
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  opacity: 0; animation: fadeUp 1s ease 0.3s forwards;
+}
+.page-hero-title .italic {
+  font-weight: 400;
+  font-style: italic;
+  display: block;
+}
+.page-hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.6vw, 17px);
+  font-weight: 200;
+  font-style: italic;
+  color: var(--secondary);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0; animation: fadeUp 1s ease 0.6s forwards;
+}
+
+/* ============================ PAGE INTRO ============================ */
+.page-intro {
+  padding: 80px 30px 40px;
+  background: var(--secondary);
+  text-align: center;
+}
+.page-intro h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 300;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.page-intro p {
+  font-family: var(--font-body);
+  font-size: 15px; line-height: 26px;
+  color: var(--text);
+  max-width: 760px;
+  margin: 0 auto 16px;
+}
+.page-intro p strong { color: var(--primary); font-weight: 600; }
+
+/* ============================ GIFT CARDS ============================ */
+.gift-section {
+  padding: 80px 30px;
+  background: var(--secondary);
+}
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gift-card {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  color: var(--secondary);
+  padding: 50px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s, box-shadow 0.4s;
+  display: flex; flex-direction: column;
+}
+.gift-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(168,137,64,0.35);
+}
+.gift-card::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, transparent 55%);
+  pointer-events: none;
+}
+.gift-card-inner {
+  position: relative;
+  display: flex; flex-direction: column;
+  flex: 1;
+}
+.gift-card h3 {
+  font-family: var(--font-display);
+  font-size: 24px; font-weight: 300;
+  margin-bottom: 8px;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.gift-card .gift-amount {
+  font-family: var(--font-display);
+  font-size: 64px; font-weight: 500;
+  margin: 18px 0 12px;
+  line-height: 1;
+}
+.gift-card .gift-tagline {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-style: italic;
+  opacity: 0.85;
+  margin-bottom: 28px;
+  flex: 1;
+}
+.gift-card .btn {
+  background: var(--secondary);
+  color: var(--accent-2);
+  border-color: var(--secondary);
+  margin-top: auto;
+}
+.gift-card .btn:hover {
+  background: transparent;
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.gift-custom-note {
+  text-align: center;
+  margin-top: 36px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--text);
+}
+.gift-custom-note .accent-link {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ============================ HOW IT WORKS ============================ */
+.how-it-works {
+  padding: 80px 30px;
+  background: var(--bg);
+}
+.how-it-works-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.how-it-works h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 300;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+}
+.step {
+  text-align: center;
+}
+.step-number {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 56px; height: 56px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+.step h3 {
+  font-family: var(--font-display);
+  font-size: 18px; font-weight: 400;
+  color: var(--primary);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.step p {
+  font-family: var(--font-body);
+  font-size: 14px; line-height: 22px;
+  color: var(--text);
+}
+
+/* ============================ RESPONSIVE ============================ */
+@media (max-width: 900px) {
+  .gift-section, .how-it-works { padding: 60px 22px; }
+  .page-intro { padding: 60px 24px 30px; }
+}
+@media (max-width: 640px) {
+  .page-hero { height: 70vh; min-height: 420px; max-height: 560px; }
+  .page-hero-content { padding: 60px 22px 0; }
+  .gift-card .gift-amount { font-size: 52px; }
+}
