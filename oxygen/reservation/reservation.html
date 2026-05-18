@@ -3,10 +3,11 @@
   Le bouton "Réserver" du header pointe vers cette page.
   CSS : reservation.css (onglet CSS) · JS : reservation.js (vide).
 
-  ⚠️ Le widget ci-dessous pointe vers la plateforme Flexybeauty utilisée
-  par le site source (app.flexybeauty.com/naturellement-luxe). Vérifie /
-  remplace l'URL de l'iframe si le compte de réservation est différent.
-  Booksy et Kiute sont proposés en alternative.
+  Plateforme de réservation = BOOKSY (confirmée par le client).
+  Le bouton ouvre le profil Booksy du salon dans un nouvel onglet.
+  Pour intégrer le VRAI widget Booksy (popup, sans quitter le site) :
+  Booksy Biz → tuile "Votre site web" → copier le code unique du salon
+  et le coller à l'emplacement balisé dans le bloc .booking-cta.
 -->
 
 <main>
@@ -30,10 +31,19 @@
 
       <div class="booking-cta">
         <span class="booking-cta-label">Réservation en ligne sécurisée</span>
-        <h2>Réservez votre créneau<br>en quelques clics</h2>
-        <p>Accédez à notre agenda en temps réel : choisissez la prestation, la date et l'horaire. Paiement et confirmation immédiats sur notre plateforme de réservation.</p>
-        <a href="https://app.flexybeauty.com/naturellement-luxe" target="_blank" rel="noopener" class="btn btn-primary booking-cta-btn">Réserver en ligne maintenant</a>
-        <span class="booking-cta-note">Ouvre la plateforme de réservation dans un nouvel onglet</span>
+        <h2>Réservez votre créneau<br>sur Booksy</h2>
+        <p>Accédez à notre agenda en temps réel : choisissez la prestation, la date et l'horaire. Paiement et confirmation immédiats via Booksy, notre plateforme de réservation.</p>
+
+        <!-- ============================================================
+             WIDGET BOOKSY OFFICIEL — à coller ICI quand tu l'auras récupéré
+             Booksy Biz → tuile "Votre site web / Your Website" → copie le
+             code unique de ton salon, et REMPLACE le bouton <a> ci-dessous
+             par ce code. Le widget Booksy s'intègre sans blocage iframe
+             (il ouvre une popup Booksy).
+             ============================================================ -->
+
+        <a href="https://booksy.com/fr-fr/63493_naturellement-luxe-spa-privatif-a-paris_spa-massage_99219_paris" target="_blank" rel="noopener" class="btn btn-primary booking-cta-btn">Réserver sur Booksy</a>
+        <span class="booking-cta-note">Ouvre Booksy dans un nouvel onglet</span>
       </div>
 
       <div class="booking-alt">
@@ -46,11 +56,6 @@
           <span class="ba-label">Sur WhatsApp</span>
           <p>Réponse rapide</p>
           <a href="https://wa.me/33142360607" target="_blank" rel="noopener" class="btn btn-outline">Écrire sur WhatsApp</a>
-        </div>
-        <div class="booking-alt-card">
-          <span class="ba-label">Sur Booksy</span>
-          <p>Réserver via Booksy</p>
-          <a href="https://booksy.com/fr-fr/63493_naturellement-luxe-spa-privatif-a-paris_spa-massage_99219_paris" target="_blank" rel="noopener" class="btn btn-outline">Ouvrir Booksy</a>
         </div>
         <div class="booking-alt-card">
           <span class="ba-label">Une question d'abord ?</span>
