@@ -12,16 +12,14 @@
 
 @font-face {
   font-family: 'Alaska';
-  src: url('/wp-content/uploads/2026/05/Alaska-VF.woff2') format('woff2'),
-       url('/wp-content/uploads/2026/05/Alaska-VF.ttf') format('truetype-variations');
+  src: url('/wp-content/uploads/2026/05/Alaska-VF.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Baikal';
-  src: url('/wp-content/uploads/2026/05/Baikal-VF.woff2') format('woff2'),
-       url('/wp-content/uploads/2026/05/Baikal-VF.ttf') format('truetype-variations');
+  src: url('/wp-content/uploads/2026/05/Baikal-VF.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
