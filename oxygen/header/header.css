@@ -1,10 +1,31 @@
 /* ============================================
    HEADER CSS — Oxygen "Applied to all"
-   FONTS : gérées par le plugin "Custom Fonts" (Brainstorm Force).
-   Le plugin génère lui-même les @font-face "Alaska" et "Baikal".
-   Aucun @font-face ici (évite doublon / 404). Les noms enregistrés
-   dans le plugin doivent être exactement "Alaska" et "Baikal".
+   FONTS : déclarées ICI directement (on ne dépend plus du plugin
+   Custom Fonts qui ne servait pas les fichiers sur les pages Oxygen).
+
+   ⚠️ ACTION REQUISE : uploader les 2 fichiers de police dans la
+   Médiathèque WordPress (idéalement en .woff2, plus léger), puis
+   remplacer les url(...) ci-dessous par les URLs réelles données par
+   la médiathèque. Le plus simple : même dossier que les images, soit
+   /wp-content/uploads/2026/05/.
    ============================================ */
+
+@font-face {
+  font-family: 'Alaska';
+  src: url('/wp-content/uploads/2026/05/Alaska-VF.woff2') format('woff2'),
+       url('/wp-content/uploads/2026/05/Alaska-VF.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Baikal';
+  src: url('/wp-content/uploads/2026/05/Baikal-VF.woff2') format('woff2'),
+       url('/wp-content/uploads/2026/05/Baikal-VF.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --primary:   #1C1412;
@@ -28,6 +49,20 @@ body {
   line-height: 26px;
   color: var(--text);
   background: var(--bg);
+}
+
+/* Oxygen / le thème WP appliquent leur propre typo : on force la nôtre.
+   Le scope .site-header / .mobile-nav / [class*="nl-"] évite d'imposer
+   les polices à TOUT le site si tu as d'autres contenus WP. */
+.site-header,
+.site-header *,
+.mobile-nav,
+.mobile-nav *,
+.topbar {
+  font-family: var(--font-body);
+}
+.site-header h1, .site-header h2, .site-header h3, .site-header h4 {
+  font-family: var(--font-display);
 }
 
 h1, h2, h3, h4 {
@@ -208,9 +243,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav-cta {
   display: inline-flex; align-items: center; justify-content: center;
   padding: 33px 50px;
-  font-family: var(--font-body);
-  font-size: 17px; font-weight: 600;
-  font-style: italic;
+  font-family: var(--font-body) !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  font-style: italic !important;
   text-transform: capitalize;
   color: var(--secondary);
   background: var(--primary);
@@ -219,6 +255,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: background 0.3s, color 0.3s;
   line-height: 1;
   text-decoration: none;
+}
+.mobile-cta {
+  font-weight: 600 !important;
+  font-style: italic !important;
 }
 .nav-cta:hover { background: var(--accent); color: var(--primary); }
 
