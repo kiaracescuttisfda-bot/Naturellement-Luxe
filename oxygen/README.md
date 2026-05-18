@@ -27,11 +27,54 @@ oxygen/
 │   ├── tarifs.html
 │   ├── tarifs.css
 │   └── tarifs.js            (vide)
-└── cartes-cadeau/           ← Page /cartes-cadeau/
-    ├── cartes-cadeau.html
-    ├── cartes-cadeau.css
-    └── cartes-cadeau.js     (vide)
+├── cartes-cadeau/           ← Page /cartes-cadeau/
+│   ├── cartes-cadeau.html
+│   ├── cartes-cadeau.css
+│   └── cartes-cadeau.js     (vide)
+├── contact/                 ← Page /contact/
+│   ├── contact.html
+│   ├── contact.css
+│   └── contact.js
+│
+│   ━━━ PAGES DÉTAIL PRESTATIONS ━━━
+│   CSS commun : prestation-detail.css → à coller UNE fois
+│   à la fin du CSS du template Header (Applied to all).
+│   Ces pages n'ont donc QUE l'onglet HTML (+ JS vide).
+├── prestation-detail.css    ← CSS partagé des 9 pages ci-dessous
+├── spa-privatif/            ← /prestations/  (ancre #spa-privatif) ou /spa-privatif/
+│   ├── spa-privatif.html
+│   └── spa-privatif.js      (vide)
+├── massage/                 ← massage.html (+ js vide)
+├── cours/                   ← cours.html (+ js vide)
+├── love-room/               ← love-room.html (contenu "Bain de Minuit")
+├── events/                  ← events.html (page chapeau + 4 cartes)
+├── events-evjf/             ← events-evjf.html
+├── events-baby-shower/      ← events-baby-shower.html
+├── events-anniversaire/     ← events-anniversaire.html
+└── events-st-valentin/      ← events-st-valentin.html (contenu rédigé, à valider)
+
+CONTENUS-SITE.md   ← tout le texte scrapé de naturellementluxe.com
 ```
+
+## Pages détail prestations — mode d'emploi spécifique
+
+Pour ne pas dupliquer ~500 lignes de CSS sur 9 pages :
+
+1. Ouvre le **template Header** (Applied to all) → Code Block → onglet **CSS**.
+2. Va à la fin du CSS existant et **colle tout `prestation-detail.css`** à la suite.
+3. Pour chaque page (spa-privatif, massage, cours, love-room, events,
+   events-evjf, events-baby-shower, events-anniversaire, events-st-valentin) :
+   crée la page WordPress, ajoute un **Code Block**, colle UNIQUEMENT
+   l'onglet **HTML** (le CSS est déjà global, le JS est vide).
+
+Slugs conseillés (à adapter à l'arborescence WordPress voulue) :
+`/spa-privatif/` ou `/prestations/spa-privatif/`, etc. Si tu utilises des
+ancres sur une page unique `/prestations/`, garde plutôt la page
+`prestations/prestations.html` (résumé) — les pages détail servent alors
+de pages dédiées séparées.
+
+⚠️ **events-st-valentin** : contenu rédigé par défaut (le site source n'a
+pas de page St Valentin) — à faire valider / personnaliser.
 
 ## Marche à suivre dans Oxygen
 
