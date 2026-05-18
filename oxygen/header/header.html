@@ -1,19 +1,93 @@
-<!--
-  HEADER — Oxygen Code Block "Applied to all" (Template Header)
-  ⚠️ Ce bloc contient du PHP : à coller dans l'onglet "PHP & HTML"
-  d'un Code Block Oxygen (Oxygen exécute le PHP).
+<?php
+/**
+ * HEADER — à coller dans l'onglet "PHP & HTML" d'UN SEUL Code Block Oxygen
+ * (template Header, Applied to all).
+ *
+ * Tout est ici : les 2 Walkers (définis une seule fois grâce à
+ * class_exists) PUIS le markup. Rien d'autre à installer, pas de plugin
+ * Code Snippets nécessaire.
+ *
+ * Le menu desktop + mobile est lu depuis le menu WordPress nommé
+ * "Header" (Apparence → Menus). Réserver et WhatsApp restent en dur.
+ */
 
-  Le menu (desktop + mobile) est généré dynamiquement depuis le menu
-  WordPress nommé "Header" (Apparence → Menus) via wp_nav_menu() +
-  les Walkers NL_Walker_Desktop / NL_Walker_Mobile.
-  → Colle d'abord header-menu-walkers.php dans le plugin Code Snippets
-    (PHP, Run Everywhere), sinon le menu s'affichera "brut".
+if ( ! class_exists( 'NL_Walker_Desktop' ) ) {
 
-  Restent EN DUR (non gérés par le menu WP) :
-  - bouton "Réserver" → /reservation/
-  - icône WhatsApp → wa.me/33142360607
-  - logo, topbar, burger, en-tête/pied du panneau mobile
--->
+	class NL_Walker_Desktop extends Walker_Nav_Menu {
+		public function start_lvl( &$output, $depth = 0, $args = null ) {
+			$output .= ( $depth === 0 ) ? '<div class="submenu">' : '<div class="subsubmenu">';
+		}
+		public function end_lvl( &$output, $depth = 0, $args = null ) {
+			$output .= '</div>';
+		}
+		public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+			$classes      = (array) $item->classes;
+			$has_children = in_array( 'menu-item-has-children', $classes, true );
+			$is_current   = in_array( 'current-menu-item', $classes, true ) || in_array( 'current-menu-ancestor', $classes, true );
+			$url   = esc_url( $item->url );
+			$title = esc_html( $item->title );
+			$aria  = $is_current ? ' aria-current="page"' : '';
+			if ( $depth === 0 ) {
+				$output .= $has_children
+					? '<div class="nav-item has-submenu"><a href="' . $url . '"' . $aria . '>' . $title . '</a>'
+					: '<a href="' . $url . '"' . $aria . '>' . $title . '</a>';
+			} elseif ( $depth === 1 ) {
+				$output .= $has_children
+					? '<div class="submenu-item has-subsubmenu"><a href="' . $url . '"' . $aria . '><span>' . $title . '</span><span class="submenu-arrow" aria-hidden="true">›</span></a>'
+					: '<a href="' . $url . '"' . $aria . '>' . $title . '</a>';
+			} else {
+				$output .= '<a href="' . $url . '"' . $aria . '>' . $title . '</a>';
+			}
+		}
+		public function end_el( &$output, $item, $depth = 0, $args = null ) {
+			if ( in_array( 'menu-item-has-children', (array) $item->classes, true ) && $depth <= 1 ) {
+				$output .= '</div>';
+			}
+		}
+	}
+
+	class NL_Walker_Mobile extends Walker_Nav_Menu {
+		private $last_id = '';
+		public function start_lvl( &$output, $depth = 0, $args = null ) {
+			$output .= ( $depth === 0 )
+				? '<div class="mobile-sublist" id="' . esc_attr( $this->last_id ) . '" hidden>'
+				: '<div class="mobile-sublist mobile-subsublist" id="' . esc_attr( $this->last_id ) . '" hidden>';
+		}
+		public function end_lvl( &$output, $depth = 0, $args = null ) {
+			$output .= '</div>';
+		}
+		public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+			$has_children = in_array( 'menu-item-has-children', (array) $item->classes, true );
+			$url   = esc_url( $item->url );
+			$title = esc_html( $item->title );
+			if ( $depth === 0 ) {
+				if ( $has_children ) {
+					$cid           = 'm-sub-' . (int) $item->ID;
+					$this->last_id = $cid;
+					$output .= '<div class="mobile-group"><div class="mobile-link mobile-link-parent"><a href="' . $url . '">' . $title . '</a><button type="button" class="mobile-link-arrow" aria-expanded="false" aria-controls="' . $cid . '" aria-label="Afficher le sous-menu"><span aria-hidden="true">›</span></button></div>';
+				} else {
+					$output .= '<a href="' . $url . '" class="mobile-link">' . $title . '</a>';
+				}
+			} elseif ( $depth === 1 ) {
+				if ( $has_children ) {
+					$cid           = 'm-subsub-' . (int) $item->ID;
+					$this->last_id = $cid;
+					$output .= '<div class="mobile-sub-group"><div class="mobile-sub-row"><a href="' . $url . '">' . $title . '</a><button type="button" class="mobile-link-arrow mobile-link-arrow-sm" aria-expanded="false" aria-controls="' . $cid . '" aria-label="Afficher le sous-menu"><span aria-hidden="true">›</span></button></div>';
+				} else {
+					$output .= '<a href="' . $url . '">' . $title . '</a>';
+				}
+			} else {
+				$output .= '<a href="' . $url . '">' . $title . '</a>';
+			}
+		}
+		public function end_el( &$output, $item, $depth = 0, $args = null ) {
+			if ( in_array( 'menu-item-has-children', (array) $item->classes, true ) && $depth <= 1 ) {
+				$output .= '</div>';
+			}
+		}
+	}
+}
+?>
 
 <div class="topbar">Une parenthèse d'exception, de jour comme de nuit</div>
 
@@ -24,16 +98,14 @@
 
   <nav class="nav">
     <?php
-      if ( function_exists( 'wp_nav_menu' ) ) {
-        wp_nav_menu( array(
-          'menu'        => 'Header',
-          'container'   => false,
-          'items_wrap'  => '%3$s',
-          'depth'       => 3,
-          'fallback_cb' => false,
-          'walker'      => class_exists( 'NL_Walker_Desktop' ) ? new NL_Walker_Desktop() : '',
-        ) );
-      }
+      wp_nav_menu( array(
+        'menu'        => 'Header',
+        'container'   => false,
+        'items_wrap'  => '%3$s',
+        'depth'       => 3,
+        'fallback_cb' => false,
+        'walker'      => new NL_Walker_Desktop(),
+      ) );
     ?>
   </nav>
 
@@ -57,16 +129,14 @@
 
   <div class="mobile-nav-body">
     <?php
-      if ( function_exists( 'wp_nav_menu' ) ) {
-        wp_nav_menu( array(
-          'menu'        => 'Header',
-          'container'   => false,
-          'items_wrap'  => '%3$s',
-          'depth'       => 3,
-          'fallback_cb' => false,
-          'walker'      => class_exists( 'NL_Walker_Mobile' ) ? new NL_Walker_Mobile() : '',
-        ) );
-      }
+      wp_nav_menu( array(
+        'menu'        => 'Header',
+        'container'   => false,
+        'items_wrap'  => '%3$s',
+        'depth'       => 3,
+        'fallback_cb' => false,
+        'walker'      => new NL_Walker_Mobile(),
+      ) );
     ?>
 
     <a href="/reservation/" class="mobile-cta">Réserver</a>
