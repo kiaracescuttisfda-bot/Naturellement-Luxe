@@ -1,14 +1,5 @@
-/* ============================================
-   PRESTATION-DETAIL CSS — COMMUN à toutes les pages détail
-   (Spa Privatif, Massage, Cours, Love Room, Events + sous-pages)
-
-   ⚠️ À COLLER UNE SEULE FOIS, à la fin du CSS du template "Header"
-   (Applied to all). Les 9 pages détail n'ont alors PLUS de CSS propre :
-   tu ne colles que l'onglet HTML (et JS vide).
-
-   Suppose les variables / .btn / .section-center déjà définies plus haut
-   dans le Header CSS.
-   ============================================ */
+/* cours.css — onglet CSS du Code Block Oxygen (page cours)
+   Self-contained. Variables / .btn / .section-center : définies dans le Header CSS. */
 
 /* ---- PAGE HERO ---- */
 .page-hero {

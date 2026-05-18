@@ -1,0 +1,389 @@
+/* love-room.css — onglet CSS du Code Block Oxygen (page love-room)
+   Self-contained. Variables / .btn / .section-center : définies dans le Header CSS. */
+
+/* ---- PAGE HERO ---- */
+.page-hero {
+  position: relative;
+  min-height: 460px;
+  height: 54vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  background: var(--primary);
+}
+.page-hero-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.page-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(0,0,0,0.48);
+  z-index: 1;
+}
+.page-hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  padding: 80px 30px 0;
+  max-width: 960px;
+}
+.page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5.6vw, 64px);
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  opacity: 0; animation: fadeUp 1s ease 0.3s forwards;
+}
+.page-hero-title .italic { font-weight: 400; font-style: italic; display: block; }
+.page-hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.6vw, 17px);
+  font-weight: 200; font-style: italic;
+  color: var(--secondary);
+  max-width: 680px; margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0; animation: fadeUp 1s ease 0.6s forwards;
+}
+
+/* ---- PAGE INTRO ---- */
+.page-intro {
+  padding: 80px 30px 50px;
+  background: var(--secondary);
+  text-align: center;
+}
+.page-intro .eyebrow {
+  font-family: var(--font-body);
+  font-size: 13px; font-weight: 600;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  margin-bottom: 16px;
+}
+.page-intro h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 300;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.page-intro p {
+  font-family: var(--font-body);
+  font-size: 15px; line-height: 27px;
+  color: var(--text);
+  max-width: 760px;
+  margin: 0 auto 16px;
+}
+.page-intro p strong { color: var(--primary); font-weight: 600; }
+.page-intro .quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(18px, 2.4vw, 24px);
+  color: var(--accent-2);
+  max-width: 700px;
+  margin: 28px auto 0;
+  line-height: 1.4;
+}
+
+/* ---- BLOC ALTERNÉ texte / image ---- */
+.prestation-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--secondary);
+  align-items: stretch;
+}
+.prestation-block + .prestation-block { border-top: 1px solid rgba(0,0,0,0.04); }
+.prestation-block-img {
+  position: relative;
+  min-height: 480px;
+  overflow: hidden;
+}
+.prestation-block-img img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.4s cubic-bezier(0.4,0,0.2,1);
+}
+.prestation-block:hover .prestation-block-img img { transform: scale(1.04); }
+.prestation-block-body {
+  padding: 70px 56px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.prestation-block-body h3 {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+.prestation-block-body h3 .italic { font-weight: 400; font-style: italic; }
+.prestation-block-body p {
+  font-family: var(--font-body);
+  font-size: 15px; line-height: 26px;
+  color: var(--text);
+  margin-bottom: 14px;
+  max-width: 540px;
+}
+.prestation-block-body p strong { color: var(--primary); font-weight: 600; }
+.prestation-block-body .price-line {
+  font-family: var(--font-display);
+  font-size: 20px; font-style: italic;
+  color: var(--accent);
+  margin: 10px 0 20px;
+}
+.prestation-block.reverse .prestation-block-img { order: 2; }
+.prestation-block.reverse .prestation-block-body { order: 1; }
+
+/* ---- GRILLE D'ÉQUIPEMENTS / PUCES ---- */
+.equip-section {
+  padding: 70px 30px;
+  background: var(--bg);
+  text-align: center;
+}
+.equip-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.4vw, 36px);
+  font-weight: 300;
+  color: var(--primary);
+  margin-bottom: 40px;
+}
+.equip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.equip-item {
+  background: var(--secondary);
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 18px 16px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--primary);
+  transition: border-color 0.3s, color 0.3s, transform 0.3s;
+}
+.equip-item:hover {
+  border-color: var(--accent);
+  color: var(--accent-2);
+  transform: translateY(-3px);
+}
+
+/* ---- GRILLE TARIFAIRE ---- */
+.price-section {
+  padding: 80px 30px;
+  background: var(--secondary);
+}
+.price-section .eyebrow {
+  font-family: var(--font-body);
+  font-size: 13px; font-weight: 600;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.price-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 300;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 12px;
+}
+.price-section .price-note {
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 13px; font-style: italic;
+  color: var(--accent-2);
+  margin-bottom: 46px;
+}
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.price-card {
+  background: var(--bg-light);
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 38px 30px;
+  text-align: center;
+  display: flex; flex-direction: column;
+  transition: transform 0.4s, box-shadow 0.4s, border-color 0.4s;
+}
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(28,20,18,0.08);
+  border-color: var(--accent);
+}
+.price-card h3 {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 300;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+.price-card .rows { display: flex; flex-direction: column; gap: 9px; flex: 1; }
+.price-card .row {
+  display: flex; justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text);
+  padding-bottom: 9px;
+  border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+.price-card .row span:last-child { color: var(--accent-2); font-weight: 600; }
+.price-card.featured { background: var(--primary); border-color: var(--primary); }
+.price-card.featured h3 { color: var(--secondary); }
+.price-card.featured .row { color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.12); }
+.price-card.featured .row span:last-child { color: var(--accent); }
+
+/* ---- BANDE INFOS PRATIQUES ---- */
+.info-band {
+  background: var(--primary);
+  color: rgba(255,255,255,0.78);
+  padding: 60px 30px;
+}
+.info-band-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 36px;
+}
+.info-band .ib {
+  text-align: center;
+}
+.info-band .ib-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.info-band .ib p {
+  font-family: var(--font-body);
+  font-size: 14px; line-height: 23px;
+  color: rgba(255,255,255,0.78);
+  margin: 0;
+}
+.info-band .ib a { color: rgba(255,255,255,0.92); }
+.info-band .ib a:hover { color: var(--accent); }
+
+/* ---- CARTES VERS SOUS-PAGES (Events) ---- */
+.subpages-section {
+  padding: 80px 30px;
+  background: var(--bg);
+}
+.subpages-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 300;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 46px;
+}
+.subpages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.subpage-card {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  display: flex; align-items: flex-end;
+  text-decoration: none;
+}
+.subpage-card img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+.subpage-card::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.65) 100%);
+  transition: background 0.4s;
+}
+.subpage-card:hover img { transform: scale(1.06); }
+.subpage-card:hover::after { background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.75) 100%); }
+.subpage-card-label {
+  position: relative; z-index: 2;
+  padding: 28px 26px;
+  width: 100%;
+}
+.subpage-card-label h3 {
+  font-family: var(--font-display);
+  font-size: 26px; font-weight: 400;
+  color: var(--secondary);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+.subpage-card-label span {
+  font-family: var(--font-body);
+  font-size: 13px; font-style: italic;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ---- TABLE OPTIONS ---- */
+.options-section {
+  padding: 70px 30px;
+  background: var(--secondary);
+}
+.options-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 300;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 36px;
+}
+.options-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex; flex-direction: column;
+}
+.options-list .opt {
+  display: flex; justify-content: space-between;
+  padding: 15px 4px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text);
+}
+.options-list .opt span:last-child {
+  color: var(--accent-2); font-weight: 600; white-space: nowrap; padding-left: 20px;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .prestation-block { grid-template-columns: 1fr; }
+  .prestation-block.reverse .prestation-block-img,
+  .prestation-block.reverse .prestation-block-body { order: 0; }
+  .prestation-block-img { min-height: 340px; }
+  .prestation-block-body { padding: 48px 26px; }
+  .page-intro { padding: 60px 24px 40px; }
+  .equip-section, .price-section, .info-band, .subpages-section, .options-section { padding: 56px 22px; }
+}
+@media (max-width: 640px) {
+  .page-hero { height: 68vh; min-height: 400px; max-height: 540px; }
+  .page-hero-content { padding: 60px 22px 0; }
+}

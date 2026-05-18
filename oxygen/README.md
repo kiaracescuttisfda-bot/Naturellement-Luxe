@@ -37,41 +37,36 @@ oxygen/
 │   └── contact.js
 │
 │   ━━━ PAGES DÉTAIL PRESTATIONS ━━━
-│   CSS commun : prestation-detail.css → à coller UNE fois
-│   à la fin du CSS du template Header (Applied to all).
-│   Ces pages n'ont donc QUE l'onglet HTML (+ JS vide).
-├── prestation-detail.css    ← CSS partagé des 9 pages ci-dessous
-├── spa-privatif/            ← /prestations/  (ancre #spa-privatif) ou /spa-privatif/
-│   ├── spa-privatif.html
-│   └── spa-privatif.js      (vide)
-├── massage/                 ← massage.html (+ js vide)
-├── cours/                   ← cours.html (+ js vide)
-├── love-room/               ← love-room.html (contenu "Bain de Minuit")
-├── events/                  ← events.html (page chapeau + 4 cartes)
-├── events-evjf/             ← events-evjf.html
-├── events-baby-shower/      ← events-baby-shower.html
-├── events-anniversaire/     ← events-anniversaire.html
-└── events-st-valentin/      ← events-st-valentin.html (contenu rédigé, à valider)
+│   Chaque page est autonome : 3 onglets (HTML + CSS + JS) à coller
+│   dans son propre Code Block. Le CSS est dupliqué dans chaque page
+│   (identique d'une page à l'autre) — c'est voulu.
+├── spa-privatif/            ├── spa-privatif.html / .css / .js
+├── massage/                 ├── massage.html / .css / .js
+├── cours/                   ├── cours.html / .css / .js
+├── love-room/               ├── love-room.html / .css / .js  (contenu "Bain de Minuit")
+├── events/                  ├── events.html / .css / .js  (chapeau + 4 cartes)
+├── events-evjf/             ├── events-evjf.html / .css / .js
+├── events-baby-shower/      ├── events-baby-shower.html / .css / .js
+├── events-anniversaire/     ├── events-anniversaire.html / .css / .js
+└── events-st-valentin/      └── events-st-valentin.html / .css / .js  (contenu rédigé, à valider)
 
 CONTENUS-SITE.md   ← tout le texte scrapé de naturellementluxe.com
 ```
 
-## Pages détail prestations — mode d'emploi spécifique
+## Pages détail prestations — mode d'emploi
 
-Pour ne pas dupliquer ~500 lignes de CSS sur 9 pages :
+Chaque page a son propre Code Block autonome :
 
-1. Ouvre le **template Header** (Applied to all) → Code Block → onglet **CSS**.
-2. Va à la fin du CSS existant et **colle tout `prestation-detail.css`** à la suite.
-3. Pour chaque page (spa-privatif, massage, cours, love-room, events,
-   events-evjf, events-baby-shower, events-anniversaire, events-st-valentin) :
-   crée la page WordPress, ajoute un **Code Block**, colle UNIQUEMENT
-   l'onglet **HTML** (le CSS est déjà global, le JS est vide).
+1. Crée la page WordPress (slug au choix, ex. `/spa-privatif/` ou
+   `/prestations/spa-privatif/`).
+2. Ajoute un **Code Block** et colle les **3 onglets** depuis le dossier
+   correspondant : `*.html` → HTML, `*.css` → CSS, `*.js` → JS.
+3. Recommence pour chacune des 9 pages.
 
-Slugs conseillés (à adapter à l'arborescence WordPress voulue) :
-`/spa-privatif/` ou `/prestations/spa-privatif/`, etc. Si tu utilises des
-ancres sur une page unique `/prestations/`, garde plutôt la page
-`prestations/prestations.html` (résumé) — les pages détail servent alors
-de pages dédiées séparées.
+Le CSS de ces 9 pages est volontairement **identique et dupliqué** dans
+chaque dossier (tu as choisi un bloc CSS par page plutôt qu'un CSS global).
+Si tu modifies le style commun, pense à reporter le changement sur les
+9 fichiers `.css` (ils sont strictement identiques au départ).
 
 ⚠️ **events-st-valentin** : contenu rédigé par défaut (le site source n'a
 pas de page St Valentin) — à faire valider / personnaliser.
