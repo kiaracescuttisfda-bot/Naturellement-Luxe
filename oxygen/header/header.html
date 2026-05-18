@@ -1,36 +1,42 @@
-<!-- HEADER — Oxygen Code Block "Applied to all" (Template Header) -->
+<!--
+  HEADER — Oxygen Code Block "Applied to all" (Template Header)
+  ⚠️ Ce bloc contient du PHP : à coller dans l'onglet "PHP & HTML"
+  d'un Code Block Oxygen (Oxygen exécute le PHP).
+
+  Le menu (desktop + mobile) est généré dynamiquement depuis le menu
+  WordPress nommé "Header" (Apparence → Menus) via wp_nav_menu() +
+  les Walkers NL_Walker_Desktop / NL_Walker_Mobile.
+  → Colle d'abord header-menu-walkers.php dans le plugin Code Snippets
+    (PHP, Run Everywhere), sinon le menu s'affichera "brut".
+
+  Restent EN DUR (non gérés par le menu WP) :
+  - bouton "Réserver" → /reservation/
+  - icône WhatsApp → wa.me/33142360607
+  - logo, topbar, burger, en-tête/pied du panneau mobile
+-->
+
 <div class="topbar">Une parenthèse d'exception, de jour comme de nuit</div>
 
 <header class="site-header">
   <a href="/" class="logo">
     <img src="/wp-content/uploads/2026/05/LOGOS-naturellementluxe-11.webp" alt="Naturellement Luxe" class="logo-img">
   </a>
+
   <nav class="nav">
-    <div class="nav-item has-submenu">
-      <a href="/prestations/">Prestations</a>
-      <div class="submenu">
-        <a href="/prestations/#spa-privatif">Spa Privatif</a>
-        <a href="/prestations/#massage">Massage</a>
-        <a href="/prestations/#cours">Cours</a>
-        <div class="submenu-item has-subsubmenu">
-          <a href="/prestations/#events">
-            <span>Events</span>
-            <span class="submenu-arrow" aria-hidden="true">›</span>
-          </a>
-          <div class="subsubmenu">
-            <a href="/prestations/#evjf">EVJF</a>
-            <a href="/prestations/#baby-shower">Baby shower</a>
-            <a href="/prestations/#anniversaire">Anniversaire</a>
-            <a href="/prestations/#st-valentin">St Valentin</a>
-          </div>
-        </div>
-        <a href="/prestations/#love-room">Love Room</a>
-      </div>
-    </div>
-    <a href="/tarifs/">Tarifs</a>
-    <a href="/cartes-cadeau/">Cartes Cadeau</a>
-    <a href="/#contact">Contact</a>
+    <?php
+      if ( function_exists( 'wp_nav_menu' ) ) {
+        wp_nav_menu( array(
+          'menu'        => 'Header',
+          'container'   => false,
+          'items_wrap'  => '%3$s',
+          'depth'       => 3,
+          'fallback_cb' => false,
+          'walker'      => class_exists( 'NL_Walker_Desktop' ) ? new NL_Walker_Desktop() : '',
+        ) );
+      }
+    ?>
   </nav>
+
   <a href="/reservation/" class="nav-cta">Réserver</a>
   <a href="https://wa.me/33142360607" class="nav-icon" aria-label="WhatsApp" target="_blank" rel="noopener">
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -50,38 +56,18 @@
   </div>
 
   <div class="mobile-nav-body">
-    <div class="mobile-group">
-      <div class="mobile-link mobile-link-parent">
-        <a href="/prestations/">Prestations</a>
-        <button type="button" class="mobile-link-arrow" aria-expanded="false" aria-controls="mobile-sublist-prestations" aria-label="Afficher les prestations">
-          <span aria-hidden="true">›</span>
-        </button>
-      </div>
-      <div class="mobile-sublist" id="mobile-sublist-prestations" hidden>
-        <a href="/prestations/#spa-privatif">Spa Privatif</a>
-        <a href="/prestations/#massage">Massage</a>
-        <a href="/prestations/#cours">Cours</a>
-        <div class="mobile-sub-group">
-          <div class="mobile-sub-row">
-            <a href="/prestations/#events">Events</a>
-            <button type="button" class="mobile-link-arrow mobile-link-arrow-sm" aria-expanded="false" aria-controls="mobile-subsublist-events" aria-label="Afficher les types d'événements">
-              <span aria-hidden="true">›</span>
-            </button>
-          </div>
-          <div class="mobile-sublist mobile-subsublist" id="mobile-subsublist-events" hidden>
-            <a href="/prestations/#evjf">EVJF</a>
-            <a href="/prestations/#baby-shower">Baby shower</a>
-            <a href="/prestations/#anniversaire">Anniversaire</a>
-            <a href="/prestations/#st-valentin">St Valentin</a>
-          </div>
-        </div>
-        <a href="/prestations/#love-room">Love Room</a>
-      </div>
-    </div>
-
-    <a href="/tarifs/" class="mobile-link">Tarifs</a>
-    <a href="/cartes-cadeau/" class="mobile-link">Cartes Cadeau</a>
-    <a href="/#contact" class="mobile-link">Contact</a>
+    <?php
+      if ( function_exists( 'wp_nav_menu' ) ) {
+        wp_nav_menu( array(
+          'menu'        => 'Header',
+          'container'   => false,
+          'items_wrap'  => '%3$s',
+          'depth'       => 3,
+          'fallback_cb' => false,
+          'walker'      => class_exists( 'NL_Walker_Mobile' ) ? new NL_Walker_Mobile() : '',
+        ) );
+      }
+    ?>
 
     <a href="/reservation/" class="mobile-cta">Réserver</a>
   </div>

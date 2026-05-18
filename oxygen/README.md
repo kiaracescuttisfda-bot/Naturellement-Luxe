@@ -99,9 +99,24 @@ Dans Oxygen → **Templates** → **Add New** :
 - Type : **Singular** ou **Front Page** + cocher **Apply to all**
 - Position : **Header**
 - Édite avec Oxygen → ajoute un **Code Block**
-  - Onglet **PHP+HTML** : colle `oxygen/header/header.html`
+  - Onglet **PHP+HTML** : colle `oxygen/header/header.html` (contient du PHP)
   - Onglet **CSS** : colle `oxygen/header/header.css`
   - Onglet **JavaScript** : colle `oxygen/header/header.js`
+
+> ⚙️ **Menu dynamique du Header** — le header n'est plus codé en dur :
+> il lit le menu WordPress nommé **"Header"** (Apparence → Menus).
+> Étape obligatoire AVANT que le menu s'affiche correctement :
+> 1. Plugin **Code Snippets** → New → **PHP Snippet** → colle le contenu
+>    de `oxygen/header/header-menu-walkers.php` (sans la 1ʳᵉ ligne `<?php`
+>    si le plugin l'ajoute déjà) → **Run Everywhere** → Activer.
+> 2. Apparence → Menus : crée/garde le menu **"Header"** avec la
+>    hiérarchie voulue (Prestations › Spa Privatif / Massage / Cours /
+>    Events › EVJF / Baby-Shower / Anniversaire / St Valentin / Love
+>    Room, puis Tarifs, Cartes cadeau, Contact). 3 niveaux max.
+> 3. Le bouton **Réserver** (→ /reservation/) et l'icône **WhatsApp**
+>    (→ wa.me) restent codés en dur dans le Code Block, pas dans le menu.
+> Si le snippet PHP n'est pas actif, le menu s'affiche sans nos classes
+> (markup WP brut) → styles cassés : c'est le symptôme à reconnaître.
 
 **Template "Footer global"**
 - Même chose, position **Footer**
