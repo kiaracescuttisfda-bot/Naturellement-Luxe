@@ -37,8 +37,28 @@
   --font-body:    'Baikal', system-ui, sans-serif;
 }
 
-/* ---- Reset minimal (à scoper si conflit avec un thème WP) ---- */
-.nl-reset *, .nl-reset *::before, .nl-reset *::after { box-sizing: border-box; }
+/* ---- Reset : IDENTIQUE au site statique GitHub ----
+   box-sizing global = indispensable, tout le design est calé dessus.
+   Scopé à nos conteneurs + le contenu Oxygen pour ne pas casser
+   l'éditeur, mais assez large pour couvrir header/footer/pages. */
+.site-header, .site-header *, .site-header *::before, .site-header *::after,
+.topbar, .topbar *,
+.mobile-nav, .mobile-nav *, .mobile-nav *::before, .mobile-nav *::after,
+.mobile-overlay,
+.site-footer, .site-footer *, .site-footer *::before, .site-footer *::after,
+#content *, #content *::before, #content *::after,
+.ct-section *, .oxy-stock-content-styles *,
+main, main *, main *::before, main *::after {
+  box-sizing: border-box;
+}
+/* Marges/paddings par défaut neutralisés sur nos éléments structurants
+   (le thème WP en ajoute sinon → tout est décalé). */
+main h1, main h2, main h3, main h4, main h5, main p, main ul, main ol, main figure,
+.site-header ul, .mobile-nav ul, .site-footer ul,
+.site-header p, .mobile-nav p, .site-footer p {
+  margin: 0;
+  padding: 0;
+}
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 body {
   font-family: var(--font-body);
