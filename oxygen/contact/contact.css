@@ -1,0 +1,225 @@
+/* ============================================
+   CONTACT CSS — Page /contact/ uniquement
+   Suppose les variables et .btn / .section-center définies dans Header CSS.
+   ============================================ */
+
+/* ============================ PAGE HERO ============================ */
+.page-hero {
+  position: relative;
+  min-height: 480px;
+  height: 56vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  background: var(--primary);
+}
+.page-hero-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.page-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+.page-hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  padding: 80px 30px 0;
+  max-width: 960px;
+}
+.page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 68px);
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  opacity: 0; animation: fadeUp 1s ease 0.3s forwards;
+}
+.page-hero-title .italic {
+  font-weight: 400;
+  font-style: italic;
+  display: block;
+}
+.page-hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.6vw, 17px);
+  font-weight: 200;
+  font-style: italic;
+  color: var(--secondary);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0; animation: fadeUp 1s ease 0.6s forwards;
+}
+
+/* ============================ PAGE INTRO ============================ */
+.page-intro {
+  padding: 80px 30px 40px;
+  background: var(--secondary);
+  text-align: center;
+}
+.page-intro h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 300;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.page-intro p {
+  font-family: var(--font-body);
+  font-size: 15px; line-height: 26px;
+  color: var(--text);
+  max-width: 760px;
+  margin: 0 auto 16px;
+}
+.page-intro p strong { color: var(--primary); font-weight: 600; }
+
+/* ============================ CONTACT SECTION ============================ */
+.contact-section {
+  padding: 70px 30px 90px;
+  background: var(--bg);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* ---- Formulaire ---- */
+.contact-form-wrap {
+  background: var(--secondary);
+  padding: 48px 44px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.contact-form-wrap h3,
+.contact-info h3 {
+  font-family: var(--font-display);
+  font-size: 26px; font-weight: 300;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+}
+
+.contact-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.contact-form .form-field {
+  margin-bottom: 18px;
+  display: flex; flex-direction: column;
+}
+.contact-form label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--primary);
+  background: var(--bg-light);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 0;
+  padding: 13px 15px;
+  width: 100%;
+  transition: border-color 0.25s, background 0.25s;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: rgba(155,124,105,0.6); }
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--secondary);
+}
+.contact-form textarea { resize: vertical; min-height: 130px; }
+
+.form-consent {
+  display: flex; align-items: flex-start; gap: 10px;
+  margin: 6px 0 24px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+.form-consent input { width: auto; margin-top: 3px; accent-color: var(--accent); }
+
+.contact-submit { width: 100%; }
+
+/* ---- Infos ---- */
+.contact-info {
+  background: var(--primary);
+  color: rgba(255,255,255,0.8);
+  padding: 48px 40px;
+}
+.contact-info h3 { color: var(--secondary); }
+.contact-info-item { margin-bottom: 22px; }
+.contact-info-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.contact-info-item p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 24px;
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+}
+.contact-info-item a { color: rgba(255,255,255,0.9); }
+.contact-info-item a:hover { color: var(--accent); }
+.contact-wa {
+  margin-top: 14px;
+  width: 100%;
+}
+
+/* ---- Carte ---- */
+.contact-map {
+  max-width: 1200px;
+  margin: 48px auto 0;
+}
+.contact-map iframe {
+  display: block;
+  filter: grayscale(0.3) contrast(1.05);
+}
+
+/* ============================ RESPONSIVE ============================ */
+@media (max-width: 900px) {
+  .contact-section { padding: 50px 22px 70px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+  .contact-form-wrap { padding: 36px 26px; }
+  .contact-info { padding: 36px 28px; }
+  .page-intro { padding: 60px 24px 30px; }
+}
+@media (max-width: 640px) {
+  .page-hero { height: 70vh; min-height: 420px; max-height: 560px; }
+  .page-hero-content { padding: 60px 22px 0; }
+  .contact-form .form-row { grid-template-columns: 1fr; gap: 0; }
+}

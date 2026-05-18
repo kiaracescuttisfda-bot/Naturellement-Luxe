@@ -1,0 +1,154 @@
+<!--
+  CONTACT — Oxygen Code Block placé sur la page /contact/.
+  Pas de header / footer (gérés par les templates "Applied to all").
+
+  FORMULAIRE : le markup ci-dessous est purement HTML/CSS. Pour qu'il
+  envoie réellement les messages, 2 options :
+   A) Remplace tout le <form>...</form> par le shortcode d'un plugin
+      (WPForms / Forminator / Contact Form 7) — recommandé sur WordPress.
+   B) Garde ce form et branche l'attribut action= sur ton endpoint
+      (ex : un webhook, un script PHP, FormSubmit, etc.).
+  Tant que ce n'est pas branché, le bouton ne fait qu'un envoi mailto
+  de secours (voir commentaire dans le <form>).
+-->
+
+<main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <img class="page-hero-bg" src="/wp-content/uploads/2026/05/hero.webp" alt="">
+    <div class="page-hero-content">
+      <h1 class="page-hero-title">Contact <span class="italic">parlons de votre moment</span></h1>
+      <p class="page-hero-subtitle">Une question, une demande de devis pour un événement, une réservation sur-mesure&nbsp;? Notre équipe vous répond avec plaisir.</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="page-intro">
+    <h2>Échangeons<br>en toute simplicité</h2>
+    <p>
+      Vous pouvez nous écrire via le formulaire ci-dessous, nous appeler, ou nous joindre directement sur <strong>WhatsApp</strong>. Nous répondons généralement sous 24&nbsp;h ouvrées.
+    </p>
+  </section>
+
+  <!-- CONTACT : formulaire + infos -->
+  <section class="contact-section">
+    <div class="contact-grid">
+
+      <!-- Formulaire -->
+      <div class="contact-form-wrap">
+        <h3>Écrivez-nous</h3>
+        <form class="contact-form"
+              method="POST"
+              action="mailto:contact@naturellement-luxe.fr"
+              enctype="text/plain">
+          <!--
+            ⚠️ action=mailto = solution de secours (ouvre le client mail).
+            Remplace par le shortcode d'un plugin de formulaire pour un
+            vrai envoi serveur + anti-spam.
+          -->
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-nom">Nom *</label>
+              <input type="text" id="cf-nom" name="nom" required placeholder="Votre nom">
+            </div>
+            <div class="form-field">
+              <label for="cf-prenom">Prénom</label>
+              <input type="text" id="cf-prenom" name="prenom" placeholder="Votre prénom">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-email">Email *</label>
+              <input type="email" id="cf-email" name="email" required placeholder="vous@email.com">
+            </div>
+            <div class="form-field">
+              <label for="cf-tel">Téléphone</label>
+              <input type="tel" id="cf-tel" name="telephone" placeholder="06 00 00 00 00">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="cf-sujet">Sujet</label>
+            <select id="cf-sujet" name="sujet">
+              <option value="Réservation spa privatif">Réservation spa privatif</option>
+              <option value="Massage / Cours">Massage / Cours</option>
+              <option value="Love Room">Love Room</option>
+              <option value="Événement (EVJF, anniversaire…)">Événement (EVJF, anniversaire…)</option>
+              <option value="Carte cadeau">Carte cadeau</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="cf-message">Message *</label>
+            <textarea id="cf-message" name="message" rows="6" required placeholder="Dites-nous tout…"></textarea>
+          </div>
+
+          <label class="form-consent">
+            <input type="checkbox" name="consentement" required>
+            <span>J'accepte que mes informations soient utilisées pour être recontacté(e). *</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary contact-submit">Envoyer mon message</button>
+        </form>
+      </div>
+
+      <!-- Infos -->
+      <aside class="contact-info">
+        <h3>Nos coordonnées</h3>
+
+        <div class="contact-info-item">
+          <span class="contact-info-label">Adresse</span>
+          <p>15 rue du Croissant<br>75002 Paris</p>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-label">Téléphone</span>
+          <p><a href="tel:+33142360607">01 42 36 06 07</a></p>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-label">WhatsApp</span>
+          <p><a href="https://wa.me/33142360607" target="_blank" rel="noopener">+33 1 42 36 06 07</a></p>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-label">Email</span>
+          <p><a href="mailto:contact@naturellement-luxe.fr">contact@naturellement-luxe.fr</a></p>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-label">Horaires</span>
+          <p>Tous les jours · 10h – 21h<br>Nuitées sur réservation</p>
+        </div>
+
+        <a href="https://wa.me/33142360607" class="btn btn-primary contact-wa" target="_blank" rel="noopener">
+          Discuter sur WhatsApp
+        </a>
+      </aside>
+
+    </div>
+
+    <!-- Carte -->
+    <div class="contact-map">
+      <iframe
+        title="Carte — 15 rue du Croissant, 75002 Paris"
+        src="https://www.google.com/maps?q=15%20rue%20du%20Croissant%2075002%20Paris&output=embed"
+        width="100%" height="420" style="border:0;"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- SECTION QUESTION -->
+  <section class="section-center" id="faq">
+    <h2>Vous préférez chercher vous-même ?</h2>
+    <p>La plupart des réponses (horaires, déroulé d'une séance, réservation, cartes cadeau) se trouvent déjà dans notre FAQ.</p>
+    <div class="cta-row">
+      <a href="/#faq" class="btn btn-primary">Voir notre FAQ</a>
+      <a href="/prestations/" class="btn btn-outline">Voir les prestations</a>
+    </div>
+  </section>
+
+</main>
