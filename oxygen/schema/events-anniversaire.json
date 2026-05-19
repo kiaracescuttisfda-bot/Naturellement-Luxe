@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.naturellementluxe.com/events/anniversaire/#webpage",
+      "url": "https://www.naturellementluxe.com/events/anniversaire/",
+      "name": "Anniversaire à Paris en spa privatif | Naturellement Luxe",
+      "description": "Fêtez votre anniversaire dans un spa de luxe privatisé : 2h, groupe de 5 à 8 personnes, options champagne, macarons et décoration.",
+      "inLanguage": "fr-FR",
+      "isPartOf": { "@id": "https://www.naturellementluxe.com/#website" },
+      "about": { "@id": "https://www.naturellementluxe.com/#service-anniversaire" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.naturellementluxe.com/#service-anniversaire",
+      "serviceType": "Anniversaire en spa privatif",
+      "name": "Anniversaire",
+      "description": "Spa privatif 2h pour un anniversaire festif et intime, 5 à 8 personnes, options champagne, plateau de macarons et décoration.",
+      "url": "https://www.naturellementluxe.com/events/anniversaire/",
+      "provider": { "@id": "https://www.naturellementluxe.com/#dayspa" },
+      "areaServed": { "@type": "City", "name": "Paris" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "EUR",
+        "lowPrice": "350",
+        "highPrice": "560",
+        "offerCount": "4",
+        "url": "https://www.naturellementluxe.com/reservation/"
+      }
+    }
+  ]
+}

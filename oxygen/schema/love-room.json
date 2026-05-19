@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.naturellementluxe.com/love-room/#webpage",
+      "url": "https://www.naturellementluxe.com/love-room/",
+      "name": "Love Room Paris — Nuit en spa privatif | Naturellement Luxe",
+      "description": "Love Room : une nuit en spa privatif à Paris (suite 60 m², jacuzzi, sauna), champagne et macarons inclus. Prestation exclusive pour couple.",
+      "inLanguage": "fr-FR",
+      "isPartOf": { "@id": "https://www.naturellementluxe.com/#website" },
+      "about": { "@id": "https://www.naturellementluxe.com/#service-loveroom" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.naturellementluxe.com/#service-loveroom",
+      "serviceType": "Nuit en spa privatif",
+      "name": "Love Room",
+      "description": "Suite confidentielle de 60 m² pour la nuit (20h → 11h) : jacuzzi, sauna, ambiance bougies et pétales, bouteille de champagne et 16 macarons frais inclus.",
+      "url": "https://www.naturellementluxe.com/love-room/",
+      "provider": { "@id": "https://www.naturellementluxe.com/#dayspa" },
+      "areaServed": { "@type": "City", "name": "Paris" },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "399",
+        "url": "https://www.naturellementluxe.com/reservation/",
+        "name": "Nuit Love Room — couple"
+      }
+    }
+  ]
+}

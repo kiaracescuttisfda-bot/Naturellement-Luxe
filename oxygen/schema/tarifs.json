@@ -1,0 +1,26 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.naturellementluxe.com/tarifs/#webpage",
+      "url": "https://www.naturellementluxe.com/tarifs/",
+      "name": "Tarifs — Spa privatif, groupe, Saint-Valentin | Naturellement Luxe",
+      "description": "Grille tarifaire Naturellement Luxe : spa privatif solo et duo (semaine/week-end), formules groupe, forfait Saint-Valentin.",
+      "inLanguage": "fr-FR",
+      "isPartOf": { "@id": "https://www.naturellementluxe.com/#website" },
+      "about": { "@id": "https://www.naturellementluxe.com/#dayspa" }
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://www.naturellementluxe.com/tarifs/#catalog",
+      "name": "Tarifs Naturellement Luxe",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Spa privatif solo (semaine)", "priceCurrency": "EUR", "price": "99", "url": "https://www.naturellementluxe.com/spa-privatif/" },
+        { "@type": "Offer", "name": "Spa privatif duo (semaine)", "priceCurrency": "EUR", "price": "119", "url": "https://www.naturellementluxe.com/spa-privatif/" },
+        { "@type": "Offer", "name": "Groupe / EVJF / Baby shower (2h, dès 5 pers.)", "priceCurrency": "EUR", "price": "350", "url": "https://www.naturellementluxe.com/events/" },
+        { "@type": "Offer", "name": "Forfait Saint-Valentin (couple 2h)", "priceCurrency": "EUR", "price": "279", "url": "https://www.naturellementluxe.com/events/st-valentin/" }
+      ]
+    }
+  ]
+}

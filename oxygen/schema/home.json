@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.naturellementluxe.com/#webpage",
+      "url": "https://www.naturellementluxe.com/",
+      "name": "Naturellement Luxe — Spa privatif de luxe à Paris",
+      "description": "Spa privatif à Paris : jacuzzi, sauna, balnéothérapie. Réservation de jour et de nuit (Love Room), massages, cours en duo et événements privés.",
+      "inLanguage": "fr-FR",
+      "isPartOf": { "@id": "https://www.naturellementluxe.com/#website" },
+      "about": { "@id": "https://www.naturellementluxe.com/#dayspa" },
+      "primaryImageOfPage": "https://www.naturellementluxe.com/wp-content/uploads/2026/05/hero.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.naturellementluxe.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quels sont les horaires d'ouverture ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Notre spa privatif vous accueille en journée de 10h à 21h sur des créneaux à l'heure, et propose également une formule Bain de Minuit pour une nuit complète." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de personnes peut accueillir le spa privatif ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "L'espace vous est entièrement privatisé. Vous profitez du jacuzzi, du sauna et de l'ensemble des installations à deux ou en petit comité, sans aucun croisement avec d'autres clients." }
+        },
+        {
+          "@type": "Question",
+          "name": "Que comprend une séance au spa ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Chaque séance inclut l'accès libre au jacuzzi, au sauna, ainsi qu'aux peignoirs, serviettes et produits de soin. La lumière, la musique et la température sont entièrement réglables." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment réserver ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La réservation se fait en ligne via le bouton Réserver, par téléphone au 01 42 36 06 07 ou par WhatsApp." }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des massages, cours ou événements ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, en plus du spa privatif vous pouvez ajouter un massage, un cours en duo ou organiser un événement privé (EVJF, baby shower, anniversaire, Saint-Valentin)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Avez-vous des cartes cadeau ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, nos cartes cadeau sont disponibles toute l'année, valables sur l'ensemble de nos prestations." }
+        }
+      ]
+    }
+  ]
+}

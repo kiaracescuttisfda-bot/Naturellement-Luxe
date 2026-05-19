@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.naturellementluxe.com/cours/#webpage",
+      "url": "https://www.naturellementluxe.com/cours/",
+      "name": "Cours & initiation au massage en duo à Paris | Naturellement Luxe",
+      "description": "Apprenez à deux les gestes du massage, guidés par une praticienne diplômée d'État. Cours privatif en couple, espace de 22 m².",
+      "inLanguage": "fr-FR",
+      "isPartOf": { "@id": "https://www.naturellementluxe.com/#website" },
+      "about": { "@id": "https://www.naturellementluxe.com/#service-cours" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.naturellementluxe.com/#service-cours",
+      "serviceType": "Cours d'initiation au massage",
+      "name": "Cours en duo",
+      "description": "Cours d'initiation au massage en couple : 1h30 sur table, 30 min en privé, huile offerte, accès aux vidéos de révision. Praticienne diplômée d'État.",
+      "url": "https://www.naturellementluxe.com/cours/",
+      "provider": { "@id": "https://www.naturellementluxe.com/#dayspa" },
+      "areaServed": { "@type": "City", "name": "Paris" }
+    }
+  ]
+}

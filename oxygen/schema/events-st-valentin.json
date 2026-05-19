@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.naturellementluxe.com/events/st-valentin/#webpage",
+      "url": "https://www.naturellementluxe.com/events/st-valentin/",
+      "name": "Saint-Valentin à Paris — Forfait spa privatif en couple | Naturellement Luxe",
+      "description": "Forfait Saint-Valentin : 2h de spa privatif en couple, 2 coupes de champagne, 16 macarons et 1 rose rouge. 279 €.",
+      "inLanguage": "fr-FR",
+      "isPartOf": { "@id": "https://www.naturellementluxe.com/#website" },
+      "about": { "@id": "https://www.naturellementluxe.com/#service-stvalentin" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.naturellementluxe.com/#service-stvalentin",
+      "serviceType": "Forfait Saint-Valentin",
+      "name": "Saint-Valentin — forfait couple",
+      "description": "2h de spa privatif en couple avec 2 coupes de champagne, 16 macarons et 1 rose rouge.",
+      "url": "https://www.naturellementluxe.com/events/st-valentin/",
+      "provider": { "@id": "https://www.naturellementluxe.com/#dayspa" },
+      "areaServed": { "@type": "City", "name": "Paris" },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "279",
+        "url": "https://www.naturellementluxe.com/reservation/",
+        "name": "Forfait Saint-Valentin couple 2h"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.naturellementluxe.com/cgv/#webpage",
+  "url": "https://www.naturellementluxe.com/cgv/",
+  "name": "Conditions générales de vente | Naturellement Luxe",
+  "description": "Conditions générales de vente de Naturellement Luxe : réservation, annulation, caution, médiation et données personnelles.",
+  "inLanguage": "fr-FR",
+  "isPartOf": { "@id": "https://www.naturellementluxe.com/#website" },
+  "about": { "@id": "https://www.naturellementluxe.com/#dayspa" }
+}

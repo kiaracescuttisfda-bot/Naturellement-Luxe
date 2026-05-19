@@ -1,0 +1,16 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://www.naturellementluxe.com/contact/#webpage",
+      "url": "https://www.naturellementluxe.com/contact/",
+      "name": "Contact — Naturellement Luxe, spa privatif Paris 2e",
+      "description": "Contactez Naturellement Luxe : 15 rue du Croissant, 75002 Paris. Téléphone, WhatsApp et formulaire de contact.",
+      "inLanguage": "fr-FR",
+      "isPartOf": { "@id": "https://www.naturellementluxe.com/#website" },
+      "about": { "@id": "https://www.naturellementluxe.com/#dayspa" },
+      "mainEntity": { "@id": "https://www.naturellementluxe.com/#dayspa" }
+    }
+  ]
+}
