@@ -17,9 +17,9 @@
 
     <header class="post-hero">
       <?php if ( has_post_thumbnail() ) : ?>
-        <?php the_post_thumbnail( 'full', array( 'class' => 'post-hero-bg' ) ); ?>
+        <?php the_post_thumbnail( 'full', array( 'class' => 'post-hero-bg', 'fetchpriority' => 'high', 'decoding' => 'async' ) ); ?>
       <?php else : ?>
-        <img class="post-hero-bg" src="/wp-content/uploads/2026/05/hero.webp" alt="">
+        <img class="post-hero-bg" fetchpriority="high" decoding="async" src="/wp-content/uploads/2026/05/hero.webp" alt="">
       <?php endif; ?>
       <div class="post-hero-content">
         <?php
@@ -85,7 +85,7 @@
             <?php if ( has_post_thumbnail() ) : ?>
               <?php the_post_thumbnail( 'medium_large' ); ?>
             <?php else : ?>
-              <img src="/wp-content/uploads/2026/05/hero.webp" alt="">
+              <img loading="lazy" decoding="async" src="/wp-content/uploads/2026/05/hero.webp" alt="">
             <?php endif; ?>
           </a>
           <div class="post-related-body">

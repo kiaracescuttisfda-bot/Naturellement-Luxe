@@ -17,7 +17,7 @@ $nl_blog = new WP_Query( array(
 <main>
 
   <section class="page-hero">
-    <img class="page-hero-bg" src="/wp-content/uploads/2026/05/hero.webp" alt="">
+    <img class="page-hero-bg" fetchpriority="high" decoding="async" src="/wp-content/uploads/2026/05/hero.webp" alt="">
     <div class="page-hero-content">
       <h1 class="page-hero-title">Le Blog <span class="italic">bien-être &amp; détente</span></h1>
       <p class="page-hero-subtitle">Conseils, inspirations et coulisses de Naturellement Luxe — pour prolonger l'expérience au-delà du spa.</p>
@@ -39,7 +39,7 @@ $nl_blog = new WP_Query( array(
               <?php if ( has_post_thumbnail() ) : ?>
                 <?php the_post_thumbnail( 'medium_large' ); ?>
               <?php else : ?>
-                <img src="/wp-content/uploads/2026/05/hero.webp" alt="">
+                <img loading="lazy" decoding="async" src="/wp-content/uploads/2026/05/hero.webp" alt="">
               <?php endif; ?>
             </a>
             <div class="blog-card-body">
