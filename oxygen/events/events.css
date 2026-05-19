@@ -213,6 +213,14 @@
   max-width: 1100px;
   margin: 0 auto;
 }
+/* Page Events : 4 cartes groupe → grille 2×2 (au lieu de 3+1) */
+.price-section .price-grid {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 720px;
+}
+@media (max-width: 560px) {
+  .price-section .price-grid { grid-template-columns: 1fr; }
+}
 .price-card {
   background: var(--bg-light);
   border: 1px solid rgba(0,0,0,0.06);
