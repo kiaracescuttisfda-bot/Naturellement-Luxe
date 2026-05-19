@@ -1,35 +1,46 @@
 <!--
   FOOTER — Oxygen Code Block "Applied to all"
-  Logo centré en haut, ligne de 5 liens (séparés par un trait) + réseaux,
+  Layout multi-colonnes : Infos pratiques · Suivez-nous · Logo,
   puis barre du bas. Adapte les href si tes slugs WordPress diffèrent.
 -->
 
 <footer class="site-footer">
-  <div class="footer-top">
-    <a href="/" class="footer-logo" aria-label="Accueil">
-      <img src="/wp-content/uploads/2026/05/LOGOS-naturellementluxe-11.webp" alt="Naturellement Luxe" class="logo-img-footer">
-    </a>
+  <div class="footer-grid">
 
-    <nav class="footer-nav" aria-label="Liens du pied de page">
-      <a href="/blog/">Blog</a>
-      <a href="/#faq">FAQ</a>
-      <a href="/cgv/">CGV</a>
-      <a href="/mentions-legales/">Mentions légales</a>
-      <a href="/hygiene-securite/">Hygiène et sécurité</a>
-    </nav>
+    <div class="footer-col">
+      <h4>Infos pratiques</h4>
+      <ul>
+        <li><a href="/blog/" class="footer-link">Blog</a></li>
+        <li><a href="/#faq" class="footer-link">FAQ</a></li>
+        <li><a href="/cgv/" class="footer-link">CGV</a></li>
+        <li><a href="/mentions-legales/" class="footer-link">Mentions légales</a></li>
+        <li><a href="/hygiene-securite/" class="footer-link">Hygiène et sécurité</a></li>
+      </ul>
+    </div>
 
-    <div class="footer-social" aria-label="Réseaux sociaux">
-      <a href="https://www.facebook.com/naturellementluxe" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.14 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.9h-2.34V22c4.78-.8 8.44-4.94 8.44-9.94z"></path></svg>
-      </a>
-      <a href="https://www.instagram.com/spaprivatif/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.41.61.24 1.05.52 1.5.98.46.46.74.89.98 1.5.17.46.36 1.26.41 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.41 2.43a4.04 4.04 0 0 1-.98 1.5c-.46.46-.89.74-1.5.98-.46.17-1.26.36-2.43.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.41a4.04 4.04 0 0 1-1.5-.98 4.04 4.04 0 0 1-.98-1.5c-.17-.46-.36-1.26-.41-2.43C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.24-1.97.41-2.43.24-.61.52-1.05.98-1.5.46-.46.89-.74 1.5-.98.46-.17 1.26-.36 2.43-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.8c-3.15 0-3.5.01-4.74.07-1.14.05-1.76.24-2.17.41-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.17.41-.36 1.03-.41 2.17-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.05 1.14.24 1.76.41 2.17.21.55.47.94.88 1.35.41.41.8.67 1.35.88.41.17 1.03.36 2.17.41 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c1.14-.05 1.76-.24 2.17-.41.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.17-.41.36-1.03.41-2.17.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.05-1.14-.24-1.76-.41-2.17a3.64 3.64 0 0 0-.88-1.35 3.64 3.64 0 0 0-1.35-.88c-.41-.17-1.03-.36-2.17-.41-1.24-.06-1.59-.07-4.74-.07zm0 3.06a4.98 4.98 0 1 1 0 9.96 4.98 4.98 0 0 1 0-9.96zm0 8.21a3.23 3.23 0 1 0 0-6.46 3.23 3.23 0 0 0 0 6.46zm6.34-8.41a1.16 1.16 0 1 1-2.33 0 1.16 1.16 0 0 1 2.33 0z"></path></svg>
+    <div class="footer-col">
+      <h4>Suivez-nous</h4>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/naturellementluxe" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.14 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.9h-2.34V22c4.78-.8 8.44-4.94 8.44-9.94z"></path></svg>
+        </a>
+        <a href="https://www.instagram.com/spaprivatif/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.41.61.24 1.05.52 1.5.98.46.46.74.89.98 1.5.17.46.36 1.26.41 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.41 2.43a4.04 4.04 0 0 1-.98 1.5c-.46.46-.89.74-1.5.98-.46.17-1.26.36-2.43.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.41a4.04 4.04 0 0 1-1.5-.98 4.04 4.04 0 0 1-.98-1.5c-.17-.46-.36-1.26-.41-2.43C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.24-1.97.41-2.43.24-.61.52-1.05.98-1.5.46-.46.89-.74 1.5-.98.46-.17 1.26-.36 2.43-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.8c-3.15 0-3.5.01-4.74.07-1.14.05-1.76.24-2.17.41-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.17.41-.36 1.03-.41 2.17-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.05 1.14.24 1.76.41 2.17.21.55.47.94.88 1.35.41.41.8.67 1.35.88.41.17 1.03.36 2.17.41 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c1.14-.05 1.76-.24 2.17-.41.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.17-.41.36-1.03.41-2.17.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.05-1.14-.24-1.76-.41-2.17a3.64 3.64 0 0 0-.88-1.35 3.64 3.64 0 0 0-1.35-.88c-.41-.17-1.03-.36-2.17-.41-1.24-.06-1.59-.07-4.74-.07zm0 3.06a4.98 4.98 0 1 1 0 9.96 4.98 4.98 0 0 1 0-9.96zm0 8.21a3.23 3.23 0 1 0 0-6.46 3.23 3.23 0 0 0 0 6.46zm6.34-8.41a1.16 1.16 0 1 1-2.33 0 1.16 1.16 0 0 1 2.33 0z"></path></svg>
+        </a>
+      </div>
+      <p class="footer-contact">15 rue du Croissant<br>75002 Paris<br><a href="tel:+33142360607">01 42 36 06 07</a></p>
+    </div>
+
+    <div class="footer-col footer-brand">
+      <a href="/" class="footer-logo" aria-label="Accueil">
+        <img src="/wp-content/uploads/2026/05/LOGOS-naturellementluxe-11.webp" alt="Naturellement Luxe" class="logo-img logo-img-footer">
       </a>
     </div>
+
   </div>
 
   <div class="footer-bottom">
-    <p>15 rue du Croissant, 75002 Paris · <a href="tel:+33142360607">01 42 36 06 07</a></p>
-    <p>© Naturellement Luxe. Tous droits réservés. Site créé par <a href="https://dgl-agency.fr/" target="_blank" rel="noopener">DGL Agency</a></p>
+    <p>© Naturellement Luxe. Tous droits réservés.</p>
+    <p>Site créé par <a href="https://dgl-agency.fr/" target="_blank" rel="noopener">DGL Agency</a></p>
   </div>
 </footer>
