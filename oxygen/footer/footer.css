@@ -1,74 +1,86 @@
 /* ============================================
    FOOTER CSS — Oxygen "Applied to all"
-   Suppose que les variables (--primary, --accent, --secondary, etc.)
-   sont déjà définies dans le Header CSS.
+   Footer long : logo centré + 5 liens en ligne, puis barre du bas.
+   Variables (--primary, --accent, etc.) définies dans le Header CSS.
    ============================================ */
 
 .site-footer {
   background: var(--primary);
-  color: rgba(255,255,255,0.65);
-  padding: 60px 40px 30px;
+  color: rgba(255,255,255,0.6);
+  padding: 64px 30px 30px;
 }
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  max-width: 1200px;
+
+/* ---- Haut : logo + nav ---- */
+.footer-top {
+  max-width: 1100px;
   margin: 0 auto 40px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
 }
-.footer-col h4 {
-  font-family: var(--font-body);
-  color: var(--secondary);
-  font-size: 14px; font-weight: 600;
-  letter-spacing: 0.18em; text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.footer-col li { margin-bottom: 10px; }
-.footer-col a, .footer-col span {
-  font-size: 14px; line-height: 24px;
-}
-.footer-col a:hover { color: var(--accent); }
-
-/* Liens du footer (cliquables) */
-.footer-link {
-  display: inline-block;
+.footer-logo {
+  display: inline-flex;
   cursor: pointer;
-  color: rgba(255,255,255,0.65);
-  transition: color 0.25s;
 }
-.footer-link:hover { color: var(--accent); }
-
-/* Logo footer (image blanche, pas de filter) */
-.footer-brand {
-  display: flex; flex-direction: column; align-items: center;
-}
-.footer-brand .logo { cursor: pointer; }
 .logo-img-footer {
   filter: none;
-  height: 100px;
+  height: 90px;
   width: auto;
+  display: block;
 }
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px 36px;
+}
+.footer-nav a {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.25s;
+}
+.footer-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.footer-nav a:hover {
+  color: var(--accent);
+}
+.footer-nav a:hover::after { width: 100%; }
 
+/* ---- Barre du bas ---- */
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 24px;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px 24px;
   font-size: 12px;
   color: rgba(255,255,255,0.5);
 }
 .footer-bottom p { margin: 0; }
 .footer-bottom a { color: var(--accent); }
+.footer-bottom a:hover { color: var(--secondary); }
 
-@media (max-width: 900px) {
-  .footer-grid { grid-template-columns: 1fr; gap: 36px; text-align: center; }
-  .footer-brand { align-items: center; }
-}
 @media (max-width: 640px) {
+  .site-footer { padding: 48px 22px 28px; }
+  .footer-nav { gap: 12px 22px; }
+  .footer-nav a { font-size: 13px; letter-spacing: 0.1em; }
+  .logo-img-footer { height: 72px; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
