@@ -387,3 +387,31 @@
   .page-hero { height: 68vh; min-height: 400px; max-height: 540px; }
   .page-hero-content { padding: 60px 22px 0; }
 }
+
+/* ---- Tarifs groupe (remplace l'ancien .price-line tassé) ---- */
+.event-price-intro {
+  font-family: var(--font-body);
+  font-size: 15px; line-height: 24px;
+  color: var(--text);
+  margin: 14px 0 14px;
+}
+.event-price-intro strong { color: var(--primary); font-weight: 600; }
+.event-price-intro span {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 12px; font-style: italic;
+  color: var(--accent-2);
+}
+.event-price-row {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin: 0 0 24px;
+}
+.event-price-row span {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--primary);
+  background: var(--bg);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 9px 16px;
+}
+.event-price-row b { color: var(--accent-2); font-weight: 700; }
