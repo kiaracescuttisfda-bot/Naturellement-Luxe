@@ -1,0 +1,87 @@
+<?php
+/**
+ * BLOG — Oxygen Code Block (onglet PHP & HTML), page /blog/.
+ * Liste dynamiquement les articles WordPress (derniers publiés) avec
+ * pagination. Pas de header/footer (templates "Applied to all").
+ * CSS : blog.css · JS : blog.js (vide).
+ */
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : ( get_query_var( 'page' ) ? get_query_var( 'page' ) : 1 );
+$nl_blog = new WP_Query( array(
+  'post_type'      => 'post',
+  'post_status'    => 'publish',
+  'posts_per_page' => 9,
+  'paged'          => $paged,
+) );
+?>
+
+<main>
+
+  <section class="page-hero">
+    <img class="page-hero-bg" src="/wp-content/uploads/2026/05/hero.webp" alt="">
+    <div class="page-hero-content">
+      <h1 class="page-hero-title">Le Blog <span class="italic">bien-être &amp; détente</span></h1>
+      <p class="page-hero-subtitle">Conseils, inspirations et coulisses de Naturellement Luxe — pour prolonger l'expérience au-delà du spa.</p>
+    </div>
+  </section>
+
+  <section class="page-intro">
+    <div class="eyebrow">Journal</div>
+    <h2>Nos derniers articles</h2>
+    <p>Rituels de relaxation, idées cadeaux, nouveautés du spa privatif : retrouvez ici toutes nos publications.</p>
+  </section>
+
+  <section class="blog-section">
+    <?php if ( $nl_blog->have_posts() ) : ?>
+      <div class="blog-grid">
+        <?php while ( $nl_blog->have_posts() ) : $nl_blog->the_post(); ?>
+          <article class="blog-card">
+            <a href="<?php the_permalink(); ?>" class="blog-card-media">
+              <?php if ( has_post_thumbnail() ) : ?>
+                <?php the_post_thumbnail( 'medium_large' ); ?>
+              <?php else : ?>
+                <img src="/wp-content/uploads/2026/05/hero.webp" alt="">
+              <?php endif; ?>
+            </a>
+            <div class="blog-card-body">
+              <span class="blog-card-date"><?php echo esc_html( get_the_date( 'd F Y' ) ); ?></span>
+              <h3 class="blog-card-title">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </h3>
+              <p class="blog-card-excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 22 ) ); ?></p>
+              <a href="<?php the_permalink(); ?>" class="blog-card-link">Lire l'article</a>
+            </div>
+          </article>
+        <?php endwhile; ?>
+      </div>
+
+      <div class="blog-pagination">
+        <?php
+          echo paginate_links( array(
+            'total'     => $nl_blog->max_num_pages,
+            'current'   => max( 1, $paged ),
+            'prev_text' => '‹ Précédent',
+            'next_text' => 'Suivant ›',
+          ) );
+        ?>
+      </div>
+
+      <?php wp_reset_postdata(); ?>
+
+    <?php else : ?>
+      <div class="blog-empty">
+        <p>Aucun article pour le moment. Revenez bientôt&nbsp;!</p>
+        <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+      </div>
+    <?php endif; ?>
+  </section>
+
+  <section class="section-center" id="contact">
+    <h2>Envie d'une parenthèse&nbsp;?</h2>
+    <p>Découvrez nos prestations ou réservez directement votre moment de détente.</p>
+    <div class="cta-row">
+      <a href="/prestations/" class="btn btn-primary">Voir les prestations</a>
+      <a href="/reservation/" class="btn btn-outline">Réserver</a>
+    </div>
+  </section>
+
+</main>

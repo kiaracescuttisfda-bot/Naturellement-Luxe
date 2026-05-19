@@ -1,0 +1,205 @@
+/* blog.css — onglet CSS du Code Block Oxygen (page blog)
+   Self-contained. Variables / .btn / .section-center : définies dans le Header CSS. */
+
+/* ---- PAGE HERO ---- */
+.page-hero {
+  position: relative;
+  min-height: 420px;
+  height: 50vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  background: var(--primary);
+}
+.page-hero-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.page-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(0,0,0,0.48);
+  z-index: 1;
+}
+.page-hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  padding: 70px 30px 0;
+  max-width: 960px;
+}
+.page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5.4vw, 60px);
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+  opacity: 0; animation: fadeUp 1s ease 0.3s forwards;
+}
+.page-hero-title .italic { font-weight: 400; font-style: italic; display: block; }
+.page-hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.6vw, 17px);
+  font-weight: 200; font-style: italic;
+  color: var(--secondary);
+  max-width: 680px; margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0; animation: fadeUp 1s ease 0.6s forwards;
+}
+
+/* ---- PAGE INTRO ---- */
+.page-intro {
+  padding: 70px 30px 30px;
+  background: var(--secondary);
+  text-align: center;
+}
+.page-intro .eyebrow {
+  font-family: var(--font-body);
+  font-size: 13px; font-weight: 600;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  margin-bottom: 14px;
+}
+.page-intro h2 {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.4vw, 36px);
+  font-weight: 300;
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+.page-intro p {
+  font-family: var(--font-body);
+  font-size: 15px; line-height: 26px;
+  color: var(--text);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ---- GRILLE ARTICLES ---- */
+.blog-section {
+  padding: 30px 30px 90px;
+  background: var(--secondary);
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.blog-card {
+  background: var(--bg-light);
+  border: 1px solid rgba(0,0,0,0.06);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(28,20,18,0.10);
+}
+.blog-card-media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+.blog-card-media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+.blog-card:hover .blog-card-media img { transform: scale(1.06); }
+.blog-card-body {
+  padding: 26px 26px 30px;
+  display: flex; flex-direction: column;
+  flex: 1;
+}
+.blog-card-date {
+  font-family: var(--font-body);
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 12px;
+}
+.blog-card-title {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 400;
+  line-height: 1.25;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.blog-card-title a { color: inherit; }
+.blog-card-title a:hover { color: var(--accent); }
+.blog-card-excerpt {
+  font-family: var(--font-body);
+  font-size: 14px; line-height: 23px;
+  color: var(--text);
+  margin-bottom: 20px;
+  flex: 1;
+}
+.blog-card-link {
+  align-self: flex-start;
+  font-family: var(--font-body);
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 3px;
+  transition: color 0.25s, border-color 0.25s;
+}
+.blog-card-link:hover { color: var(--accent); border-color: var(--accent-2); }
+
+/* ---- PAGINATION ---- */
+.blog-pagination {
+  display: flex; justify-content: center; flex-wrap: wrap;
+  gap: 8px;
+  max-width: 1200px;
+  margin: 56px auto 0;
+}
+.blog-pagination .page-numbers {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 44px; height: 44px;
+  padding: 0 12px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--primary);
+  border: 1px solid rgba(0,0,0,0.12);
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+.blog-pagination .page-numbers:hover { border-color: var(--accent); color: var(--accent-2); }
+.blog-pagination .page-numbers.current {
+  background: var(--accent);
+  color: var(--secondary);
+  border-color: var(--accent);
+}
+.blog-pagination .page-numbers.dots { border: none; }
+
+/* ---- ÉTAT VIDE ---- */
+.blog-empty {
+  text-align: center;
+  max-width: 520px;
+  margin: 40px auto;
+}
+.blog-empty p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .page-intro { padding: 56px 22px 24px; }
+  .blog-section { padding: 24px 22px 64px; }
+}
+@media (max-width: 640px) {
+  .page-hero { height: 60vh; min-height: 360px; max-height: 480px; }
+  .page-hero-content { padding: 56px 22px 0; }
+  .blog-grid { grid-template-columns: 1fr; gap: 22px; }
+}
