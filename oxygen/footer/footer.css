@@ -1,30 +1,40 @@
 /* ============================================
    FOOTER CSS — Oxygen "Applied to all"
-   Liens (séparés par un trait) à gauche + réseaux, logo à droite,
+   Logo centré + ligne de liens (séparés par un trait) + réseaux,
    puis barre du bas. Variables définies dans le Header CSS.
    ============================================ */
 
 .site-footer {
   background: var(--primary);
   color: rgba(255,255,255,0.6);
-  padding: 56px 40px 30px;
+  padding: 60px 30px 30px;
 }
 
-/* ---- Haut : nav (gauche) + logo (droite) ---- */
+/* ---- Haut : logo centré, nav, réseaux ---- */
 .footer-top {
-  max-width: 1200px;
-  margin: 0 auto 38px;
+  max-width: 1100px;
+  margin: 0 auto 40px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 28px 40px;
+  gap: 28px;
 }
+.footer-logo {
+  display: inline-flex;
+  cursor: pointer;
+}
+.logo-img-footer {
+  filter: none;
+  height: 86px;
+  width: auto;
+  display: block;
+}
+
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 12px 0;
 }
 .footer-nav a {
   font-family: var(--font-body);
@@ -33,59 +43,42 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.7);
-  padding: 0 22px;
+  padding: 4px 22px;
   position: relative;
   transition: color 0.25s;
 }
 .footer-nav a:hover { color: var(--accent); }
-
-/* Trait séparateur vertical entre chaque lien */
-.footer-nav > a + a::before,
-.footer-nav > .footer-social::before {
+/* Trait séparateur vertical entre les liens */
+.footer-nav a + a::before {
   content: '';
   position: absolute;
   left: 0; top: 50%;
   transform: translateY(-50%);
-  width: 1px; height: 14px;
+  width: 1px; height: 13px;
   background: rgba(255,255,255,0.22);
 }
-.footer-nav > a:first-child { padding-left: 0; }
 
 /* Réseaux sociaux */
 .footer-social {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 14px;
-  padding-left: 22px;
-  position: relative;
+  gap: 18px;
 }
 .footer-social a {
   display: inline-flex;
-  width: 20px; height: 20px;
-  color: rgba(255,255,255,0.7);
+  align-items: center; justify-content: center;
+  width: 22px; height: 22px;
+  color: rgba(255,255,255,0.75);
   transition: color 0.25s, transform 0.25s;
 }
-.footer-social a svg { width: 100%; height: 100%; fill: currentColor; }
+.footer-social svg { display: block; width: 22px; height: 22px; }
 .footer-social a:hover { color: var(--accent); transform: translateY(-2px); }
-
-/* Logo à droite */
-.footer-logo {
-  display: inline-flex;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-.logo-img-footer {
-  filter: none;
-  height: 84px;
-  width: auto;
-  display: block;
-}
 
 /* ---- Barre du bas ---- */
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 24px;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -98,17 +91,9 @@
 .footer-bottom a { color: var(--accent); }
 .footer-bottom a:hover { color: var(--secondary); }
 
-@media (max-width: 900px) {
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .footer-nav { justify-content: center; }
-}
 @media (max-width: 640px) {
-  .site-footer { padding: 44px 22px 28px; }
-  .footer-nav a { font-size: 13px; padding: 0 14px; letter-spacing: 0.08em; }
+  .site-footer { padding: 48px 22px 28px; }
+  .footer-nav a { font-size: 13px; padding: 4px 14px; letter-spacing: 0.08em; }
   .logo-img-footer { height: 70px; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
