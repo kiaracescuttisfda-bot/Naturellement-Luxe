@@ -1,0 +1,110 @@
+<?php
+/**
+ * SINGLE ARTICLE — Oxygen Code Block (onglet PHP & HTML).
+ * À placer dans un TEMPLATE Oxygen appliqué à "Articles seuls"
+ * (Single — Post). Pas de header/footer (templates "Applied to all").
+ * CSS : single-post.css · JS : single-post.js (vide).
+ *
+ * Fonctionne dans la boucle du post affiché : the_title(), the_content()…
+ */
+?>
+
+<main>
+
+  <?php while ( have_posts() ) : the_post(); ?>
+
+  <article class="post">
+
+    <header class="post-hero">
+      <?php if ( has_post_thumbnail() ) : ?>
+        <?php the_post_thumbnail( 'full', array( 'class' => 'post-hero-bg' ) ); ?>
+      <?php else : ?>
+        <img class="post-hero-bg" src="/wp-content/uploads/2026/05/hero.webp" alt="">
+      <?php endif; ?>
+      <div class="post-hero-content">
+        <?php
+          $cats = get_the_category();
+          if ( ! empty( $cats ) ) :
+        ?>
+          <a href="<?php echo esc_url( get_category_link( $cats[0]->term_id ) ); ?>" class="post-cat"><?php echo esc_html( $cats[0]->name ); ?></a>
+        <?php endif; ?>
+        <h1 class="post-title"><?php the_title(); ?></h1>
+        <div class="post-meta">
+          <span><?php echo esc_html( get_the_date( 'd F Y' ) ); ?></span>
+          <span class="post-meta-sep">·</span>
+          <span><?php echo esc_html( get_the_author() ); ?></span>
+          <span class="post-meta-sep">·</span>
+          <span><?php echo esc_html( max( 1, ceil( str_word_count( wp_strip_all_tags( get_the_content() ) ) / 200 ) ) ); ?> min de lecture</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="post-body">
+      <div class="post-content">
+        <?php the_content(); ?>
+        <?php
+          wp_link_pages( array(
+            'before' => '<div class="post-pagelinks">' . __( 'Pages :' ),
+            'after'  => '</div>',
+          ) );
+        ?>
+      </div>
+
+      <?php if ( has_tag() ) : ?>
+        <div class="post-tags"><?php the_tags( '', '', '' ); ?></div>
+      <?php endif; ?>
+
+      <div class="post-back">
+        <a href="/blog/" class="btn btn-outline">‹ Tous les articles</a>
+      </div>
+    </div>
+
+  </article>
+
+  <?php endwhile; ?>
+
+  <!-- Articles récents -->
+  <?php
+    $reco = new WP_Query( array(
+      'post_type'           => 'post',
+      'post_status'         => 'publish',
+      'posts_per_page'      => 3,
+      'post__not_in'        => array( get_queried_object_id() ),
+      'ignore_sticky_posts' => true,
+      'orderby'             => 'date',
+      'order'               => 'DESC',
+    ) );
+    if ( $reco->have_posts() ) :
+  ?>
+  <section class="post-related">
+    <h2>À lire aussi</h2>
+    <div class="post-related-grid">
+      <?php while ( $reco->have_posts() ) : $reco->the_post(); ?>
+        <article class="post-related-card">
+          <a href="<?php the_permalink(); ?>" class="post-related-media">
+            <?php if ( has_post_thumbnail() ) : ?>
+              <?php the_post_thumbnail( 'medium_large' ); ?>
+            <?php else : ?>
+              <img src="/wp-content/uploads/2026/05/hero.webp" alt="">
+            <?php endif; ?>
+          </a>
+          <div class="post-related-body">
+            <span class="post-related-date"><?php echo esc_html( get_the_date( 'd F Y' ) ); ?></span>
+            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+          </div>
+        </article>
+      <?php endwhile; wp_reset_postdata(); ?>
+    </div>
+  </section>
+  <?php endif; ?>
+
+  <section class="section-center" id="contact">
+    <h2>Envie d'une parenthèse ?</h2>
+    <p>Découvrez nos prestations ou réservez directement votre moment de détente.</p>
+    <div class="cta-row">
+      <a href="/prestations/" class="btn btn-primary">Voir les prestations</a>
+      <a href="/reservation/" class="btn btn-outline">Réserver</a>
+    </div>
+  </section>
+
+</main>
