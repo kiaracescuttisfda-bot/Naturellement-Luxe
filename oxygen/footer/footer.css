@@ -30,18 +30,20 @@
 }
 .footer-col a:hover { color: var(--accent); }
 
-/* Liens non cliquables (état actuel) */
+/* Liens du footer (cliquables) */
 .footer-link {
   display: inline-block;
-  cursor: default;
+  cursor: pointer;
   color: rgba(255,255,255,0.65);
+  transition: color 0.25s;
 }
+.footer-link:hover { color: var(--accent); }
 
 /* Logo footer (image blanche, pas de filter) */
 .footer-brand {
   display: flex; flex-direction: column; align-items: center;
 }
-.footer-logo-static { cursor: default; }
+.footer-brand .logo { cursor: pointer; }
 .logo-img-footer {
   filter: none;
   height: 100px;
